@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_emergencia_entidad_Emergencia" object="${emergencia}" path="/emergencias" z="q5O58RINluN9Co6vk8knnl+PcZc=">
+        <field:display field="centroAcopios" id="s_emergencia_entidad_Emergencia_centroAcopios" object="${emergencia}" z="fU/FtMIacxymq9dwECm8pLLDmyk="/>
+        <field:display field="emergenciaSuministroes" id="s_emergencia_entidad_Emergencia_emergenciaSuministroes" object="${emergencia}" z="PhjGyiraM4ZyVt+/wqOqx3rVauA="/>
+        <field:display field="poblacions" id="s_emergencia_entidad_Emergencia_poblacions" object="${emergencia}" z="uUm/+WiWZoEk5Z9+cmWqcpylwhc="/>
+        <field:display field="consejo" id="s_emergencia_entidad_Emergencia_consejo" object="${emergencia}" z="+LJOMbd3/2kfiLwTcSxATN7+dcY="/>
+        <field:display field="ubicacion" id="s_emergencia_entidad_Emergencia_ubicacion" object="${emergencia}" z="cRkdUCiXG+LiSBbQelKA/Z4AfqQ="/>
+        <field:display field="nombre" id="s_emergencia_entidad_Emergencia_nombre" object="${emergencia}" z="2UGzVOPZphxKwYPpDJJ+KZZ6DQE="/>
+        <field:display date="true" dateTimePattern="${emergencia_fechainicio_date_format}" field="fechaInicio" id="s_emergencia_entidad_Emergencia_fechaInicio" object="${emergencia}" z="9zYul1zYdpk57rh4ceH90nRIZ8E="/>
+        <field:display date="true" dateTimePattern="${emergencia_fechafin_date_format}" field="fechaFin" id="s_emergencia_entidad_Emergencia_fechaFin" object="${emergencia}" z="H6B49lfJGojzH+80CAsPv2QaPkc="/>
+    </page:show>
+</div>

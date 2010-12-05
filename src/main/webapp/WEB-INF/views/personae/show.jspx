@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_emergencia_entidad_Persona" object="${persona}" path="/personae" z="n8M1Zs6ZbmZa1EQCU2KBOokytek=">
+        <field:display field="centroAcopios" id="s_emergencia_entidad_Persona_centroAcopios" object="${persona}" z="eQO4YqvYY8ZVAqHAuprPvopAkrw="/>
+        <field:display field="voluntarios" id="s_emergencia_entidad_Persona_voluntarios" object="${persona}" z="O09lOwcTJ2EsyJDhOYmDG4f9esU="/>
+        <field:display field="locacion" id="s_emergencia_entidad_Persona_locacion" object="${persona}" z="3KN2PNeIIHbaCaiP1Utcw71b8ZM="/>
+        <field:display field="correo" id="s_emergencia_entidad_Persona_correo" object="${persona}" z="+RCBklwLAfQRZiweqYQQVy6+hD4="/>
+        <field:display field="perfil" id="s_emergencia_entidad_Persona_perfil" object="${persona}" z="eC/Ea35CKwQ2cMO5qYUUL95jhu8="/>
+        <field:display field="celular" id="s_emergencia_entidad_Persona_celular" object="${persona}" z="Zkmmy6LR5mD5yuu5+7I03tzRukg="/>
+        <field:display field="direccion" id="s_emergencia_entidad_Persona_direccion" object="${persona}" z="BhYCxpq5flaDknh15dCPfo5x+uU="/>
+        <field:display field="nombre" id="s_emergencia_entidad_Persona_nombre" object="${persona}" z="o9EvQ71GzNT6TCoB9Sm8xoGF69g="/>
+    </page:show>
+</div>

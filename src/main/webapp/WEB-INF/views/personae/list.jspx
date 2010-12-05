@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_emergencia_entidad_Persona" items="${personae}" z="jn3/IJCFNfcSpoDHoPPAFcjiEwA=">
+        <table:table data="${personae}" id="l_emergencia_entidad_Persona" path="/personae" typeIdFieldName="idPersona" z="Kf4gX1u6uUjspIsgTyzahK0uPEc=">
+            <table:column id="c_emergencia_entidad_Persona_centroAcopios" property="centroAcopios" z="gSSkt6gR9iFfgQ1S6Zkh4fN+20Y="/>
+            <table:column id="c_emergencia_entidad_Persona_voluntarios" property="voluntarios" z="N87HYEaTeagSGUTrMaEPGMkt3NE="/>
+            <table:column id="c_emergencia_entidad_Persona_locacion" property="locacion" z="dV6Px9B1QppvfpSlQmrfUi+p/Mw="/>
+            <table:column id="c_emergencia_entidad_Persona_correo" property="correo" z="CuQdzICyKfGHuDkttAU/LAZdFp8="/>
+            <table:column id="c_emergencia_entidad_Persona_perfil" property="perfil" z="dEd402eNz6RCqMLl3jmQx3+GJcM="/>
+            <table:column id="c_emergencia_entidad_Persona_celular" property="celular" z="UJIOLRtAqEq0KJJ3XFZA5S6kVlQ="/>
+        </table:table>
+    </page:list>
+</div>

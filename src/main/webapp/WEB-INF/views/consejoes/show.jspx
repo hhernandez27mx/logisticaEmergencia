@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_emergencia_entidad_Consejo" object="${consejo}" path="/consejoes" z="HGt4n9Sk0qED0aHqIghJJqh87qA=">
+        <field:display field="emergencias" id="s_emergencia_entidad_Consejo_emergencias" object="${consejo}" z="CC2ZmoVbdtuEMth5mHeuPGDwE50="/>
+        <field:display field="idResponsable" id="s_emergencia_entidad_Consejo_idResponsable" object="${consejo}" z="cN5/sSSxb+x85vLkGqJhW8e7NWA="/>
+    </page:show>
+</div>

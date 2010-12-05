@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_emergencia_entidad_Poblacion" items="${poblacions}" z="mmUjMp4DNeTwqmVVToOfMytxNjQ=">
+        <table:table data="${poblacions}" id="l_emergencia_entidad_Poblacion" path="/poblacions" typeIdFieldName="idPoblacion" z="a7OYS9NAwO6pYyGlnXFT1fRVwNw=">
+            <table:column id="c_emergencia_entidad_Poblacion_scis" property="scis" z="bpqjiTNbWftuMoEKJFbruSVyWIU="/>
+            <table:column id="c_emergencia_entidad_Poblacion_emergencia" property="emergencia" z="5sVkNQjpjzk5wSrRqyTQZsk4mIs="/>
+            <table:column id="c_emergencia_entidad_Poblacion_instEncargada" property="instEncargada" z="ukemXhNEbys9K2cfqdWhuSmxxC4="/>
+            <table:column id="c_emergencia_entidad_Poblacion_lugar" property="lugar" z="2IQL4GC9UVn4OQ4IFyI9Kg94KAw="/>
+            <table:column id="c_emergencia_entidad_Poblacion_dano" property="dano" z="piUXjL5n2JD5DkCZBunNpoZvd2o="/>
+            <table:column id="c_emergencia_entidad_Poblacion_solucion" property="solucion" z="hXtWr5H9mXMavX3dGS8RKrmK3gQ="/>
+        </table:table>
+    </page:list>
+</div>

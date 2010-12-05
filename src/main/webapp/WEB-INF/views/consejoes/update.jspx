@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_emergencia_entidad_Consejo" idField="idConsejo" modelAttribute="consejo" path="/consejoes" versionField="none" z="YIs6okH7Ewt+q6Fpy0NQWOIpD7w=">
+        <field:simple field="emergencias" id="c_emergencia_entidad_Consejo_emergencias" messageCode="entity_reference_not_managed" messageCodeAttribute="Emergencia" z="/O5042ApwmWSiHu449D6i1O31TQ="/>
+        <field:input field="idResponsable" id="c_emergencia_entidad_Consejo_idResponsable" required="true" validationMessageCode="field_invalid_integer" z="2RrtXzG6AwjD/NOqDwhPto0ppSU="/>
+    </form:update>
+</div>

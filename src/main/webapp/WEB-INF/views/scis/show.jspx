@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_emergencia_entidad_Sci" object="${sci}" path="/scis" z="xoUEd6inFGFC3rDfj24+pKdTnMw=">
+        <field:display field="poblacion" id="s_emergencia_entidad_Sci_poblacion" object="${sci}" z="i0GNrCRPo+5HbS0w2gHW2Y9nbMo="/>
+        <field:display field="comandante" id="s_emergencia_entidad_Sci_comandante" object="${sci}" z="fDaz88FZxbniEa8WjhaKrCDX1R4="/>
+        <field:display field="seguridad" id="s_emergencia_entidad_Sci_seguridad" object="${sci}" z="b0cME+xOdc9FxZEGL9F4WeLD/mg="/>
+        <field:display field="enlace" id="s_emergencia_entidad_Sci_enlace" object="${sci}" z="bhDWdbUv/L22OXj8tLAD9xZpOX0="/>
+        <field:display field="informacionPublica" id="s_emergencia_entidad_Sci_informacionPublica" object="${sci}" z="KDF6bj5PK/rf6uVZFPtf8MH+xo8="/>
+        <field:display field="planeacion" id="s_emergencia_entidad_Sci_planeacion" object="${sci}" z="uHwP6k4KkfHgWPQl8MNFv8oJoD0="/>
+        <field:display field="operaciones" id="s_emergencia_entidad_Sci_operaciones" object="${sci}" z="QcLRZLBYx4cczU9gReRPkZqxiBY="/>
+        <field:display field="logistica" id="s_emergencia_entidad_Sci_logistica" object="${sci}" z="9/w13TlKQXBpjt/LnPOFPSwo0vQ="/>
+        <field:display field="admFinanciera" id="s_emergencia_entidad_Sci_admFinanciera" object="${sci}" z="vW7RMtwKI8zwVGK+x0G3gmWhIpc="/>
+    </page:show>
+</div>

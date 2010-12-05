@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="emergencias/list">
+        <put-attribute name="body" value="/WEB-INF/views/emergencias/list.jspx"/>
+    </definition>
+<definition extends="default" name="emergencias/show">
+        <put-attribute name="body" value="/WEB-INF/views/emergencias/show.jspx"/>
+    </definition>
+<definition extends="default" name="emergencias/create">
+        <put-attribute name="body" value="/WEB-INF/views/emergencias/create.jspx"/>
+    </definition>
+<definition extends="default" name="emergencias/update">
+        <put-attribute name="body" value="/WEB-INF/views/emergencias/update.jspx"/>
+    </definition>
+</tiles-definitions>

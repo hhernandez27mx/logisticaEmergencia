@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_emergencia_entidad_CaSuministro" idField="idCaSuministro" modelAttribute="caSuministro" path="/casuministroes" versionField="none" z="8jtU4+RR2BTRxhSCFRUQtJJIee8=">
+        <field:select field="centroAcopio" id="c_emergencia_entidad_CaSuministro_centroAcopio" itemValue="idCentroacopio" items="${centroacopios}" path="/centroacopios" z="/kO3kOBOP9iPbWJAWxX+xk3cNn0="/>
+        <field:select field="suministro" id="c_emergencia_entidad_CaSuministro_suministro" itemValue="idSuministro" items="${suministroes}" path="/suministroes" z="oc/WSeterCjpJI0CsPZto5v6vF4="/>
+    </form:update>
+</div>

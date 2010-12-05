@@ -1,0 +1,17 @@
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-04 19:13:29
+project --topLevelPackage emergencia --projectName Emergencia --java 6
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-12-04 19:13:31
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-04 19:13:33
+persistence setup --provider HIBERNATE --database POSTGRES --databaseName bdemergencia --password lobin31a --userName desarrollo
+database reverse engineer --package emergencia.entidad --schema public 
+controller all --package emergencia.web
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-12-04 19:20:29
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-04 21:43:26
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-12-04 21:46:13
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-04 21:46:28
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-12-04 21:48:47
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-04 21:49:02
+web mvc install language --code es 
+json all
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-12-05 09:32:53
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-05 12:16:59

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_emergencia_entidad_Suministro" modelAttribute="suministro" path="/suministroes" render="${empty dependencies}" z="X9MuKU9PJb/NRPtxU5wabZpfrjA=">
+        
+        
+        <field:input field="nombre" id="c_emergencia_entidad_Suministro_nombre" required="true" z="DGb720irTuJSkpPCGvhQmz4J9q0="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_Suministro" render="${not empty dependencies}" z="gCsTNUksMTqM/RfHuniVNw71Tc0="/>
+</div>

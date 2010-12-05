@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_emergencia_entidad_Suministro" object="${suministro}" path="/suministroes" z="H4VbtGiFS/M3Hb8Wo02H0bBhrZM=">
+        
+        
+        <field:display field="nombre" id="s_emergencia_entidad_Suministro_nombre" object="${suministro}" z="15lYjnPjbY6Pa/spALEK12U+Waw="/>
+    </page:show>
+</div>

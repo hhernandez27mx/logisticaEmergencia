@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_emergencia_entidad_CentroAcopio" object="${centroacopio}" path="/centroacopios" z="x0bk3ePIOViDUmymuA1XxflVPdQ=">
+        <field:display field="caSuministroes" id="s_emergencia_entidad_CentroAcopio_caSuministroes" object="${centroacopio}" z="LyaP2BSEsICfQMQ5EE2n0HYKLJ8="/>
+        <field:display field="emergencia" id="s_emergencia_entidad_CentroAcopio_emergencia" object="${centroacopio}" z="7NBxQi75yJaR/+PdE0SkhZsLUZw="/>
+        <field:display field="persona" id="s_emergencia_entidad_CentroAcopio_persona" object="${centroacopio}" z="Ep4I6vRJ/P2rEq8Ys4nqwj0WOTg="/>
+        <field:display date="true" dateTimePattern="${centroAcopio_fechainicio_date_format}" field="fechaInicio" id="s_emergencia_entidad_CentroAcopio_fechaInicio" object="${centroacopio}" z="FNRgmggLiOU1DZW53AtLGnKFCsU="/>
+        <field:display date="true" dateTimePattern="${centroAcopio_fechafin_date_format}" field="fechaFin" id="s_emergencia_entidad_CentroAcopio_fechaFin" object="${centroacopio}" z="FLuukBcRbrvNkHRUJC+4D1Lb5VA="/>
+    </page:show>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_emergencia_entidad_InstEncargada" items="${instencargadas}" z="6gAQF1w/V12/7EgUeVvNH1BcS/4=">
+        <table:table data="${instencargadas}" id="l_emergencia_entidad_InstEncargada" path="/instencargadas" typeIdFieldName="idInstencargada" z="mhJJ6VrwhyoOjPsqc+0FScbOhl0=">
+            <table:column id="c_emergencia_entidad_InstEncargada_poblacions" property="poblacions" z="qug7xv4GKuxQ8gktIk3JAup6z3s="/>
+            <table:column id="c_emergencia_entidad_InstEncargada_nombre" property="nombre" z="gs8JQvQpUzS0+sHHmcEwjV83QEA="/>
+            <table:column id="c_emergencia_entidad_InstEncargada_idResponsable" property="idResponsable" z="6Kp4OBkBbmWiUkvbMEe58eiIpmg="/>
+            <table:column id="c_emergencia_entidad_InstEncargada_funciones" property="funciones" z="2QmN3GakTQmpPDpv5tKJUh+wC04="/>
+        </table:table>
+    </page:list>
+</div>

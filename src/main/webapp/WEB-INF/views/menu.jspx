@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+	<jsp:output omit-xml-declaration="yes"/>
+
+<menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_casuministro" z="BVnos04KgtNJkbhIfWehiJ4Vbo4=">
+            <menu:item id="i_casuministro_new" messageCode="global_menu_new" url="/casuministroes?form" z="4C6GsaKPe8YdTfregeKjU8AEh8I="/>
+        <menu:item id="i_casuministro_list" messageCode="global_menu_list" url="/casuministroes?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="iG2R7Y7vBTVISO7kpIgxMbskOmk="/>
+        </menu:category>
+    <menu:category id="c_poblacion" z="UFEbS7hpD7wlWegXGDp7WxpJGGo=">
+            <menu:item id="i_poblacion_new" messageCode="global_menu_new" url="/poblacions?form" z="XzjZQFIfIcd07X5kcntwEzKukIc="/>
+        <menu:item id="i_poblacion_list" messageCode="global_menu_list" url="/poblacions?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="gS9LqvpEBbKoPFw4LkQVnfwmkUs="/>
+        </menu:category>
+    <menu:category id="c_emergenciasuministro" z="LcZhpW0mdeRuJz17hj6MWQCqdW0=">
+            <menu:item id="i_emergenciasuministro_new" messageCode="global_menu_new" url="/emergenciasuministroes?form" z="ehDLEI3DV2XCh4pb2oe6ipkoy8E="/>
+        <menu:item id="i_emergenciasuministro_list" messageCode="global_menu_list" url="/emergenciasuministroes?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="+2pP3qqKLvHEAUVHLaxWe14W6Wc="/>
+        </menu:category>
+    <menu:category id="c_suministro" z="mMZeU71v9ahKaZwnNgAaSn9YlBM=">
+            <menu:item id="i_suministro_new" messageCode="global_menu_new" url="/suministroes?form" z="6XLvRAXtALUJRRkmih19yAaySyg="/>
+        <menu:item id="i_suministro_list" messageCode="global_menu_list" url="/suministroes?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="l9PDSsJTcU2uRavNp95hNVs8Prg="/>
+        </menu:category>
+    <menu:category id="c_instencargada" z="3xe2NWDZf4pyao0l+A1Ddjd/noE=">
+            <menu:item id="i_instencargada_new" messageCode="global_menu_new" url="/instencargadas?form" z="D1kmVaPL6jf0q5RgTDmpOFTo+Ng="/>
+        <menu:item id="i_instencargada_list" messageCode="global_menu_list" url="/instencargadas?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="6RddI8ILQXdhLmur9DrJ8j0T268="/>
+        </menu:category>
+    <menu:category id="c_consejo" z="VtSw/9mhlfrat5TEZTO0+yBLCV8=">
+            <menu:item id="i_consejo_new" messageCode="global_menu_new" url="/consejoes?form" z="PtbBl9SB/dK0TO2Ao++Jji7vRqA="/>
+        <menu:item id="i_consejo_list" messageCode="global_menu_list" url="/consejoes?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="ng4LX+gPzRZ27xvZhEVz04t7c4M="/>
+        </menu:category>
+    <menu:category id="c_emergencia" z="rLPq/RNQK8C8LtfBL+rjPGrYpJM=">
+            <menu:item id="i_emergencia_new" messageCode="global_menu_new" url="/emergencias?form" z="WxAKOO79zYbtyIwrXm3v5nBZuI4="/>
+        <menu:item id="i_emergencia_list" messageCode="global_menu_list" url="/emergencias?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="XnKMFv+mGOfDQVjJtXvGXb2zSYM="/>
+        </menu:category>
+    <menu:category id="c_sci" z="EhIEkI0dVYWbVE1IZu7uurL+G3w=">
+            <menu:item id="i_sci_new" messageCode="global_menu_new" url="/scis?form" z="M6Ngqs8MfrRXQgX3Dzm2Y/1qcNA="/>
+        <menu:item id="i_sci_list" messageCode="global_menu_list" url="/scis?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="BzNuLQn/2w4cex7kDiuvt1eQ1og="/>
+        </menu:category>
+    <menu:category id="c_centroacopio" z="vQ37vJUiyPerARGnUCWqzh6UOhU=">
+            <menu:item id="i_centroacopio_new" messageCode="global_menu_new" url="/centroacopios?form" z="v41s2+P1HQcAk07eGnQvseZEz0A="/>
+        <menu:item id="i_centroacopio_list" messageCode="global_menu_list" url="/centroacopios?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="ov7eurdMol/LokvYqFdvAorsQVg="/>
+        </menu:category>
+    <menu:category id="c_persona" z="HGx10uPnaEw3eOO50fIb9qf5jiI=">
+            <menu:item id="i_persona_new" messageCode="global_menu_new" url="/personae?form" z="7Y0KdFKrjpWljePDcf4RoDAeOUA="/>
+        <menu:item id="i_persona_list" messageCode="global_menu_list" url="/personae?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="LbRjV2nZHYtB+QAty5L1hPmdHBw="/>
+        </menu:category>
+    <menu:category id="c_voluntario" z="+hrXdPXXNy5Qjpx+nrdIN0ryjbo=">
+            <menu:item id="i_voluntario_new" messageCode="global_menu_new" url="/voluntarios?form" z="I40GuHqB837Nj6LdhPOTz4Nerow="/>
+        <menu:item id="i_voluntario_list" messageCode="global_menu_list" url="/voluntarios?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="T0pMlOiVjsQMxVxX2S9Gx5U2oyA="/>
+        </menu:category>
+    </menu:menu>
+</div>

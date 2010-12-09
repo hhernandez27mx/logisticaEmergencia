@@ -3,22 +3,12 @@
 
 package emergencia.entidad;
 
-import emergencia.entidad.CentroAcopio;
-import emergencia.entidad.Voluntario;
 import java.lang.Integer;
 import java.lang.String;
-import java.util.Set;
 import javax.persistence.Column;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 privileged aspect Persona_Roo_DbManaged {
-    
-    @OneToMany(mappedBy = "persona")
-    private Set<CentroAcopio> Persona.centroAcopios;
-    
-    @OneToMany(mappedBy = "persona")
-    private Set<Voluntario> Persona.voluntarios;
     
     @Column(name = "locacion", length = 20)
     @NotNull
@@ -43,22 +33,6 @@ privileged aspect Persona_Roo_DbManaged {
     @Column(name = "nombre", length = 100)
     @NotNull
     private String Persona.nombre;
-    
-    public Set<CentroAcopio> Persona.getCentroAcopios() {
-        return this.centroAcopios;
-    }
-    
-    public void Persona.setCentroAcopios(Set<CentroAcopio> centroAcopios) {
-        this.centroAcopios = centroAcopios;
-    }
-    
-    public Set<Voluntario> Persona.getVoluntarios() {
-        return this.voluntarios;
-    }
-    
-    public void Persona.setVoluntarios(Set<Voluntario> voluntarios) {
-        this.voluntarios = voluntarios;
-    }
     
     public String Persona.getLocacion() {
         return this.locacion;

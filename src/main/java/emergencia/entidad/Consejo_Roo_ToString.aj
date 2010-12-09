@@ -10,6 +10,7 @@ privileged aspect Consejo_Roo_ToString {
     public String Consejo.toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Emergencias: ").append(getEmergencias() == null ? "null" : getEmergencias().size()).append(", ");
+        sb.append("Nombre: ").append(getNombre()).append(", ");
         sb.append("IdResponsable: ").append(getIdResponsable()).append(", ");
         sb.append("IdConsejo: ").append(getIdConsejo());
         return sb.toString();

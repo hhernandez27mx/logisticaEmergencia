@@ -9,8 +9,6 @@ privileged aspect Persona_Roo_ToString {
     
     public String Persona.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("CentroAcopios: ").append(getCentroAcopios() == null ? "null" : getCentroAcopios().size()).append(", ");
-        sb.append("Voluntarios: ").append(getVoluntarios() == null ? "null" : getVoluntarios().size()).append(", ");
         sb.append("Locacion: ").append(getLocacion()).append(", ");
         sb.append("Correo: ").append(getCorreo()).append(", ");
         sb.append("Perfil: ").append(getPerfil()).append(", ");

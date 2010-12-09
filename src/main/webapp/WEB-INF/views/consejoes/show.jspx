@@ -4,5 +4,6 @@
     <page:show id="ps_emergencia_entidad_Consejo" object="${consejo}" path="/consejoes" z="HGt4n9Sk0qED0aHqIghJJqh87qA=">
         <field:display field="emergencias" id="s_emergencia_entidad_Consejo_emergencias" object="${consejo}" z="CC2ZmoVbdtuEMth5mHeuPGDwE50="/>
         <field:display field="idResponsable" id="s_emergencia_entidad_Consejo_idResponsable" object="${consejo}" z="cN5/sSSxb+x85vLkGqJhW8e7NWA="/>
+    <field:display field="nombre" id="s_emergencia_entidad_Consejo_nombre" object="${consejo}" z="3voLDg4Gch1Qt9e0a/1DcmhJzeI="/>
     </page:show>
 </div>

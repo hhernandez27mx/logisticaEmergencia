@@ -2,7 +2,7 @@
 <div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_emergencia_entidad_CentroAcopio" modelAttribute="centroAcopio" path="/centroacopios" render="${empty dependencies}" z="5R5cOFKiTgYlGANKhizUQa/uQQo=">
-        <field:simple field="caSuministroes" id="c_emergencia_entidad_CentroAcopio_caSuministroes" messageCode="entity_reference_not_managed" messageCodeAttribute="Ca Suministro" z="1rP8ejJylzuZuerwiHjHaH6xOL8="/>
+        
         <field:select field="emergencia" id="c_emergencia_entidad_CentroAcopio_emergencia" itemValue="idEmergencia" items="${emergencias}" path="/emergencias" z="uMFO1qepfoL5CdSv7DLZLGIIBJs="/>
         <field:select field="persona" id="c_emergencia_entidad_CentroAcopio_persona" itemValue="idPersona" items="${personae}" path="/personae" z="RKC4ZEqOyBu189M/J6FvynBeK5E="/>
         <field:datetime dateTimePattern="${centroAcopio_fechainicio_date_format}" field="fechaInicio" id="c_emergencia_entidad_CentroAcopio_fechaInicio" required="true" z="HUw0bOWefpxpDCfmf/YYVEg7akI="/>

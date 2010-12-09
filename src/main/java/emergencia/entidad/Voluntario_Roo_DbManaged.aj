@@ -3,30 +3,15 @@
 
 package emergencia.entidad;
 
-import emergencia.entidad.Persona;
 import java.lang.String;
 import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 privileged aspect Voluntario_Roo_DbManaged {
     
-    @ManyToOne
-    @JoinColumn(name = "id_persona", referencedColumnName = "id_persona")
-    private Persona Voluntario.persona;
-    
     @Column(name = "asignacion", length = 20)
     @NotNull
     private String Voluntario.asignacion;
-    
-    public Persona Voluntario.getPersona() {
-        return this.persona;
-    }
-    
-    public void Voluntario.setPersona(Persona persona) {
-        this.persona = persona;
-    }
     
     public String Voluntario.getAsignacion() {
         return this.asignacion;

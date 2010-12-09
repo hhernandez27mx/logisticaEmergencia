@@ -2,8 +2,8 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_emergencia_entidad_Persona" idField="idPersona" modelAttribute="persona" path="/personae" versionField="none" z="pCd6iptCNPFduDbvxF3m6ANGEFk=">
-        <field:simple field="centroAcopios" id="c_emergencia_entidad_Persona_centroAcopios" messageCode="entity_reference_not_managed" messageCodeAttribute="Centro Acopio" z="CEus3rzeUwHVVavtw/RKB05t2XQ="/>
-        <field:simple field="voluntarios" id="c_emergencia_entidad_Persona_voluntarios" messageCode="entity_reference_not_managed" messageCodeAttribute="Voluntario" z="oBAU2uzcCIxHQuJlcgRbCAh7DOE="/>
+        
+        
         <field:input field="locacion" id="c_emergencia_entidad_Persona_locacion" required="true" z="SvPrgibdXjeigC6uKSTtz9s7WD4="/>
         <field:input field="correo" id="c_emergencia_entidad_Persona_correo" required="true" z="T3iwvn8Jts5lSZ0u9md3sG2lWjg="/>
         <field:input field="perfil" id="c_emergencia_entidad_Persona_perfil" required="true" z="OhP4fNpz3GRJYbrGJJSAc7/Qah8="/>

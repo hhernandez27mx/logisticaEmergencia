@@ -5,6 +5,7 @@ package emergencia.entidad;
 
 import emergencia.entidad.Emergencia;
 import java.lang.Integer;
+import java.lang.String;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
@@ -14,6 +15,10 @@ privileged aspect Consejo_Roo_DbManaged {
     
     @OneToMany(mappedBy = "consejo")
     private Set<Emergencia> Consejo.emergencias;
+    
+    @Column(name = "nombre", length = 100)
+    @NotNull
+    private String Consejo.nombre;
     
     @Column(name = "id_responsable")
     @NotNull
@@ -25,6 +30,14 @@ privileged aspect Consejo_Roo_DbManaged {
     
     public void Consejo.setEmergencias(Set<Emergencia> emergencias) {
         this.emergencias = emergencias;
+    }
+    
+    public String Consejo.getNombre() {
+        return this.nombre;
+    }
+    
+    public void Consejo.setNombre(String nombre) {
+        this.nombre = nombre;
     }
     
     public Integer Consejo.getIdResponsable() {

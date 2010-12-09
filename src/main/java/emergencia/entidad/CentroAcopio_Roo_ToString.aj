@@ -9,7 +9,6 @@ privileged aspect CentroAcopio_Roo_ToString {
     
     public String CentroAcopio.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("CaSuministroes: ").append(getCaSuministroes() == null ? "null" : getCaSuministroes().size()).append(", ");
         sb.append("Emergencia: ").append(getEmergencia()).append(", ");
         sb.append("Persona: ").append(getPersona()).append(", ");
         sb.append("FechaInicio: ").append(getFechaInicio()).append(", ");

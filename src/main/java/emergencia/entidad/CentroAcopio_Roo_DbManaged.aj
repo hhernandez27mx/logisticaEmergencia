@@ -3,24 +3,18 @@
 
 package emergencia.entidad;
 
-import emergencia.entidad.CaSuministro;
 import emergencia.entidad.Emergencia;
 import emergencia.entidad.Persona;
 import java.util.Date;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 privileged aspect CentroAcopio_Roo_DbManaged {
-    
-    @OneToMany(mappedBy = "centroAcopio")
-    private Set<CaSuministro> CentroAcopio.caSuministroes;
     
     @ManyToOne
     @JoinColumn(name = "id_emergencia", referencedColumnName = "id_emergencia")
@@ -41,14 +35,6 @@ privileged aspect CentroAcopio_Roo_DbManaged {
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "S-")
     private Date CentroAcopio.fechaFin;
-    
-    public Set<CaSuministro> CentroAcopio.getCaSuministroes() {
-        return this.caSuministroes;
-    }
-    
-    public void CentroAcopio.setCaSuministroes(Set<CaSuministro> caSuministroes) {
-        this.caSuministroes = caSuministroes;
-    }
     
     public Emergencia CentroAcopio.getEmergencia() {
         return this.emergencia;

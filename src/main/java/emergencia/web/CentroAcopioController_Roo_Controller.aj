@@ -3,7 +3,6 @@
 
 package emergencia.web;
 
-import emergencia.entidad.CaSuministro;
 import emergencia.entidad.CentroAcopio;
 import emergencia.entidad.Emergencia;
 import emergencia.entidad.Persona;
@@ -102,11 +101,6 @@ privileged aspect CentroAcopioController_Roo_Controller {
         model.addAttribute("page", (page == null) ? "1" : page.toString());
         model.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/centroacopios?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
-    }
-    
-    @ModelAttribute("casuministroes")
-    public Collection<CaSuministro> CentroAcopioController.populateCaSuministroes() {
-        return CaSuministro.findAllCaSuministroes();
     }
     
     @ModelAttribute("emergencias")

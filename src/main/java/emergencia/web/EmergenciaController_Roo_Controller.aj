@@ -136,7 +136,7 @@ privileged aspect EmergenciaController_Roo_Controller {
     Converter<Consejo, String> EmergenciaController.getConsejoConverter() {
         return new Converter<Consejo, String>() {
             public String convert(Consejo consejo) {
-                return new StringBuilder().append(consejo.getIdResponsable()).toString();
+                return new StringBuilder().append(consejo.getNombre()).append(" ").append(consejo.getIdResponsable()).toString();
             }
         };
     }

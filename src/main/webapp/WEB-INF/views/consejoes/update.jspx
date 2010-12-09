@@ -4,5 +4,6 @@
     <form:update id="fu_emergencia_entidad_Consejo" idField="idConsejo" modelAttribute="consejo" path="/consejoes" versionField="none" z="YIs6okH7Ewt+q6Fpy0NQWOIpD7w=">
         <field:simple field="emergencias" id="c_emergencia_entidad_Consejo_emergencias" messageCode="entity_reference_not_managed" messageCodeAttribute="Emergencia" z="/O5042ApwmWSiHu449D6i1O31TQ="/>
         <field:input field="idResponsable" id="c_emergencia_entidad_Consejo_idResponsable" required="true" validationMessageCode="field_invalid_integer" z="2RrtXzG6AwjD/NOqDwhPto0ppSU="/>
+    <field:input field="nombre" id="c_emergencia_entidad_Consejo_nombre" required="true" z="eMDniNG6Ebczn2leOqAl4hDJ3sk="/>
     </form:update>
 </div>

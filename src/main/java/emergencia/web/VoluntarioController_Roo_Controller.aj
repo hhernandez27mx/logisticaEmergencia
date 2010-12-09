@@ -3,23 +3,22 @@
 
 package emergencia.web;
 
-import emergencia.entidad.Persona;
 import emergencia.entidad.Voluntario;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
-import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.support.GenericConversionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,6 +37,7 @@ privileged aspect VoluntarioController_Roo_Controller {
     public String VoluntarioController.create(@Valid Voluntario voluntario, BindingResult result, Model model, HttpServletRequest request) {
         if (result.hasErrors()) {
             model.addAttribute("voluntario", voluntario);
+            addDateTimeFormatPatterns(model);
             return "voluntarios/create";
         }
         voluntario.persist();
@@ -47,11 +47,13 @@ privileged aspect VoluntarioController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String VoluntarioController.createForm(Model model) {
         model.addAttribute("voluntario", new Voluntario());
+        addDateTimeFormatPatterns(model);
         return "voluntarios/create";
     }
     
     @RequestMapping(value = "/{idVoluntario}", method = RequestMethod.GET)
     public String VoluntarioController.show(@PathVariable("idVoluntario") Integer idVoluntario, Model model) {
+        addDateTimeFormatPatterns(model);
         model.addAttribute("voluntario", Voluntario.findVoluntario(idVoluntario));
         model.addAttribute("itemId", idVoluntario);
         return "voluntarios/show";
@@ -67,6 +69,7 @@ privileged aspect VoluntarioController_Roo_Controller {
         } else {
             model.addAttribute("voluntarios", Voluntario.findAllVoluntarios());
         }
+        addDateTimeFormatPatterns(model);
         return "voluntarios/list";
     }
     
@@ -74,6 +77,7 @@ privileged aspect VoluntarioController_Roo_Controller {
     public String VoluntarioController.update(@Valid Voluntario voluntario, BindingResult result, Model model, HttpServletRequest request) {
         if (result.hasErrors()) {
             model.addAttribute("voluntario", voluntario);
+            addDateTimeFormatPatterns(model);
             return "voluntarios/update";
         }
         voluntario.merge();
@@ -83,6 +87,7 @@ privileged aspect VoluntarioController_Roo_Controller {
     @RequestMapping(value = "/{idVoluntario}", params = "form", method = RequestMethod.GET)
     public String VoluntarioController.updateForm(@PathVariable("idVoluntario") Integer idVoluntario, Model model) {
         model.addAttribute("voluntario", Voluntario.findVoluntario(idVoluntario));
+        addDateTimeFormatPatterns(model);
         return "voluntarios/update";
     }
     
@@ -94,31 +99,21 @@ privileged aspect VoluntarioController_Roo_Controller {
         return "redirect:/voluntarios?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
     }
     
-    @ModelAttribute("personae")
-    public Collection<Persona> VoluntarioController.populatePersonae() {
-        return Persona.findAllPersonae();
-    }
-    
-    Converter<Persona, String> VoluntarioController.getPersonaConverter() {
-        return new Converter<Persona, String>() {
-            public String convert(Persona persona) {
-                return new StringBuilder().append(persona.getLocacion()).append(" ").append(persona.getCorreo()).append(" ").append(persona.getPerfil()).toString();
-            }
-        };
-    }
-    
     Converter<Voluntario, String> VoluntarioController.getVoluntarioConverter() {
         return new Converter<Voluntario, String>() {
             public String convert(Voluntario voluntario) {
-                return new StringBuilder().append(voluntario.getAsignacion()).toString();
+                return new StringBuilder().append(voluntario.getAsignacion()).append(" ").append(voluntario.getNombre()).append(" ").append(voluntario.getCorreo()).toString();
             }
         };
     }
     
     @PostConstruct
     void VoluntarioController.registerConverters() {
-        conversionService.addConverter(getPersonaConverter());
         conversionService.addConverter(getVoluntarioConverter());
+    }
+    
+    void VoluntarioController.addDateTimeFormatPatterns(Model model) {
+        model.addAttribute("voluntario_fechanacimiento_date_format", DateTimeFormat.patternForStyle("S-", LocaleContextHolder.getLocale()));
     }
     
     @RequestMapping(value = "/{idVoluntario}", method = RequestMethod.GET, headers = "Accept=application/json")

@@ -3,13 +3,10 @@
 
 package emergencia.web;
 
-import emergencia.entidad.CentroAcopio;
 import emergencia.entidad.Persona;
-import emergencia.entidad.Voluntario;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
-import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -20,7 +17,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -95,24 +91,6 @@ privileged aspect PersonaController_Roo_Controller {
         return "redirect:/personae?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
     }
     
-    @ModelAttribute("centroacopios")
-    public Collection<CentroAcopio> PersonaController.populateCentroAcopios() {
-        return CentroAcopio.findAllCentroAcopios();
-    }
-    
-    @ModelAttribute("voluntarios")
-    public Collection<Voluntario> PersonaController.populateVoluntarios() {
-        return Voluntario.findAllVoluntarios();
-    }
-    
-    Converter<CentroAcopio, String> PersonaController.getCentroAcopioConverter() {
-        return new Converter<CentroAcopio, String>() {
-            public String convert(CentroAcopio centroAcopio) {
-                return new StringBuilder().append(centroAcopio.getFechaInicio()).append(" ").append(centroAcopio.getFechaFin()).toString();
-            }
-        };
-    }
-    
     Converter<Persona, String> PersonaController.getPersonaConverter() {
         return new Converter<Persona, String>() {
             public String convert(Persona persona) {
@@ -121,19 +99,9 @@ privileged aspect PersonaController_Roo_Controller {
         };
     }
     
-    Converter<Voluntario, String> PersonaController.getVoluntarioConverter() {
-        return new Converter<Voluntario, String>() {
-            public String convert(Voluntario voluntario) {
-                return new StringBuilder().append(voluntario.getAsignacion()).toString();
-            }
-        };
-    }
-    
     @PostConstruct
     void PersonaController.registerConverters() {
-        conversionService.addConverter(getCentroAcopioConverter());
         conversionService.addConverter(getPersonaConverter());
-        conversionService.addConverter(getVoluntarioConverter());
     }
     
     @RequestMapping(value = "/{idPersona}", method = RequestMethod.GET, headers = "Accept=application/json")

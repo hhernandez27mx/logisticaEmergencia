@@ -5,6 +5,7 @@
         <table:table data="${consejoes}" id="l_emergencia_entidad_Consejo" path="/consejoes" typeIdFieldName="idConsejo" z="Gehv77wjKjiCfoa8uy76u+FS1Tg=">
             <table:column id="c_emergencia_entidad_Consejo_emergencias" property="emergencias" z="Pt5VZScA7OoZurviQS3zAMPVKxY="/>
             <table:column id="c_emergencia_entidad_Consejo_idResponsable" property="idResponsable" z="Z4ykpPH6OJNYj4N+LOLuwaaJ4JA="/>
+        <table:column id="c_emergencia_entidad_Consejo_nombre" property="nombre" z="TYh5edno38Dcq1+gIH/zD++u0Kw="/>
         </table:table>
     </page:list>
 </div>

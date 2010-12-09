@@ -2,7 +2,10 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_emergencia_entidad_Voluntario" idField="idVoluntario" modelAttribute="voluntario" path="/voluntarios" versionField="none" z="isikvZe26n/qExJ/L22avCLKQKc=">
-        <field:select field="persona" id="c_emergencia_entidad_Voluntario_persona" itemValue="idPersona" items="${personae}" path="/personae" z="/7Mau8knq/kyXTSDyA90YEnjbJ8="/>
+        
         <field:input field="asignacion" id="c_emergencia_entidad_Voluntario_asignacion" required="true" z="eVdgRtWFpbyum+FyfbffxvQI9wY="/>
+    <field:input field="nombre" id="c_emergencia_entidad_Voluntario_nombre" required="true" z="dbIqj6h4E4YmBsf2T79ys+OMS+E="/>
+    <field:textarea field="correo" id="c_emergencia_entidad_Voluntario_correo" required="true" z="cM7jIZljJyGqNI4VIyhuEzuNlZ0="/>
+    <field:datetime dateTimePattern="${voluntario_fechanacimiento_date_format}" field="fechaNacimiento" id="c_emergencia_entidad_Voluntario_fechaNacimiento" required="true" z="/y3mvsyLKStlnOmQRh+lSqHlhGw="/>
     </form:update>
 </div>

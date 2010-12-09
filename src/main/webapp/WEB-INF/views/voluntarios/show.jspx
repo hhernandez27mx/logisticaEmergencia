@@ -2,7 +2,10 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_emergencia_entidad_Voluntario" object="${voluntario}" path="/voluntarios" z="eC3WJoNONzxJJh0LxbOm1Ck4qIM=">
-        <field:display field="persona" id="s_emergencia_entidad_Voluntario_persona" object="${voluntario}" z="9b6q7dEmHqq8c64PDl3IFH7JrhM="/>
+        
         <field:display field="asignacion" id="s_emergencia_entidad_Voluntario_asignacion" object="${voluntario}" z="Na8ZmOX7p642P0cBCz/VTSjWLJ4="/>
+    <field:display field="nombre" id="s_emergencia_entidad_Voluntario_nombre" object="${voluntario}" z="YMCG87Q27fN7DmPJAQeKIU8eTT4="/>
+    <field:display field="correo" id="s_emergencia_entidad_Voluntario_correo" object="${voluntario}" z="NrLpgDJ5biS0vIoi+CgsDw20ims="/>
+    <field:display date="true" dateTimePattern="${voluntario_fechanacimiento_date_format}" field="fechaNacimiento" id="s_emergencia_entidad_Voluntario_fechaNacimiento" object="${voluntario}" z="ri10EzdOHERUYHArLYkAyYim9O4="/>
     </page:show>
 </div>

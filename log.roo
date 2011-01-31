@@ -77,3 +77,6 @@ field string --fieldName colonia  --notNull
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 14:48:41
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-31 14:52:51
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 14:53:09
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 17:07:39
+entity --class ~.entidad.Direccion --identifierField idDireccion --identifierType java.lang.Integer --identifierColumn id_direccion 
+field string --fieldName calle --notNull 

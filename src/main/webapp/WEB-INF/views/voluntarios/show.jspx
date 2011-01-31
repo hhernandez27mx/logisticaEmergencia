@@ -7,5 +7,6 @@
     <field:display field="nombre" id="s_emergencia_entidad_Voluntario_nombre" object="${voluntario}" z="YMCG87Q27fN7DmPJAQeKIU8eTT4="/>
     <field:display field="correo" id="s_emergencia_entidad_Voluntario_correo" object="${voluntario}" z="NrLpgDJ5biS0vIoi+CgsDw20ims="/>
     <field:display date="true" dateTimePattern="${voluntario_fechanacimiento_date_format}" field="fechaNacimiento" id="s_emergencia_entidad_Voluntario_fechaNacimiento" object="${voluntario}" z="ri10EzdOHERUYHArLYkAyYim9O4="/>
+    <field:display field="twitter" id="s_emergencia_entidad_Voluntario_twitter" object="${voluntario}" z="+1VfktjfsMXhpUzn0EDgouqc5TA="/>
     </page:show>
 </div>

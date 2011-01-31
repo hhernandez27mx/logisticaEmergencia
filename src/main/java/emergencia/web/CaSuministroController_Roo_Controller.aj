@@ -116,7 +116,7 @@ privileged aspect CaSuministroController_Roo_Controller {
     Converter<Suministro, String> CaSuministroController.getSuministroConverter() {
         return new Converter<Suministro, String>() {
             public String convert(Suministro suministro) {
-                return new StringBuilder().append(suministro.getNombre()).toString();
+                return new StringBuilder().append(suministro.getNombre()).append(" ").append(suministro.getRadio()).append(" ").append(suministro.getCategoria()).toString();
             }
         };
     }

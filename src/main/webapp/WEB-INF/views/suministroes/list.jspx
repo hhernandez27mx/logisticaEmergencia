@@ -6,6 +6,8 @@
             
             
             <table:column id="c_emergencia_entidad_Suministro_nombre" property="nombre" z="jcC+/ko6rnpsRuMzba1enSdL6Lk="/>
+        <table:column id="c_emergencia_entidad_Suministro_radio" property="radio" z="TgX624Ukx0Eqn1eepZZYeFF0O7U="/>
+        <table:column id="c_emergencia_entidad_Suministro_categoria" property="categoria" z="bFZ2lj97UCDPkRMpKLsH2fdg6j0="/>
         </table:table>
     </page:list>
 </div>

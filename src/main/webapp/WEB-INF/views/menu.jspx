@@ -47,5 +47,9 @@
             <menu:item id="i_voluntario_new" messageCode="global_menu_new" url="/voluntarios?form" z="I40GuHqB837Nj6LdhPOTz4Nerow="/>
         <menu:item id="i_voluntario_list" messageCode="global_menu_list" url="/voluntarios?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="T0pMlOiVjsQMxVxX2S9Gx5U2oyA="/>
         </menu:category>
+    <menu:category id="c_direccion" z="vv0L6YTwxMeww0i7QGZBXwkHYTk=">
+            <menu:item id="i_direccion_new" messageCode="global_menu_new" url="/direccions?form" z="OB2aiFOrt88EDndGzgT3SA9+2s8="/>
+        <menu:item id="i_direccion_list" messageCode="global_menu_list" url="/direccions?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="Sli08DqToowVj8nPaZ+q7HZzgRc="/>
+        </menu:category>
     </menu:menu>
 </div>

@@ -40,3 +40,24 @@ quit
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-11 16:17:18
 addon list 
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-11 17:42:41
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-27 23:37:56
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-27 23:51:41
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-27 23:57:02
+focus --class emergencia.entidad.Voluntario
+field string --fieldName twitter --notNull --sizeMax 150 
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 00:14:07
+focus --class emergencia.entidad.Suministro
+field number --fieldName radio --type java.lang.Integer --value 0 
+field string --fieldName categoria --notNull  
+entity --class emergencia.entidad.Direccion
+entity --class emergencia.entidad.Direccion --identifierField idDireccion --identifierColumn id_direccion
+field string --fieldName calle --notNull 
+field reference --fieldName poblacion --type emergencia.entidad.Poblacion --notNull 
+// [failed] field reference --fieldName poblacion --type emergencia.entidad.Poblacion --notNull 
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-31 09:58:26
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 10:03:26
+focus --class emergencia.entidad.Direccion 
+field reference --fieldName poblacion --type emergencia.entidad.Direccion --notNull --cardinality ONE_TO_ONE 
+field reference --fieldName poblacion --type emergencia.entidad.Poblacion --notNull --cardinality ONE_TO_ONE 
+// [failed] controller class --class emergencia.entidad.Direccion 
+controller all --package emergencia.web

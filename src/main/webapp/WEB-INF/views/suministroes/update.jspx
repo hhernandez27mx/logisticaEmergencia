@@ -5,5 +5,7 @@
         
         
         <field:input field="nombre" id="c_emergencia_entidad_Suministro_nombre" required="true" z="DGb720irTuJSkpPCGvhQmz4J9q0="/>
+    <field:input field="radio" id="c_emergencia_entidad_Suministro_radio" validationMessageCode="field_invalid_integer" z="rJAIwa1xlYEcQYqCBKPPkO9Cwao="/>
+    <field:input field="categoria" id="c_emergencia_entidad_Suministro_categoria" required="true" z="m+72aL7pAXzYHLKpQcF8iMjV8pA="/>
     </form:update>
 </div>

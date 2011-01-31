@@ -124,7 +124,7 @@ privileged aspect EmergenciaSuministroController_Roo_Controller {
     Converter<Suministro, String> EmergenciaSuministroController.getSuministroConverter() {
         return new Converter<Suministro, String>() {
             public String convert(Suministro suministro) {
-                return new StringBuilder().append(suministro.getNombre()).toString();
+                return new StringBuilder().append(suministro.getNombre()).append(" ").append(suministro.getRadio()).append(" ").append(suministro.getCategoria()).toString();
             }
         };
     }

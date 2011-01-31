@@ -32,4 +32,12 @@ privileged aspect Voluntario_Roo_JavaBean {
         this.fechaNacimiento = fechaNacimiento;
     }
     
+    public String Voluntario.getTwitter() {
+        return this.twitter;
+    }
+    
+    public void Voluntario.setTwitter(String twitter) {
+        this.twitter = twitter;
+    }
+    
 }

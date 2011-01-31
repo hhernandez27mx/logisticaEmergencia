@@ -13,7 +13,8 @@ privileged aspect Voluntario_Roo_ToString {
         sb.append("IdVoluntario: ").append(getIdVoluntario()).append(", ");
         sb.append("Nombre: ").append(getNombre()).append(", ");
         sb.append("Correo: ").append(getCorreo()).append(", ");
-        sb.append("FechaNacimiento: ").append(getFechaNacimiento());
+        sb.append("FechaNacimiento: ").append(getFechaNacimiento()).append(", ");
+        sb.append("Twitter: ").append(getTwitter());
         return sb.toString();
     }
     

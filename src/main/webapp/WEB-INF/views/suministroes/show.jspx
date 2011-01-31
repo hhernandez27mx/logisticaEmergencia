@@ -5,5 +5,7 @@
         
         
         <field:display field="nombre" id="s_emergencia_entidad_Suministro_nombre" object="${suministro}" z="15lYjnPjbY6Pa/spALEK12U+Waw="/>
+    <field:display field="radio" id="s_emergencia_entidad_Suministro_radio" object="${suministro}" z="qW1wrGn+fvvXP0GFzncnbKKUMKU="/>
+    <field:display field="categoria" id="s_emergencia_entidad_Suministro_categoria" object="${suministro}" z="ltXqLUfGh4WQ3824m9IsRpRjgUI="/>
     </page:show>
 </div>

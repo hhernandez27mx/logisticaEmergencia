@@ -32,4 +32,8 @@ public class Voluntario {
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "S-")
     private Date fechaNacimiento;
+
+    
+    @Size(max = 150)
+    private String twitter;
 }

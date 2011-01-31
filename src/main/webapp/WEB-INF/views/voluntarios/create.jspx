@@ -7,6 +7,7 @@
     <field:input field="nombre" id="c_emergencia_entidad_Voluntario_nombre" required="true" z="dbIqj6h4E4YmBsf2T79ys+OMS+E="/>
     <field:textarea field="correo" id="c_emergencia_entidad_Voluntario_correo" required="true" z="cM7jIZljJyGqNI4VIyhuEzuNlZ0="/>
     <field:datetime dateTimePattern="${voluntario_fechanacimiento_date_format}" field="fechaNacimiento" id="c_emergencia_entidad_Voluntario_fechaNacimiento" required="true" z="/y3mvsyLKStlnOmQRh+lSqHlhGw="/>
+    <field:textarea field="twitter" id="c_emergencia_entidad_Voluntario_twitter" z="uikq5ycq+rtgpLsZ/jqdgPtrtD4="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_Voluntario" render="${not empty dependencies}" z="SK2GYbRqh4+47ihAXCrTxtaQ0ZQ="/>
 </div>

@@ -2,7 +2,7 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_emergencia_entidad_InstEncargada" idField="idInstencargada" modelAttribute="instEncargada" path="/instencargadas" versionField="none" z="3K2qJw/e9o/wikCkAGAVJgaIZR4=">
-        <field:simple field="poblacions" id="c_emergencia_entidad_InstEncargada_poblacions" messageCode="entity_reference_not_managed" messageCodeAttribute="Poblacion" z="9XqTo8BBT5HQ4G1xQ4N6WbPRc2k="/>
+        
         <field:input field="nombre" id="c_emergencia_entidad_InstEncargada_nombre" required="true" z="HBTjljwIlv0BibyejG8OlFQR5zc="/>
         <field:input field="idResponsable" id="c_emergencia_entidad_InstEncargada_idResponsable" required="true" validationMessageCode="field_invalid_integer" z="/9L03aYoEQ8yoMYNr1KacX6TTcs="/>
         <field:input field="funciones" id="c_emergencia_entidad_InstEncargada_funciones" required="true" z="431fM4M9DxWcjpr9daViA9AkyV8="/>

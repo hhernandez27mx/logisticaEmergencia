@@ -6,7 +6,6 @@ package emergencia.entidad;
 import emergencia.entidad.CentroAcopio;
 import emergencia.entidad.Consejo;
 import emergencia.entidad.EmergenciaSuministro;
-import emergencia.entidad.Poblacion;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
@@ -26,9 +25,6 @@ privileged aspect Emergencia_Roo_DbManaged {
     
     @OneToMany(mappedBy = "emergencia")
     private Set<EmergenciaSuministro> Emergencia.emergenciaSuministroes;
-    
-    @OneToMany(mappedBy = "emergencia")
-    private Set<Poblacion> Emergencia.poblacions;
     
     @ManyToOne
     @JoinColumn(name = "id_consejo", referencedColumnName = "id_consejo")
@@ -68,14 +64,6 @@ privileged aspect Emergencia_Roo_DbManaged {
     
     public void Emergencia.setEmergenciaSuministroes(Set<EmergenciaSuministro> emergenciaSuministroes) {
         this.emergenciaSuministroes = emergenciaSuministroes;
-    }
-    
-    public Set<Poblacion> Emergencia.getPoblacions() {
-        return this.poblacions;
-    }
-    
-    public void Emergencia.setPoblacions(Set<Poblacion> poblacions) {
-        this.poblacions = poblacions;
     }
     
     public Consejo Emergencia.getConsejo() {

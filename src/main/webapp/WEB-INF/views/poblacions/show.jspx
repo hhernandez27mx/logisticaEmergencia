@@ -2,14 +2,14 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_emergencia_entidad_Poblacion" object="${poblacion}" path="/poblacions" z="x4Ct7OgcrOeD9z741pTOiGO+C/Y=">
-        <field:display field="scis" id="s_emergencia_entidad_Poblacion_scis" object="${poblacion}" z="SQFc5SbQx/p40JP9RAg6g0GOXgo="/>
-        <field:display field="emergencia" id="s_emergencia_entidad_Poblacion_emergencia" object="${poblacion}" z="EqBSI4tYqjDxHaPzcgucZ0ESG7A="/>
-        <field:display field="instEncargada" id="s_emergencia_entidad_Poblacion_instEncargada" object="${poblacion}" z="eYG4FIB1vTt2ribFrQhH4WA5JIU="/>
-        <field:display field="lugar" id="s_emergencia_entidad_Poblacion_lugar" object="${poblacion}" z="KrDUVFddg2Uo3cFeKScLf/AFqvI="/>
-        <field:display field="dano" id="s_emergencia_entidad_Poblacion_dano" object="${poblacion}" z="DOJpyyxLO/j23As3mugaA3aReF4="/>
-        <field:display field="solucion" id="s_emergencia_entidad_Poblacion_solucion" object="${poblacion}" z="+SXcKwrbqyaNup1FquXEsjH3Bsk="/>
-        <field:display field="sectorDescriptivo" id="s_emergencia_entidad_Poblacion_sectorDescriptivo" object="${poblacion}" z="hX7JkyTspW+zJng6Sk+Q8NL+/0Q="/>
-        <field:display field="numEvacuados" id="s_emergencia_entidad_Poblacion_numEvacuados" object="${poblacion}" z="A2KaM1hkwwccjCIZxDNE/BCN6zM="/>
-        <field:display field="numRefugiados" id="s_emergencia_entidad_Poblacion_numRefugiados" object="${poblacion}" z="wlZO8ceZfslbR6kw6XL5EOfGXT0="/>
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </page:show>
 </div>

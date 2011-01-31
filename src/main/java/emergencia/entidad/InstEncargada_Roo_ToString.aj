@@ -9,7 +9,6 @@ privileged aspect InstEncargada_Roo_ToString {
     
     public String InstEncargada.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Poblacions: ").append(getPoblacions() == null ? "null" : getPoblacions().size()).append(", ");
         sb.append("Nombre: ").append(getNombre()).append(", ");
         sb.append("IdResponsable: ").append(getIdResponsable()).append(", ");
         sb.append("Funciones: ").append(getFunciones()).append(", ");

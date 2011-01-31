@@ -3,12 +3,10 @@
 
 package emergencia.web;
 
-import emergencia.entidad.Poblacion;
 import emergencia.entidad.Sci;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
-import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -19,7 +17,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -94,19 +91,6 @@ privileged aspect SciController_Roo_Controller {
         return "redirect:/scis?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
     }
     
-    @ModelAttribute("poblacions")
-    public Collection<Poblacion> SciController.populatePoblacions() {
-        return Poblacion.findAllPoblacions();
-    }
-    
-    Converter<Poblacion, String> SciController.getPoblacionConverter() {
-        return new Converter<Poblacion, String>() {
-            public String convert(Poblacion poblacion) {
-                return new StringBuilder().append(poblacion.getLugar()).append(" ").append(poblacion.getDano()).append(" ").append(poblacion.getSolucion()).toString();
-            }
-        };
-    }
-    
     Converter<Sci, String> SciController.getSciConverter() {
         return new Converter<Sci, String>() {
             public String convert(Sci sci) {
@@ -117,7 +101,6 @@ privileged aspect SciController_Roo_Controller {
     
     @PostConstruct
     void SciController.registerConverters() {
-        conversionService.addConverter(getPoblacionConverter());
         conversionService.addConverter(getSciConverter());
     }
     

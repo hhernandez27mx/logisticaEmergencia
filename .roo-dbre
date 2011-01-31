@@ -62,9 +62,7 @@
      <exportedKey foreignTable="emergencia_suministro" name="emergencia_new_table_fk" onDelete="none" onUpdate="none">
          <reference foreign="id_emergencia" local="id_emergencia" sequenceNumber="1"/>
      </exportedKey>
-     <exportedKey foreignTable="poblacion" name="emergencia_poblacion_fk" onDelete="none" onUpdate="none">
-         <reference foreign="id_emergencia" local="id_emergencia" sequenceNumber="1"/>
-     </exportedKey>
+    
  </table>
  <table name="emergencia_suministro">
      <column index="1" name="id_emer_sumi" primaryKey="true" required="true" size="10" type="INTEGER"/>
@@ -89,9 +87,7 @@
      <unique name="inst_encargada_pk">
          <unique-column name="id_instencargada" sequenceNumber="1"/>
      </unique>
-     <exportedKey foreignTable="poblacion" name="new_table_poblacion_fk" onDelete="none" onUpdate="none">
-         <reference foreign="id_instencargada" local="id_instencargada" sequenceNumber="1"/>
-     </exportedKey>
+   
  </table>
  <table name="persona">
      <column index="1" name="id_persona" primaryKey="true" required="true" size="10" type="INTEGER"/>
@@ -108,26 +104,11 @@
  </table>
  <table name="poblacion">
      <column index="1" name="id_poblacion" primaryKey="true" required="true" size="10" type="INTEGER"/>
-     <column index="2" name="lugar" primaryKey="false" required="true" size="100" type="VARCHAR"/>
-     <column index="3" name="dano" primaryKey="false" required="true" size="2000" type="VARCHAR"/>
-     <column index="4" name="solucion" primaryKey="false" required="true" size="10" type="INTEGER"/>
-     <column index="5" name="sector_descriptivo" primaryKey="false" required="true" size="100" type="VARCHAR"/>
-     <column index="6" name="num_evacuados" primaryKey="false" required="true" size="10" type="INTEGER"/>
-     <column index="7" name="num_refugiados" primaryKey="false" required="true" size="10" type="INTEGER"/>
-     <column index="8" name="id_instencargada" primaryKey="false" required="true" size="10" type="INTEGER"/>
-     <column index="9" name="id_emergencia" primaryKey="false" required="true" size="10" type="INTEGER"/>
-     <foreignKey foreignTable="emergencia" name="emergencia_poblacion_fk" onDelete="none" onUpdate="none">
-         <reference foreign="id_emergencia" local="id_emergencia" sequenceNumber="1"/>
-     </foreignKey>
-     <foreignKey foreignTable="inst_encargada" name="new_table_poblacion_fk" onDelete="none" onUpdate="none">
-         <reference foreign="id_instencargada" local="id_instencargada" sequenceNumber="1"/>
-     </foreignKey>
+    
      <unique name="poblacion_pk">
          <unique-column name="id_poblacion" sequenceNumber="1"/>
      </unique>
-     <exportedKey foreignTable="sci" name="poblacion_new_table_fk" onDelete="none" onUpdate="none">
-         <reference foreign="id_poblacion" local="id_poblacion" sequenceNumber="1"/>
-     </exportedKey>
+    
  </table>
  <table name="sci">
      <column index="1" name="id_sci" primaryKey="true" required="true" size="10" type="INTEGER"/>
@@ -139,10 +120,8 @@
      <column index="7" name="operaciones" primaryKey="false" required="true" size="10" type="INTEGER"/>
      <column index="8" name="logistica" primaryKey="false" required="true" size="10" type="INTEGER"/>
      <column index="9" name="adm_financiera" primaryKey="false" required="true" size="10" type="INTEGER"/>
-     <column index="10" name="id_poblacion" primaryKey="false" required="true" size="10" type="INTEGER"/>
-     <foreignKey foreignTable="poblacion" name="poblacion_new_table_fk" onDelete="none" onUpdate="none">
-         <reference foreign="id_poblacion" local="id_poblacion" sequenceNumber="1"/>
-     </foreignKey>
+   
+     
      <unique name="sci_pk">
          <unique-column name="id_sci" sequenceNumber="1"/>
      </unique>

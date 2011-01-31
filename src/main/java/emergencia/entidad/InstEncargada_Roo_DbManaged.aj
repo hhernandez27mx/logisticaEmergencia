@@ -3,18 +3,12 @@
 
 package emergencia.entidad;
 
-import emergencia.entidad.Poblacion;
 import java.lang.Integer;
 import java.lang.String;
-import java.util.Set;
 import javax.persistence.Column;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 privileged aspect InstEncargada_Roo_DbManaged {
-    
-    @OneToMany(mappedBy = "instEncargada")
-    private Set<Poblacion> InstEncargada.poblacions;
     
     @Column(name = "nombre", length = 100)
     @NotNull
@@ -27,14 +21,6 @@ privileged aspect InstEncargada_Roo_DbManaged {
     @Column(name = "funciones", length = 100)
     @NotNull
     private String InstEncargada.funciones;
-    
-    public Set<Poblacion> InstEncargada.getPoblacions() {
-        return this.poblacions;
-    }
-    
-    public void InstEncargada.setPoblacions(Set<Poblacion> poblacions) {
-        this.poblacions = poblacions;
-    }
     
     public String InstEncargada.getNombre() {
         return this.nombre;

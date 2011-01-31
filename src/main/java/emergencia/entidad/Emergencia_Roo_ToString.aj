@@ -11,7 +11,6 @@ privileged aspect Emergencia_Roo_ToString {
         StringBuilder sb = new StringBuilder();
         sb.append("CentroAcopios: ").append(getCentroAcopios() == null ? "null" : getCentroAcopios().size()).append(", ");
         sb.append("EmergenciaSuministroes: ").append(getEmergenciaSuministroes() == null ? "null" : getEmergenciaSuministroes().size()).append(", ");
-        sb.append("Poblacions: ").append(getPoblacions() == null ? "null" : getPoblacions().size()).append(", ");
         sb.append("Consejo: ").append(getConsejo()).append(", ");
         sb.append("Ubicacion: ").append(getUbicacion()).append(", ");
         sb.append("Nombre: ").append(getNombre()).append(", ");

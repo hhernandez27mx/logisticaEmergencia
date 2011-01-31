@@ -61,3 +61,19 @@ field reference --fieldName poblacion --type emergencia.entidad.Direccion --notN
 field reference --fieldName poblacion --type emergencia.entidad.Poblacion --notNull --cardinality ONE_TO_ONE 
 // [failed] controller class --class emergencia.entidad.Direccion 
 controller all --package emergencia.web
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 13:46:28
+entity --class ~.entidad.Direccion
+entity --class ~.entidad.Direccion --identifierField idDireccion --identifierColumn id_direccion --testAutomatically 
+field string --fieldName calle --notNull 
+field string --fieldName numero --notNull 
+field string --fieldName numeroint --notNull 
+field string --fieldName cp  
+field string --fieldName colonia  --notNull 
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-31 14:33:16
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 14:33:54
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-31 14:46:00
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 14:46:13
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-31 14:48:26
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 14:48:41
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-31 14:52:51
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 14:53:09

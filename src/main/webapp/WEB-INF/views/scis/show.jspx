@@ -2,7 +2,7 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_emergencia_entidad_Sci" object="${sci}" path="/scis" z="xoUEd6inFGFC3rDfj24+pKdTnMw=">
-        <field:display field="poblacion" id="s_emergencia_entidad_Sci_poblacion" object="${sci}" z="i0GNrCRPo+5HbS0w2gHW2Y9nbMo="/>
+        
         <field:display field="comandante" id="s_emergencia_entidad_Sci_comandante" object="${sci}" z="fDaz88FZxbniEa8WjhaKrCDX1R4="/>
         <field:display field="seguridad" id="s_emergencia_entidad_Sci_seguridad" object="${sci}" z="b0cME+xOdc9FxZEGL9F4WeLD/mg="/>
         <field:display field="enlace" id="s_emergencia_entidad_Sci_enlace" object="${sci}" z="bhDWdbUv/L22OXj8tLAD9xZpOX0="/>

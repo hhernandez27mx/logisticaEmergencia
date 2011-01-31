@@ -4,11 +4,9 @@
 package emergencia.web;
 
 import emergencia.entidad.InstEncargada;
-import emergencia.entidad.Poblacion;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
-import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -19,7 +17,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -94,11 +91,6 @@ privileged aspect InstEncargadaController_Roo_Controller {
         return "redirect:/instencargadas?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
     }
     
-    @ModelAttribute("poblacions")
-    public Collection<Poblacion> InstEncargadaController.populatePoblacions() {
-        return Poblacion.findAllPoblacions();
-    }
-    
     Converter<InstEncargada, String> InstEncargadaController.getInstEncargadaConverter() {
         return new Converter<InstEncargada, String>() {
             public String convert(InstEncargada instEncargada) {
@@ -107,18 +99,9 @@ privileged aspect InstEncargadaController_Roo_Controller {
         };
     }
     
-    Converter<Poblacion, String> InstEncargadaController.getPoblacionConverter() {
-        return new Converter<Poblacion, String>() {
-            public String convert(Poblacion poblacion) {
-                return new StringBuilder().append(poblacion.getLugar()).append(" ").append(poblacion.getDano()).append(" ").append(poblacion.getSolucion()).toString();
-            }
-        };
-    }
-    
     @PostConstruct
     void InstEncargadaController.registerConverters() {
         conversionService.addConverter(getInstEncargadaConverter());
-        conversionService.addConverter(getPoblacionConverter());
     }
     
     @RequestMapping(value = "/{idInstencargada}", method = RequestMethod.GET, headers = "Accept=application/json")

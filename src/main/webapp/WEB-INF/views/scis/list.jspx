@@ -3,12 +3,13 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_emergencia_entidad_Sci" items="${scis}" z="nQLeQJeu4J6srNjlTlbBbMvw2Oo=">
         <table:table data="${scis}" id="l_emergencia_entidad_Sci" path="/scis" typeIdFieldName="idSci" z="pc5Wi0W6D9NGWA6zFdpF67YxGhk=">
-            <table:column id="c_emergencia_entidad_Sci_poblacion" property="poblacion" z="MENGVxzBYLp8Xj2mJKh9xDF03v8="/>
+            
             <table:column id="c_emergencia_entidad_Sci_comandante" property="comandante" z="e4+uVMH3l8iKcDBpPrEuulVfisM="/>
             <table:column id="c_emergencia_entidad_Sci_seguridad" property="seguridad" z="AP8/O75Ev6M1tSHIWI3G5Ps4q94="/>
             <table:column id="c_emergencia_entidad_Sci_enlace" property="enlace" z="h8FGOpKXwvhtQQ4HKvSCScT7R9E="/>
             <table:column id="c_emergencia_entidad_Sci_informacionPublica" property="informacionPublica" z="YLyfWOOCm4hajlzmAa/UTlzuuDk="/>
             <table:column id="c_emergencia_entidad_Sci_planeacion" property="planeacion" z="emUUqUvF/DrBAVjSZavfihbr+HA="/>
+        <table:column id="c_emergencia_entidad_Sci_operaciones" property="operaciones" z="eGxpMpKxyADtkp9d5kca5C+oAhc="/>
         </table:table>
     </page:list>
 </div>

@@ -2,9 +2,16 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_emergencia_entidad_Emergencia" idField="idEmergencia" modelAttribute="emergencia" path="/emergencias" versionField="none" z="yTlBy7hD43390cJI4watFvWMDzk=">
-        <field:simple field="centroAcopios" id="c_emergencia_entidad_Emergencia_centroAcopios" messageCode="entity_reference_not_managed" messageCodeAttribute="Centro Acopio" z="JwWTbh0arlns1Ck3yy3TFcoV9cY="/>
+        
+        
+        
+        
+        
+        
+        
+        
+    <field:simple field="centroAcopios" id="c_emergencia_entidad_Emergencia_centroAcopios" messageCode="entity_reference_not_managed" messageCodeAttribute="Centro Acopio" z="JwWTbh0arlns1Ck3yy3TFcoV9cY="/>
         <field:simple field="emergenciaSuministroes" id="c_emergencia_entidad_Emergencia_emergenciaSuministroes" messageCode="entity_reference_not_managed" messageCodeAttribute="Emergencia Suministro" z="haLjJubeEvLPVBCH8u4i2RZexO0="/>
-        <field:simple field="poblacions" id="c_emergencia_entidad_Emergencia_poblacions" messageCode="entity_reference_not_managed" messageCodeAttribute="Poblacion" z="tbUToC8vJX8GF0mYSda1hFhQARk="/>
         <field:select field="consejo" id="c_emergencia_entidad_Emergencia_consejo" itemValue="idConsejo" items="${consejoes}" path="/consejoes" z="RZXKJTCbOGlDM/EI9iB9UByeRPY="/>
         <field:input field="ubicacion" id="c_emergencia_entidad_Emergencia_ubicacion" required="true" z="C/7X+YkgdfHSOnJAXyvCGwriJuk="/>
         <field:input field="nombre" id="c_emergencia_entidad_Emergencia_nombre" required="true" z="dCcNjXC8O+9gKbno2gzc338G1JM="/>

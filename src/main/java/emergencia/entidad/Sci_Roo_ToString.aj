@@ -9,7 +9,6 @@ privileged aspect Sci_Roo_ToString {
     
     public String Sci.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Poblacion: ").append(getPoblacion()).append(", ");
         sb.append("Comandante: ").append(getComandante()).append(", ");
         sb.append("Seguridad: ").append(getSeguridad()).append(", ");
         sb.append("Enlace: ").append(getEnlace()).append(", ");

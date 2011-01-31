@@ -3,18 +3,11 @@
 
 package emergencia.entidad;
 
-import emergencia.entidad.Poblacion;
 import java.lang.Integer;
 import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 privileged aspect Sci_Roo_DbManaged {
-    
-    @ManyToOne
-    @JoinColumn(name = "id_poblacion", referencedColumnName = "id_poblacion")
-    private Poblacion Sci.poblacion;
     
     @Column(name = "comandante")
     @NotNull
@@ -47,14 +40,6 @@ privileged aspect Sci_Roo_DbManaged {
     @Column(name = "adm_financiera")
     @NotNull
     private Integer Sci.admFinanciera;
-    
-    public Poblacion Sci.getPoblacion() {
-        return this.poblacion;
-    }
-    
-    public void Sci.setPoblacion(Poblacion poblacion) {
-        this.poblacion = poblacion;
-    }
     
     public Integer Sci.getComandante() {
         return this.comandante;

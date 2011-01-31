@@ -7,7 +7,6 @@ import emergencia.entidad.CentroAcopio;
 import emergencia.entidad.Consejo;
 import emergencia.entidad.Emergencia;
 import emergencia.entidad.EmergenciaSuministro;
-import emergencia.entidad.Poblacion;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
@@ -120,11 +119,6 @@ privileged aspect EmergenciaController_Roo_Controller {
         return EmergenciaSuministro.findAllEmergenciaSuministroes();
     }
     
-    @ModelAttribute("poblacions")
-    public Collection<Poblacion> EmergenciaController.populatePoblacions() {
-        return Poblacion.findAllPoblacions();
-    }
-    
     Converter<CentroAcopio, String> EmergenciaController.getCentroAcopioConverter() {
         return new Converter<CentroAcopio, String>() {
             public String convert(CentroAcopio centroAcopio) {
@@ -157,21 +151,12 @@ privileged aspect EmergenciaController_Roo_Controller {
         };
     }
     
-    Converter<Poblacion, String> EmergenciaController.getPoblacionConverter() {
-        return new Converter<Poblacion, String>() {
-            public String convert(Poblacion poblacion) {
-                return new StringBuilder().append(poblacion.getLugar()).append(" ").append(poblacion.getDano()).append(" ").append(poblacion.getSolucion()).toString();
-            }
-        };
-    }
-    
     @PostConstruct
     void EmergenciaController.registerConverters() {
         conversionService.addConverter(getCentroAcopioConverter());
         conversionService.addConverter(getConsejoConverter());
         conversionService.addConverter(getEmergenciaConverter());
         conversionService.addConverter(getEmergenciaSuministroConverter());
-        conversionService.addConverter(getPoblacionConverter());
     }
     
     void EmergenciaController.addDateTimeFormatPatterns(Model model) {

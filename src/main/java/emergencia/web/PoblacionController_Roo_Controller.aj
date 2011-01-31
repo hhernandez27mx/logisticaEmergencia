@@ -3,25 +3,18 @@
 
 package emergencia.web;
 
-import emergencia.entidad.Emergencia;
-import emergencia.entidad.InstEncargada;
 import emergencia.entidad.Poblacion;
-import emergencia.entidad.Sci;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
-import java.util.Collection;
-import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.support.GenericConversionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -94,61 +87,6 @@ privileged aspect PoblacionController_Roo_Controller {
         model.addAttribute("page", (page == null) ? "1" : page.toString());
         model.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/poblacions?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
-    }
-    
-    @ModelAttribute("emergencias")
-    public Collection<Emergencia> PoblacionController.populateEmergencias() {
-        return Emergencia.findAllEmergencias();
-    }
-    
-    @ModelAttribute("instencargadas")
-    public Collection<InstEncargada> PoblacionController.populateInstEncargadas() {
-        return InstEncargada.findAllInstEncargadas();
-    }
-    
-    @ModelAttribute("scis")
-    public Collection<Sci> PoblacionController.populateScis() {
-        return Sci.findAllScis();
-    }
-    
-    Converter<Emergencia, String> PoblacionController.getEmergenciaConverter() {
-        return new Converter<Emergencia, String>() {
-            public String convert(Emergencia emergencia) {
-                return new StringBuilder().append(emergencia.getUbicacion()).append(" ").append(emergencia.getNombre()).append(" ").append(emergencia.getFechaInicio()).toString();
-            }
-        };
-    }
-    
-    Converter<InstEncargada, String> PoblacionController.getInstEncargadaConverter() {
-        return new Converter<InstEncargada, String>() {
-            public String convert(InstEncargada instEncargada) {
-                return new StringBuilder().append(instEncargada.getNombre()).append(" ").append(instEncargada.getIdResponsable()).append(" ").append(instEncargada.getFunciones()).toString();
-            }
-        };
-    }
-    
-    Converter<Poblacion, String> PoblacionController.getPoblacionConverter() {
-        return new Converter<Poblacion, String>() {
-            public String convert(Poblacion poblacion) {
-                return new StringBuilder().append(poblacion.getLugar()).append(" ").append(poblacion.getDano()).append(" ").append(poblacion.getSolucion()).toString();
-            }
-        };
-    }
-    
-    Converter<Sci, String> PoblacionController.getSciConverter() {
-        return new Converter<Sci, String>() {
-            public String convert(Sci sci) {
-                return new StringBuilder().append(sci.getComandante()).append(" ").append(sci.getSeguridad()).append(" ").append(sci.getEnlace()).toString();
-            }
-        };
-    }
-    
-    @PostConstruct
-    void PoblacionController.registerConverters() {
-        conversionService.addConverter(getEmergenciaConverter());
-        conversionService.addConverter(getInstEncargadaConverter());
-        conversionService.addConverter(getPoblacionConverter());
-        conversionService.addConverter(getSciConverter());
     }
     
     @RequestMapping(value = "/{idPoblacion}", method = RequestMethod.GET, headers = "Accept=application/json")

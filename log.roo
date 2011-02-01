@@ -80,3 +80,35 @@ field string --fieldName colonia  --notNull
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 17:07:39
 entity --class ~.entidad.Direccion --identifierField idDireccion --identifierType java.lang.Integer --identifierColumn id_direccion 
 field string --fieldName calle --notNull 
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 17:25:50
+focus --class  ~.entidad.Direccion
+field string --fieldName numero --notNull  
+field string --fieldName numeroint   
+field string --fieldName cp 
+field string --fieldName colonia --notNull 
+field reference --fieldName poblacion --type ~.entidad.Poblacion --cardinality ONE_TO_ONE --notNull 
+// [failed] focus --class ~.entidad.Voluntario
+field string --fieldName apellidoPaterno --column apellido_paterno --notNull 
+field string --fieldName apellidoMaterno --column apellido_materno --notNull 
+field string --fieldName facebook --notNull 
+entity --class ~.entidad.Profesion --identifierColumn id_profesion --identifierField idProfesion
+focus --class emergencia.entidad.Voluntario
+field enum --fieldName sexo --type ~.entidad.EnumSexo --notNull 
+field reference --fieldName profesion --type ~.entidad.Profesion --notNull 
+field reference --fieldName domicilioParticular --type ~.entidad.Direccion --notNull 
+field reference --fieldName domicilioLaboral --type ~.entidad.Direccion --cardinality ONE_TO_ONE 
+// [failed] field string --fieldName telefonoParticular --column telefono_particular 
+field string --fieldName telefonoParticular --column telefono_particular 
+field string --fieldName telefonoTrabajo --column telefono_trabajo 
+field string --fieldName numCelular --column num_celular 
+focus --class emergencia.entidad.Poblacion
+field string --fieldName nombre --notNull 
+entity --class ~.entidad.Estado --identifierColumn id_estado --identifierField idEstado
+field string --fieldName nombre --notNull 
+entity --class ~.entidad.Municipio --identifierColumn id_municipio --identifierField idMunicipio
+field string --fieldName nombre --notnull
+field reference --fieldName idEstado --type ~.entidad.Estado --notnull --cardinality ONE_TO_ONE 
+focus --class emergencia.entidad.Poblacion
+field string --fieldName claveCarta --column clave_carta 
+field reference --fieldName idMunicipio --type ~.entidad.Municipio --notnull --cardinality ONE_TO_ONE 
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-31 18:33:56

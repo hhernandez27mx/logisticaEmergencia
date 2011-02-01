@@ -3,18 +3,23 @@
 
 package emergencia.web;
 
+import emergencia.entidad.Municipio;
 import emergencia.entidad.Poblacion;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Collection;
+import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.support.GenericConversionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -87,6 +92,33 @@ privileged aspect PoblacionController_Roo_Controller {
         model.addAttribute("page", (page == null) ? "1" : page.toString());
         model.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/poblacions?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
+    }
+    
+    @ModelAttribute("municipios")
+    public Collection<Municipio> PoblacionController.populateMunicipios() {
+        return Municipio.findAllMunicipios();
+    }
+    
+    Converter<Municipio, String> PoblacionController.getMunicipioConverter() {
+        return new Converter<Municipio, String>() {
+            public String convert(Municipio municipio) {
+                return new StringBuilder().append(municipio.getNombre()).toString();
+            }
+        };
+    }
+    
+    Converter<Poblacion, String> PoblacionController.getPoblacionConverter() {
+        return new Converter<Poblacion, String>() {
+            public String convert(Poblacion poblacion) {
+                return new StringBuilder().append(poblacion.getNombre()).append(" ").append(poblacion.getLatitud()).append(" ").append(poblacion.getLongitud()).toString();
+            }
+        };
+    }
+    
+    @PostConstruct
+    void PoblacionController.registerConverters() {
+        conversionService.addConverter(getMunicipioConverter());
+        conversionService.addConverter(getPoblacionConverter());
     }
     
     @RequestMapping(value = "/{idPoblacion}", method = RequestMethod.GET, headers = "Accept=application/json")

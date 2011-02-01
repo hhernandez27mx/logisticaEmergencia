@@ -3,6 +3,9 @@
 
 package emergencia.entidad;
 
+import emergencia.entidad.Direccion;
+import emergencia.entidad.EnumSexo;
+import emergencia.entidad.Profesion;
 import java.lang.String;
 import java.util.Date;
 
@@ -38,6 +41,94 @@ privileged aspect Voluntario_Roo_JavaBean {
     
     public void Voluntario.setTwitter(String twitter) {
         this.twitter = twitter;
+    }
+    
+    public String Voluntario.getApellidoPaterno() {
+        return this.apellidoPaterno;
+    }
+    
+    public void Voluntario.setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
+    }
+    
+    public String Voluntario.getApellidoMaterno() {
+        return this.apellidoMaterno;
+    }
+    
+    public void Voluntario.setApellidoMaterno(String apellidoMaterno) {
+        this.apellidoMaterno = apellidoMaterno;
+    }
+    
+    public String Voluntario.getFacebook() {
+        return this.facebook;
+    }
+    
+    public void Voluntario.setFacebook(String facebook) {
+        this.facebook = facebook;
+    }
+    
+    public byte[] Voluntario.getFoto() {
+        return this.foto;
+    }
+    
+    public void Voluntario.setFoto(byte[] foto) {
+        this.foto = foto;
+    }
+    
+    public EnumSexo Voluntario.getSexo() {
+        return this.sexo;
+    }
+    
+    public void Voluntario.setSexo(EnumSexo sexo) {
+        this.sexo = sexo;
+    }
+    
+    public Profesion Voluntario.getProfesion() {
+        return this.profesion;
+    }
+    
+    public void Voluntario.setProfesion(Profesion profesion) {
+        this.profesion = profesion;
+    }
+    
+    public Direccion Voluntario.getDomicilioParticular() {
+        return this.domicilioParticular;
+    }
+    
+    public void Voluntario.setDomicilioParticular(Direccion domicilioParticular) {
+        this.domicilioParticular = domicilioParticular;
+    }
+    
+    public Direccion Voluntario.getDomicilioLaboral() {
+        return this.domicilioLaboral;
+    }
+    
+    public void Voluntario.setDomicilioLaboral(Direccion domicilioLaboral) {
+        this.domicilioLaboral = domicilioLaboral;
+    }
+    
+    public String Voluntario.getTelefonoParticular() {
+        return this.telefonoParticular;
+    }
+    
+    public void Voluntario.setTelefonoParticular(String telefonoParticular) {
+        this.telefonoParticular = telefonoParticular;
+    }
+    
+    public String Voluntario.getTelefonoTrabajo() {
+        return this.telefonoTrabajo;
+    }
+    
+    public void Voluntario.setTelefonoTrabajo(String telefonoTrabajo) {
+        this.telefonoTrabajo = telefonoTrabajo;
+    }
+    
+    public String Voluntario.getNumCelular() {
+        return this.numCelular;
+    }
+    
+    public void Voluntario.setNumCelular(String numCelular) {
+        this.numCelular = numCelular;
     }
     
 }

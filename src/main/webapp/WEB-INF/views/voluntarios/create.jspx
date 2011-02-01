@@ -8,6 +8,17 @@
     <field:textarea field="correo" id="c_emergencia_entidad_Voluntario_correo" required="true" z="cM7jIZljJyGqNI4VIyhuEzuNlZ0="/>
     <field:datetime dateTimePattern="${voluntario_fechanacimiento_date_format}" field="fechaNacimiento" id="c_emergencia_entidad_Voluntario_fechaNacimiento" required="true" z="/y3mvsyLKStlnOmQRh+lSqHlhGw="/>
     <field:textarea field="twitter" id="c_emergencia_entidad_Voluntario_twitter" z="uikq5ycq+rtgpLsZ/jqdgPtrtD4="/>
+    <field:input field="apellidoPaterno" id="c_emergencia_entidad_Voluntario_apellidoPaterno" required="true" z="lJuhKZBtsgY/8crWVm5hTrB0shE="/>
+    <field:input field="apellidoMaterno" id="c_emergencia_entidad_Voluntario_apellidoMaterno" required="true" z="oK9ZfMhNPkKJzaApQHx3MPruAi4="/>
+    <field:input field="facebook" id="c_emergencia_entidad_Voluntario_facebook" required="true" z="vt1jpaoapocxxHHuFkjWve1mtac="/>
+    <field:input field="foto" id="c_emergencia_entidad_Voluntario_foto" z="sXIVsnB13biQorEViP9WVNAGF1w="/>
+    <field:select field="sexo" id="c_emergencia_entidad_Voluntario_sexo" items="${enumsexoes}" path="enumsexoes" required="true" z="ersteWQZDB07iunku/xOPaVZXPQ="/>
+    <field:select field="profesion" id="c_emergencia_entidad_Voluntario_profesion" itemValue="idProfesion" items="${profesions}" path="/profesions" required="true" z="Zp7aerdGnomXTTxtP6ljuZCLNCg="/>
+    <field:select field="domicilioParticular" id="c_emergencia_entidad_Voluntario_domicilioParticular" itemValue="idDireccion" items="${direccions}" path="/direccions" required="true" z="1nFCww+OYIUkvAXCcCPvK4vBy8g="/>
+    <field:select field="domicilioLaboral" id="c_emergencia_entidad_Voluntario_domicilioLaboral" itemValue="idDireccion" items="${direccions}" path="/direccions" z="D0SAjxp6FcduMemSomTA4V0+6/Y="/>
+    <field:input field="telefonoParticular" id="c_emergencia_entidad_Voluntario_telefonoParticular" z="8Ts3VRxP+AlIw4r/0B07uq/V9XU="/>
+    <field:input field="telefonoTrabajo" id="c_emergencia_entidad_Voluntario_telefonoTrabajo" z="7QTZmjqhAHAA1lTkjBzTJJO1M3A="/>
+    <field:input field="numCelular" id="c_emergencia_entidad_Voluntario_numCelular" z="kDn2yu5vhI4cHzormd8KFndSZe4="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_Voluntario" render="${not empty dependencies}" z="SK2GYbRqh4+47ihAXCrTxtaQ0ZQ="/>
 </div>

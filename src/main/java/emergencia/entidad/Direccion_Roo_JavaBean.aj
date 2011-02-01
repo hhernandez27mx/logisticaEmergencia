@@ -3,6 +3,7 @@
 
 package emergencia.entidad;
 
+import emergencia.entidad.Poblacion;
 import java.lang.String;
 
 privileged aspect Direccion_Roo_JavaBean {
@@ -13,6 +14,46 @@ privileged aspect Direccion_Roo_JavaBean {
     
     public void Direccion.setCalle(String calle) {
         this.calle = calle;
+    }
+    
+    public String Direccion.getNumero() {
+        return this.numero;
+    }
+    
+    public void Direccion.setNumero(String numero) {
+        this.numero = numero;
+    }
+    
+    public String Direccion.getNumeroint() {
+        return this.numeroint;
+    }
+    
+    public void Direccion.setNumeroint(String numeroint) {
+        this.numeroint = numeroint;
+    }
+    
+    public String Direccion.getCp() {
+        return this.cp;
+    }
+    
+    public void Direccion.setCp(String cp) {
+        this.cp = cp;
+    }
+    
+    public String Direccion.getColonia() {
+        return this.colonia;
+    }
+    
+    public void Direccion.setColonia(String colonia) {
+        this.colonia = colonia;
+    }
+    
+    public Poblacion Direccion.getPoblacion() {
+        return this.poblacion;
+    }
+    
+    public void Direccion.setPoblacion(Poblacion poblacion) {
+        this.poblacion = poblacion;
     }
     
 }

@@ -11,5 +11,15 @@
         
         
         
+    <field:display field="nombre" id="s_emergencia_entidad_Poblacion_nombre" object="${poblacion}" z="H27g+Ec/VYDOjGIgkxiwQt7j4dI="/>
+    <field:display field="latitud" id="s_emergencia_entidad_Poblacion_latitud" object="${poblacion}" z="H2BEsDG6iBgOBrbkIvIRaEBFncw="/>
+        <field:display field="longitud" id="s_emergencia_entidad_Poblacion_longitud" object="${poblacion}" z="8e6+qaIwKhZhPuogWdNmqh8KrtI="/>
+        <field:display field="altitud" id="s_emergencia_entidad_Poblacion_altitud" object="${poblacion}" z="0xQJA89CV6um1i4xaWCS7MCiuFc="/>
+    <field:display field="claveCarta" id="s_emergencia_entidad_Poblacion_claveCarta" object="${poblacion}" z="mLuhUksKYRtsw9VZdqJsPa49fwE="/>
+    <field:display field="idMunicipio" id="s_emergencia_entidad_Poblacion_idMunicipio" object="${poblacion}" z="zihlUvfdCzfyRw7ApW5iKnn0al8="/>
+    <field:display field="p_total" id="s_emergencia_entidad_Poblacion_p_total" object="${poblacion}" z="KxFMF6acJho4dDt9QQDGjTSzRIE="/>
+        <field:display field="p_maculina" id="s_emergencia_entidad_Poblacion_p_maculina" object="${poblacion}" z="/q+rlR2QmvvndMXx7RL6Beq2OgE="/>
+        <field:display field="p_femenina" id="s_emergencia_entidad_Poblacion_p_femenina" object="${poblacion}" z="w2QnJ5fwXL5txgQbgRKbBS/O+ME="/>
+        <field:display field="p_vhabitadas" id="s_emergencia_entidad_Poblacion_p_vhabitadas" object="${poblacion}" z="yLgz5zZVPN64Vn8bIRmMogFcb+g="/>
     </page:show>
 </div>

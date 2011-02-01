@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Table;
+import javax.persistence.Version;
 import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect Poblacion_Roo_Entity {
@@ -30,12 +31,24 @@ privileged aspect Poblacion_Roo_Entity {
     @Column(name = "id_poblacion")
     private Integer Poblacion.idPoblacion;
     
+    @Version
+    @Column(name = "version")
+    private Integer Poblacion.version;
+    
     public Integer Poblacion.getIdPoblacion() {
         return this.idPoblacion;
     }
     
     public void Poblacion.setIdPoblacion(Integer id) {
         this.idPoblacion = id;
+    }
+    
+    public Integer Poblacion.getVersion() {
+        return this.version;
+    }
+    
+    public void Poblacion.setVersion(Integer version) {
+        this.version = version;
     }
     
     @Transactional

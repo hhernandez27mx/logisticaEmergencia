@@ -10,6 +10,14 @@
             
             
         
+        <table:column id="c_emergencia_entidad_Poblacion_nombre" property="nombre" z="VRkBjCi2BlgHD351WG9w0kDpKw0="/>
+        <table:column id="c_emergencia_entidad_Poblacion_latitud" property="latitud" z="8Tfx/E9dcj2svzK5NSx32b0trJk="/>
+            <table:column id="c_emergencia_entidad_Poblacion_longitud" property="longitud" z="ZIR+TpFAq/nmogqPLr1Gu4LHhZE="/>
+            <table:column id="c_emergencia_entidad_Poblacion_altitud" property="altitud" z="G4rT2L3rO6EGxB0bTttq7bO2HNs="/>
+        
+        
+        <table:column id="c_emergencia_entidad_Poblacion_p_total" property="p_total" z="mJVwU+WbPo2L3z4+AxG/KiaGozI="/>
+            <table:column id="c_emergencia_entidad_Poblacion_p_maculina" property="p_maculina" z="xVrLuJcjiiCShxYz69SmInqKvO0="/>
         </table:table>
     </page:list>
 </div>

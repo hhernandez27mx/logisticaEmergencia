@@ -8,5 +8,16 @@
     <field:display field="correo" id="s_emergencia_entidad_Voluntario_correo" object="${voluntario}" z="NrLpgDJ5biS0vIoi+CgsDw20ims="/>
     <field:display date="true" dateTimePattern="${voluntario_fechanacimiento_date_format}" field="fechaNacimiento" id="s_emergencia_entidad_Voluntario_fechaNacimiento" object="${voluntario}" z="ri10EzdOHERUYHArLYkAyYim9O4="/>
     <field:display field="twitter" id="s_emergencia_entidad_Voluntario_twitter" object="${voluntario}" z="+1VfktjfsMXhpUzn0EDgouqc5TA="/>
+    <field:display field="apellidoPaterno" id="s_emergencia_entidad_Voluntario_apellidoPaterno" object="${voluntario}" z="RvL0NzsEFAQnn/lP8IVFZ9RzaCk="/>
+    <field:display field="apellidoMaterno" id="s_emergencia_entidad_Voluntario_apellidoMaterno" object="${voluntario}" z="FIhsW7Hdeox9NS5p7jzhcYkUGdQ="/>
+    <field:display field="facebook" id="s_emergencia_entidad_Voluntario_facebook" object="${voluntario}" z="EFhof6XfYxPcG/Pe/ezG832mYcw="/>
+    <field:display field="foto" id="s_emergencia_entidad_Voluntario_foto" object="${voluntario}" z="QIapRMCQJX9l5mCPkFYnO4Vrj14="/>
+    <field:display field="sexo" id="s_emergencia_entidad_Voluntario_sexo" object="${voluntario}" z="zW30kvH+/AgmXOuYMEXCTKrYAAs="/>
+    <field:display field="profesion" id="s_emergencia_entidad_Voluntario_profesion" object="${voluntario}" z="emeDG9LIKz8ZuMUzAFOKv/1RbIc="/>
+    <field:display field="domicilioParticular" id="s_emergencia_entidad_Voluntario_domicilioParticular" object="${voluntario}" z="XXU9pwnHiTR1XWxeU9bhRLQUrGI="/>
+    <field:display field="domicilioLaboral" id="s_emergencia_entidad_Voluntario_domicilioLaboral" object="${voluntario}" z="NBoFLDiam91SUpfmz4QgocvyqVI="/>
+    <field:display field="telefonoParticular" id="s_emergencia_entidad_Voluntario_telefonoParticular" object="${voluntario}" z="HM+tRP9zCTUZVSohcq3XLBQqK84="/>
+    <field:display field="telefonoTrabajo" id="s_emergencia_entidad_Voluntario_telefonoTrabajo" object="${voluntario}" z="MC31Hs0Vy2ElLfNedKLGCwc0KIA="/>
+    <field:display field="numCelular" id="s_emergencia_entidad_Voluntario_numCelular" object="${voluntario}" z="sxfjphJmNSY7SdCFHmFTOzvJKKs="/>
     </page:show>
 </div>

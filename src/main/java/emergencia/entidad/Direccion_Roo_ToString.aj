@@ -11,7 +11,12 @@ privileged aspect Direccion_Roo_ToString {
         StringBuilder sb = new StringBuilder();
         sb.append("IdDireccion: ").append(getIdDireccion()).append(", ");
         sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("Calle: ").append(getCalle());
+        sb.append("Calle: ").append(getCalle()).append(", ");
+        sb.append("Numero: ").append(getNumero()).append(", ");
+        sb.append("Numeroint: ").append(getNumeroint()).append(", ");
+        sb.append("Cp: ").append(getCp()).append(", ");
+        sb.append("Colonia: ").append(getColonia()).append(", ");
+        sb.append("Poblacion: ").append(getPoblacion());
         return sb.toString();
     }
     

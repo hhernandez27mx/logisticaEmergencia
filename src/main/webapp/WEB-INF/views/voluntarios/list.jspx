@@ -9,6 +9,7 @@
         <table:column id="c_emergencia_entidad_Voluntario_correo" property="correo" z="IcXS3FBPpEu5pE6AmXa3OInTIcw="/>
         <table:column id="c_emergencia_entidad_Voluntario_fechaNacimiento" property="fechaNacimiento" z="PXm45/xdRN8v/7pnVRkGb3ZiV5I="/>
         <table:column id="c_emergencia_entidad_Voluntario_twitter" property="twitter" z="6SL8pGTx5EMhWsfiJ1XBtH7/5yg="/>
+        <table:column id="c_emergencia_entidad_Voluntario_apellidoPaterno" property="apellidoPaterno" z="gZJJk6BpAdo7ylVCfs3ZGxIGrL4="/>
         </table:table>
     </page:list>
 </div>

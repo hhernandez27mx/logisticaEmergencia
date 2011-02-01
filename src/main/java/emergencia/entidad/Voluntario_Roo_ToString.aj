@@ -14,7 +14,18 @@ privileged aspect Voluntario_Roo_ToString {
         sb.append("Nombre: ").append(getNombre()).append(", ");
         sb.append("Correo: ").append(getCorreo()).append(", ");
         sb.append("FechaNacimiento: ").append(getFechaNacimiento()).append(", ");
-        sb.append("Twitter: ").append(getTwitter());
+        sb.append("Twitter: ").append(getTwitter()).append(", ");
+        sb.append("ApellidoPaterno: ").append(getApellidoPaterno()).append(", ");
+        sb.append("ApellidoMaterno: ").append(getApellidoMaterno()).append(", ");
+        sb.append("Facebook: ").append(getFacebook()).append(", ");
+        sb.append("Foto: ").append(java.util.Arrays.toString(getFoto())).append(", ");
+        sb.append("Sexo: ").append(getSexo()).append(", ");
+        sb.append("Profesion: ").append(getProfesion()).append(", ");
+        sb.append("DomicilioParticular: ").append(getDomicilioParticular()).append(", ");
+        sb.append("DomicilioLaboral: ").append(getDomicilioLaboral()).append(", ");
+        sb.append("TelefonoParticular: ").append(getTelefonoParticular()).append(", ");
+        sb.append("TelefonoTrabajo: ").append(getTelefonoTrabajo()).append(", ");
+        sb.append("NumCelular: ").append(getNumCelular());
         return sb.toString();
     }
     

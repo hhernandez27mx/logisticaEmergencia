@@ -3,10 +3,17 @@
 
 package emergencia.web;
 
+import emergencia.entidad.Direccion;
+import emergencia.entidad.EnumSexo;
+import emergencia.entidad.Profesion;
 import emergencia.entidad.Voluntario;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -19,6 +26,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,6 +56,14 @@ privileged aspect VoluntarioController_Roo_Controller {
     public String VoluntarioController.createForm(Model model) {
         model.addAttribute("voluntario", new Voluntario());
         addDateTimeFormatPatterns(model);
+        List dependencies = new ArrayList();
+        if (Direccion.countDireccions() == 0) {
+            dependencies.add(new String[]{"domicilioParticular", "direccions"});
+        }
+        if (Profesion.countProfesions() == 0) {
+            dependencies.add(new String[]{"profesion", "profesions"});
+        }
+        model.addAttribute("dependencies", dependencies);
         return "voluntarios/create";
     }
     
@@ -99,6 +115,29 @@ privileged aspect VoluntarioController_Roo_Controller {
         return "redirect:/voluntarios?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
     }
     
+    @ModelAttribute("direccions")
+    public Collection<Direccion> VoluntarioController.populateDireccions() {
+        return Direccion.findAllDireccions();
+    }
+    
+    @ModelAttribute("enumsexoes")
+    public Collection<EnumSexo> VoluntarioController.populateEnumSexoes() {
+        return Arrays.asList(EnumSexo.class.getEnumConstants());
+    }
+    
+    @ModelAttribute("profesions")
+    public Collection<Profesion> VoluntarioController.populateProfesions() {
+        return Profesion.findAllProfesions();
+    }
+    
+    Converter<Direccion, String> VoluntarioController.getDireccionConverter() {
+        return new Converter<Direccion, String>() {
+            public String convert(Direccion direccion) {
+                return new StringBuilder().append(direccion.getCalle()).append(" ").append(direccion.getNumero()).append(" ").append(direccion.getNumeroint()).toString();
+            }
+        };
+    }
+    
     Converter<Voluntario, String> VoluntarioController.getVoluntarioConverter() {
         return new Converter<Voluntario, String>() {
             public String convert(Voluntario voluntario) {
@@ -109,6 +148,7 @@ privileged aspect VoluntarioController_Roo_Controller {
     
     @PostConstruct
     void VoluntarioController.registerConverters() {
+        conversionService.addConverter(getDireccionConverter());
         conversionService.addConverter(getVoluntarioConverter());
     }
     

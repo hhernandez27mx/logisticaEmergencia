@@ -11,6 +11,16 @@
         
         
         
+    <field:input field="nombre" id="c_emergencia_entidad_Poblacion_nombre" required="true" z="spk63x2WgrYnOjD4lVWgZaOogW8="/>
+    <field:input field="latitud" id="c_emergencia_entidad_Poblacion_latitud" required="true" z="yMPfYRL2/YXIEIZ3ZZB+BRQ305M="/>
+        <field:input field="longitud" id="c_emergencia_entidad_Poblacion_longitud" required="true" z="/m6Y/U7VnLPwhW96Q01tdr+3D6w="/>
+        <field:input field="altitud" id="c_emergencia_entidad_Poblacion_altitud" required="true" z="8i19LrPSMOKIUmGoupIaX95pGm8="/>
+    <field:input field="claveCarta" id="c_emergencia_entidad_Poblacion_claveCarta" z="R9hUjkv+nyaueHZsl8iBFrXJCtM="/>
+    <field:select field="idMunicipio" id="c_emergencia_entidad_Poblacion_idMunicipio" itemValue="idMunicipio" items="${municipios}" path="/municipios" z="gmSxL3MLPBeRoHTh0Zv5vqFal1Q="/>
+    <field:input field="p_total" id="c_emergencia_entidad_Poblacion_p_total" z="NUcYHur0Xbqr2pdS3xKHI77eoAM="/>
+        <field:input field="p_maculina" id="c_emergencia_entidad_Poblacion_p_maculina" z="Pjwiv8e+kUjyC8B0byr+r+gBQmc="/>
+        <field:input field="p_femenina" id="c_emergencia_entidad_Poblacion_p_femenina" z="h6GrBn8pfxRfbIQISRO/S+mrt9o="/>
+        <field:input field="p_vhabitadas" id="c_emergencia_entidad_Poblacion_p_vhabitadas" z="hpvOHgHJ18zQiVnQKHSGQxIz6tU="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_Poblacion" render="${not empty dependencies}" z="JEq7UpGMqX4CeTvs/5i1reQDX1I="/>
 </div>

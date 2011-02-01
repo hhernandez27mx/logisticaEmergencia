@@ -9,7 +9,18 @@ privileged aspect Poblacion_Roo_ToString {
     
     public String Poblacion.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("IdPoblacion: ").append(getIdPoblacion());
+        sb.append("IdPoblacion: ").append(getIdPoblacion()).append(", ");
+        sb.append("Version: ").append(getVersion()).append(", ");
+        sb.append("Nombre: ").append(getNombre()).append(", ");
+        sb.append("Latitud: ").append(getLatitud()).append(", ");
+        sb.append("Longitud: ").append(getLongitud()).append(", ");
+        sb.append("Altitud: ").append(getAltitud()).append(", ");
+        sb.append("P_total: ").append(getP_total()).append(", ");
+        sb.append("P_maculina: ").append(getP_maculina()).append(", ");
+        sb.append("P_femenina: ").append(getP_femenina()).append(", ");
+        sb.append("P_vhabitadas: ").append(getP_vhabitadas()).append(", ");
+        sb.append("ClaveCarta: ").append(getClaveCarta()).append(", ");
+        sb.append("IdMunicipio: ").append(getIdMunicipio());
         return sb.toString();
     }
     

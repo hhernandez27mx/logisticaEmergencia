@@ -5,7 +5,6 @@ package emergencia.web;
 
 import emergencia.entidad.CentroAcopio;
 import emergencia.entidad.Emergencia;
-import emergencia.entidad.Persona;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
@@ -108,11 +107,6 @@ privileged aspect CentroAcopioController_Roo_Controller {
         return Emergencia.findAllEmergencias();
     }
     
-    @ModelAttribute("personae")
-    public Collection<Persona> CentroAcopioController.populatePersonae() {
-        return Persona.findAllPersonae();
-    }
-    
     Converter<CentroAcopio, String> CentroAcopioController.getCentroAcopioConverter() {
         return new Converter<CentroAcopio, String>() {
             public String convert(CentroAcopio centroAcopio) {
@@ -129,19 +123,10 @@ privileged aspect CentroAcopioController_Roo_Controller {
         };
     }
     
-    Converter<Persona, String> CentroAcopioController.getPersonaConverter() {
-        return new Converter<Persona, String>() {
-            public String convert(Persona persona) {
-                return new StringBuilder().append(persona.getLocacion()).append(" ").append(persona.getCorreo()).append(" ").append(persona.getPerfil()).toString();
-            }
-        };
-    }
-    
     @PostConstruct
     void CentroAcopioController.registerConverters() {
         conversionService.addConverter(getCentroAcopioConverter());
         conversionService.addConverter(getEmergenciaConverter());
-        conversionService.addConverter(getPersonaConverter());
     }
     
     void CentroAcopioController.addDateTimeFormatPatterns(Model model) {

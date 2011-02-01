@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 
 @RooJavaBean
 @RooToString
-@RooEntity(versionField = "", table = "suministro", schema = "public")
+@RooEntity(versionField = "version", table = "suministro", schema = "public")
 @RooDbManaged(automaticallyDelete = true)
 @RooJson
 public class Suministro {
@@ -20,4 +20,7 @@ public class Suministro {
 
     @NotNull
     private String categoria;
+    
+    @NotNull
+    private String nombre;
 }

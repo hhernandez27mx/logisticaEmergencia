@@ -16,6 +16,14 @@ privileged aspect Municipio_Roo_JavaBean {
         this.nombre = nombre;
     }
     
+    public String Municipio.getCve_municipio() {
+        return this.cve_municipio;
+    }
+    
+    public void Municipio.setCve_municipio(String cve_municipio) {
+        this.cve_municipio = cve_municipio;
+    }
+    
     public Estado Municipio.getIdEstado() {
         return this.idEstado;
     }

@@ -32,6 +32,14 @@ privileged aspect Poblacion_Roo_JavaBean {
         this.longitud = longitud;
     }
     
+    public String Poblacion.getAmbito() {
+        return this.ambito;
+    }
+    
+    public void Poblacion.setAmbito(String ambito) {
+        this.ambito = ambito;
+    }
+    
     public String Poblacion.getAltitud() {
         return this.altitud;
     }
@@ -86,6 +94,30 @@ privileged aspect Poblacion_Roo_JavaBean {
     
     public void Poblacion.setIdMunicipio(Municipio idMunicipio) {
         this.idMunicipio = idMunicipio;
+    }
+    
+    public String Poblacion.getClave_estado() {
+        return this.clave_estado;
+    }
+    
+    public void Poblacion.setClave_estado(String clave_estado) {
+        this.clave_estado = clave_estado;
+    }
+    
+    public String Poblacion.getClave_mun() {
+        return this.clave_mun;
+    }
+    
+    public void Poblacion.setClave_mun(String clave_mun) {
+        this.clave_mun = clave_mun;
+    }
+    
+    public String Poblacion.getClave_loc() {
+        return this.clave_loc;
+    }
+    
+    public void Poblacion.setClave_loc(String clave_loc) {
+        this.clave_loc = clave_loc;
     }
     
 }

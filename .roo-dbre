@@ -20,13 +20,11 @@
      <column index="2" name="id_emergencia" primaryKey="false" required="true" size="10" type="INTEGER"/>
      <column index="3" name="fecha_inicio" primaryKey="false" required="true" size="29" type="TIMESTAMP"/>
      <column index="4" name="fecha_fin" primaryKey="false" required="true" size="29" type="TIMESTAMP"/>
-     <column index="5" name="id_encargado" primaryKey="false" required="true" size="10" type="INTEGER"/>
+    
      <foreignKey foreignTable="emergencia" name="emergencia_centro_acopio_fk" onDelete="none" onUpdate="none">
          <reference foreign="id_emergencia" local="id_emergencia" sequenceNumber="1"/>
      </foreignKey>
-     <foreignKey foreignTable="persona" name="persona_centro_acopio_fk" onDelete="none" onUpdate="none">
-         <reference foreign="id_persona" local="id_encargado" sequenceNumber="1"/>
-     </foreignKey>
+    
      <unique name="centro_acopio_pk">
          <unique-column name="id_centroacopio" sequenceNumber="1"/>
      </unique>

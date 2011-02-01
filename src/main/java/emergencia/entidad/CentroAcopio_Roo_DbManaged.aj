@@ -4,7 +4,6 @@
 package emergencia.entidad;
 
 import emergencia.entidad.Emergencia;
-import emergencia.entidad.Persona;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.JoinColumn;
@@ -19,10 +18,6 @@ privileged aspect CentroAcopio_Roo_DbManaged {
     @ManyToOne
     @JoinColumn(name = "id_emergencia", referencedColumnName = "id_emergencia")
     private Emergencia CentroAcopio.emergencia;
-    
-    @ManyToOne
-    @JoinColumn(name = "id_encargado", referencedColumnName = "id_persona")
-    private Persona CentroAcopio.persona;
     
     @Column(name = "fecha_inicio")
     @NotNull
@@ -42,14 +37,6 @@ privileged aspect CentroAcopio_Roo_DbManaged {
     
     public void CentroAcopio.setEmergencia(Emergencia emergencia) {
         this.emergencia = emergencia;
-    }
-    
-    public Persona CentroAcopio.getPersona() {
-        return this.persona;
-    }
-    
-    public void CentroAcopio.setPersona(Persona persona) {
-        this.persona = persona;
     }
     
     public Date CentroAcopio.getFechaInicio() {

@@ -5,15 +5,13 @@ package emergencia.entidad;
 
 import java.lang.String;
 
-privileged aspect Municipio_Roo_ToString {
+privileged aspect Perfil_Roo_ToString {
     
-    public String Municipio.toString() {
+    public String Perfil.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("IdMunicipio: ").append(getIdMunicipio()).append(", ");
+        sb.append("IdPerfil: ").append(getIdPerfil()).append(", ");
         sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("Nombre: ").append(getNombre()).append(", ");
-        sb.append("Cve_municipio: ").append(getCve_municipio()).append(", ");
-        sb.append("IdEstado: ").append(getIdEstado());
+        sb.append("Nombre: ").append(getNombre());
         return sb.toString();
     }
     

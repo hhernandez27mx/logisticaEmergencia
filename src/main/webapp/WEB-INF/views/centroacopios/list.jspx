@@ -5,7 +5,7 @@
         <table:table data="${centroacopios}" id="l_emergencia_entidad_CentroAcopio" path="/centroacopios" typeIdFieldName="idCentroacopio" z="cXxF0LV/odA0QNkSymNKeldhtcI=">
             
             <table:column id="c_emergencia_entidad_CentroAcopio_emergencia" property="emergencia" z="8JPZrgLR5Fh4g1Pn6YXNgy+ZIRM="/>
-            <table:column id="c_emergencia_entidad_CentroAcopio_persona" property="persona" z="iayejRDQNuk4kFNkTPHeczokFuM="/>
+            
             <table:column id="c_emergencia_entidad_CentroAcopio_fechaInicio" property="fechaInicio" z="1A6pvXZvPNhI66wYcjXO1Ru38Cs="/>
             <table:column id="c_emergencia_entidad_CentroAcopio_fechaFin" property="fechaFin" z="Xy0ztyXwC/GGIvqLK7LW41py4TA="/>
         </table:table>

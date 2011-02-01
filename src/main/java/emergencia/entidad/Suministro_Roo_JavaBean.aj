@@ -24,4 +24,12 @@ privileged aspect Suministro_Roo_JavaBean {
         this.categoria = categoria;
     }
     
+    public String Suministro.getNombre() {
+        return this.nombre;
+    }
+    
+    public void Suministro.setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
 }

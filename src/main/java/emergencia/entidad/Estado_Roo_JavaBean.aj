@@ -15,4 +15,12 @@ privileged aspect Estado_Roo_JavaBean {
         this.nombre = nombre;
     }
     
+    public String Estado.getNombreAbreviado() {
+        return this.nombreAbreviado;
+    }
+    
+    public void Estado.setNombreAbreviado(String nombreAbreviado) {
+        this.nombreAbreviado = nombreAbreviado;
+    }
+    
 }

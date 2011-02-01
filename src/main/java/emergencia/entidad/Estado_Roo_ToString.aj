@@ -11,7 +11,8 @@ privileged aspect Estado_Roo_ToString {
         StringBuilder sb = new StringBuilder();
         sb.append("IdEstado: ").append(getIdEstado()).append(", ");
         sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("Nombre: ").append(getNombre());
+        sb.append("Nombre: ").append(getNombre()).append(", ");
+        sb.append("NombreAbreviado: ").append(getNombreAbreviado());
         return sb.toString();
     }
     

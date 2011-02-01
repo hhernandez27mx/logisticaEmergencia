@@ -112,3 +112,10 @@ focus --class emergencia.entidad.Poblacion
 field string --fieldName claveCarta --column clave_carta 
 field reference --fieldName idMunicipio --type ~.entidad.Municipio --notnull --cardinality ONE_TO_ONE 
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-01-31 18:33:56
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-01-31 23:10:59
+entity --class emergencia.entidad.Perfil --identifierField idPerfil --identifierColumn id_perfil --identifierType java.lang.Integer
+field string --fieldName nombre --notNull --unique true
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-01 09:13:27
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-01 09:13:40
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-01 10:27:28
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-01 10:27:54

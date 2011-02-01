@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_emergencia_entidad_Direccion" items="${direccions}" z="5Nlwm2DbxqTQoqgmS2ZGT4XkPPk=">
+        <table:table data="${direccions}" id="l_emergencia_entidad_Direccion" path="/direccions" typeIdFieldName="idDireccion" z="xQ61iorA4dyYJCzNxfHwe3iaLfo=">
+            <table:column id="c_emergencia_entidad_Direccion_calle" property="calle" z="w0fm2jus6npoIlDp6B6IXjKM7PY="/>
+            <table:column id="c_emergencia_entidad_Direccion_numero" property="numero" z="ClzqIAfRO0b7jXZiDwQsOgqiXmE="/>
+            
+            <table:column id="c_emergencia_entidad_Direccion_cp" property="cp" z="P/Wk6FXETh+Ncl71jZRrXmUL7KE="/>
+            <table:column id="c_emergencia_entidad_Direccion_colonia" property="colonia" z="OR+ID5QWzavMU7uz2GQiL3hU0WY="/>
+            <table:column id="c_emergencia_entidad_Direccion_poblacion" property="poblacion" z="J2rzyIo3JSLK10LBygQuZWKwfAo="/>
+        <table:column id="c_emergencia_entidad_Direccion_numeroint" property="numeroint" z="PM1k7C7oupLbDaIcu46HqLfb6lY="/>
+        </table:table>
+    </page:list>
+</div>

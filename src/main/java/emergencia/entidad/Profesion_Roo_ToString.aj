@@ -10,7 +10,8 @@ privileged aspect Profesion_Roo_ToString {
     public String Profesion.toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("IdProfesion: ").append(getIdProfesion()).append(", ");
-        sb.append("Version: ").append(getVersion());
+        sb.append("Version: ").append(getVersion()).append(", ");
+        sb.append("Nombre: ").append(getNombre());
         return sb.toString();
     }
     

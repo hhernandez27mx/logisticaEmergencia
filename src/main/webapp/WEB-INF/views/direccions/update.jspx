@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_emergencia_entidad_Direccion" idField="idDireccion" modelAttribute="direccion" path="/direccions" z="O4eLZhGIh+9LZP3BYC6PAL66HbE=">
+        <field:input field="calle" id="c_emergencia_entidad_Direccion_calle" required="true" z="ZNBhhG8dx1Dxonuqp/h+neEHD6c="/>
+        <field:input field="numero" id="c_emergencia_entidad_Direccion_numero" required="true" z="AQLuzKglGEmAYWYB9/tkY2MXo8o="/>
+        
+        <field:input field="cp" id="c_emergencia_entidad_Direccion_cp" z="8IfbapSeG1DvKNWXEUAZu6IBwHQ="/>
+        <field:input field="colonia" id="c_emergencia_entidad_Direccion_colonia" required="true" z="CzF/nJ1jzbaqysgsIxMG8ZBSEdw="/>
+        <field:select field="poblacion" id="c_emergencia_entidad_Direccion_poblacion" itemValue="idPoblacion" items="${poblacions}" path="/poblacions" required="true" z="nnHOqMfyUMJ9H1d2bNocctKc1wM="/>
+    <field:input field="numeroint" id="c_emergencia_entidad_Direccion_numeroint" z="pZyMwe0bW+Ge+VrkiHf88W6H/II="/>
+    </form:update>
+</div>

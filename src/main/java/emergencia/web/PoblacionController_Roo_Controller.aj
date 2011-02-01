@@ -102,7 +102,7 @@ privileged aspect PoblacionController_Roo_Controller {
     Converter<Municipio, String> PoblacionController.getMunicipioConverter() {
         return new Converter<Municipio, String>() {
             public String convert(Municipio municipio) {
-                return new StringBuilder().append(municipio.getNombre()).toString();
+                return new StringBuilder().append(municipio.getNombre()).append(" ").append(municipio.getCve_municipio()).toString();
             }
         };
     }

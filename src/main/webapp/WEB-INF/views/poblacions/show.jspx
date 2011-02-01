@@ -21,5 +21,9 @@
         <field:display field="p_maculina" id="s_emergencia_entidad_Poblacion_p_maculina" object="${poblacion}" z="/q+rlR2QmvvndMXx7RL6Beq2OgE="/>
         <field:display field="p_femenina" id="s_emergencia_entidad_Poblacion_p_femenina" object="${poblacion}" z="w2QnJ5fwXL5txgQbgRKbBS/O+ME="/>
         <field:display field="p_vhabitadas" id="s_emergencia_entidad_Poblacion_p_vhabitadas" object="${poblacion}" z="yLgz5zZVPN64Vn8bIRmMogFcb+g="/>
+    <field:display field="ambito" id="s_emergencia_entidad_Poblacion_ambito" object="${poblacion}" z="wSh+AVVxLtrtCUPiDA5KbVayGEw="/>
+        <field:display field="clave_estado" id="s_emergencia_entidad_Poblacion_clave_estado" object="${poblacion}" z="b97wr5CqXuG/Zhao2BzwU4msXNY="/>
+        <field:display field="clave_mun" id="s_emergencia_entidad_Poblacion_clave_mun" object="${poblacion}" z="HRx2Rz3Bu2LygCCJPUdkMhvb4os="/>
+        <field:display field="clave_loc" id="s_emergencia_entidad_Poblacion_clave_loc" object="${poblacion}" z="x7/H9g3HtNIBxVmFsfb93G+rVY8="/>
     </page:show>
 </div>

@@ -10,7 +10,6 @@ privileged aspect CentroAcopio_Roo_ToString {
     public String CentroAcopio.toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Emergencia: ").append(getEmergencia()).append(", ");
-        sb.append("Persona: ").append(getPersona()).append(", ");
         sb.append("FechaInicio: ").append(getFechaInicio()).append(", ");
         sb.append("FechaFin: ").append(getFechaFin()).append(", ");
         sb.append("IdCentroacopio: ").append(getIdCentroacopio());

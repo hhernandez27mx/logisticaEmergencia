@@ -3,7 +3,7 @@
 
 package emergencia.entidad;
 
-import emergencia.entidad.Suministro;
+import emergencia.entidad.Perfil;
 import java.lang.Integer;
 import java.util.List;
 import javax.persistence.Column;
@@ -13,96 +13,93 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Table;
 import javax.persistence.Version;
 import org.springframework.transaction.annotation.Transactional;
 
-privileged aspect Suministro_Roo_Entity {
+privileged aspect Perfil_Roo_Entity {
     
-    declare @type: Suministro: @Entity;
-    
-    declare @type: Suministro: @Table(name = "suministro", schema = "public");
+    declare @type: Perfil: @Entity;
     
     @PersistenceContext
-    transient EntityManager Suministro.entityManager;
+    transient EntityManager Perfil.entityManager;
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_suministro")
-    private Integer Suministro.idSuministro;
+    @Column(name = "id_perfil")
+    private Integer Perfil.idPerfil;
     
     @Version
     @Column(name = "version")
-    private Integer Suministro.version;
+    private Integer Perfil.version;
     
-    public Integer Suministro.getIdSuministro() {
-        return this.idSuministro;
+    public Integer Perfil.getIdPerfil() {
+        return this.idPerfil;
     }
     
-    public void Suministro.setIdSuministro(Integer id) {
-        this.idSuministro = id;
+    public void Perfil.setIdPerfil(Integer id) {
+        this.idPerfil = id;
     }
     
-    public Integer Suministro.getVersion() {
+    public Integer Perfil.getVersion() {
         return this.version;
     }
     
-    public void Suministro.setVersion(Integer version) {
+    public void Perfil.setVersion(Integer version) {
         this.version = version;
     }
     
     @Transactional
-    public void Suministro.persist() {
+    public void Perfil.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);
     }
     
     @Transactional
-    public void Suministro.remove() {
+    public void Perfil.remove() {
         if (this.entityManager == null) this.entityManager = entityManager();
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Suministro attached = this.entityManager.find(this.getClass(), this.idSuministro);
+            Perfil attached = this.entityManager.find(this.getClass(), this.idPerfil);
             this.entityManager.remove(attached);
         }
     }
     
     @Transactional
-    public void Suministro.flush() {
+    public void Perfil.flush() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.flush();
     }
     
     @Transactional
-    public Suministro Suministro.merge() {
+    public Perfil Perfil.merge() {
         if (this.entityManager == null) this.entityManager = entityManager();
-        Suministro merged = this.entityManager.merge(this);
+        Perfil merged = this.entityManager.merge(this);
         this.entityManager.flush();
         return merged;
     }
     
-    public static final EntityManager Suministro.entityManager() {
-        EntityManager em = new Suministro().entityManager;
+    public static final EntityManager Perfil.entityManager() {
+        EntityManager em = new Perfil().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
         return em;
     }
     
-    public static long Suministro.countSuministroes() {
-        return entityManager().createQuery("select count(o) from Suministro o", Long.class).getSingleResult();
+    public static long Perfil.countPerfils() {
+        return entityManager().createQuery("select count(o) from Perfil o", Long.class).getSingleResult();
     }
     
-    public static List<Suministro> Suministro.findAllSuministroes() {
-        return entityManager().createQuery("select o from Suministro o", Suministro.class).getResultList();
+    public static List<Perfil> Perfil.findAllPerfils() {
+        return entityManager().createQuery("select o from Perfil o", Perfil.class).getResultList();
     }
     
-    public static Suministro Suministro.findSuministro(Integer id) {
+    public static Perfil Perfil.findPerfil(Integer id) {
         if (id == null) return null;
-        return entityManager().find(Suministro.class, id);
+        return entityManager().find(Perfil.class, id);
     }
     
-    public static List<Suministro> Suministro.findSuministroEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("select o from Suministro o", Suministro.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    public static List<Perfil> Perfil.findPerfilEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("select o from Perfil o", Perfil.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }

@@ -6,6 +6,7 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.dbre.RooDbManaged;
 import org.springframework.roo.addon.json.RooJson;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.persistence.Column;
 import emergencia.entidad.Municipio;
 import javax.persistence.OneToOne;
@@ -25,8 +26,12 @@ public class Poblacion {
 
     @NotNull
     private String longitud;
-
+    
+    @Size(max=2)
     @NotNull
+    private String ambito;
+   
+   
     private String altitud;
     
     private int p_total;
@@ -38,5 +43,11 @@ public class Poblacion {
     private String claveCarta;
 
     @OneToOne
-    private Municipio idMunicipio;
+    private Municipio idMunicipio; 
+    
+    private String clave_estado;
+    private String clave_mun ;
+    private String clave_loc;
+    
+    
 }

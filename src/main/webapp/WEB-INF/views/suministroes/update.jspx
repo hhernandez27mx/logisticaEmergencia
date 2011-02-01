@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_emergencia_entidad_Suministro" idField="idSuministro" modelAttribute="suministro" path="/suministroes" versionField="none" z="Xb84iOllD5rsidrSFh8EfW6z3z4=">
-        
-        
+    <form:update id="fu_emergencia_entidad_Suministro" idField="idSuministro" modelAttribute="suministro" path="/suministroes" z="zr1EH3hSBtoPbirA9h62hPcTW9w=">
+        <field:input field="radio" id="c_emergencia_entidad_Suministro_radio" validationMessageCode="field_invalid_integer" z="rJAIwa1xlYEcQYqCBKPPkO9Cwao="/>
+        <field:input field="categoria" id="c_emergencia_entidad_Suministro_categoria" required="true" z="m+72aL7pAXzYHLKpQcF8iMjV8pA="/>
         <field:input field="nombre" id="c_emergencia_entidad_Suministro_nombre" required="true" z="DGb720irTuJSkpPCGvhQmz4J9q0="/>
-    <field:input field="radio" id="c_emergencia_entidad_Suministro_radio" validationMessageCode="field_invalid_integer" z="rJAIwa1xlYEcQYqCBKPPkO9Cwao="/>
-    <field:input field="categoria" id="c_emergencia_entidad_Suministro_categoria" required="true" z="m+72aL7pAXzYHLKpQcF8iMjV8pA="/>
     </form:update>
 </div>

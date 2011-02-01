@@ -9,10 +9,11 @@ privileged aspect Suministro_Roo_ToString {
     
     public String Suministro.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Nombre: ").append(getNombre()).append(", ");
         sb.append("IdSuministro: ").append(getIdSuministro()).append(", ");
+        sb.append("Version: ").append(getVersion()).append(", ");
         sb.append("Radio: ").append(getRadio()).append(", ");
-        sb.append("Categoria: ").append(getCategoria());
+        sb.append("Categoria: ").append(getCategoria()).append(", ");
+        sb.append("Nombre: ").append(getNombre());
         return sb.toString();
     }
     

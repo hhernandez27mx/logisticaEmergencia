@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_emergencia_entidad_Direccion" object="${direccion}" path="/direccions" z="XjdWYrqV9XsVPgAc1NRg6UYsclE=">
+        <field:display field="calle" id="s_emergencia_entidad_Direccion_calle" object="${direccion}" z="xt3sZ8yfLXvxxzn/PQuU5w6eIGA="/>
+        <field:display field="numero" id="s_emergencia_entidad_Direccion_numero" object="${direccion}" z="Osp/MaAsFxDo/lQNaxGT1Mhd1PA="/>
+        
+        <field:display field="cp" id="s_emergencia_entidad_Direccion_cp" object="${direccion}" z="dGbo9wcPi1drzJSAIPjzCeNtPFI="/>
+        <field:display field="colonia" id="s_emergencia_entidad_Direccion_colonia" object="${direccion}" z="5kX6RIvtixKnldwkOf3B54U9zGw="/>
+        <field:display field="poblacion" id="s_emergencia_entidad_Direccion_poblacion" object="${direccion}" z="vDIL/wriancesVJXq3LMzOS9LBI="/>
+    <field:display field="numeroint" id="s_emergencia_entidad_Direccion_numeroint" object="${direccion}" z="r9yNwAeTxTE9pmbzP4zxGuY5Sbw="/>
+    </page:show>
+</div>

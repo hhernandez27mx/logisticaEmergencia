@@ -14,13 +14,17 @@ privileged aspect Poblacion_Roo_ToString {
         sb.append("Nombre: ").append(getNombre()).append(", ");
         sb.append("Latitud: ").append(getLatitud()).append(", ");
         sb.append("Longitud: ").append(getLongitud()).append(", ");
+        sb.append("Ambito: ").append(getAmbito()).append(", ");
         sb.append("Altitud: ").append(getAltitud()).append(", ");
         sb.append("P_total: ").append(getP_total()).append(", ");
         sb.append("P_maculina: ").append(getP_maculina()).append(", ");
         sb.append("P_femenina: ").append(getP_femenina()).append(", ");
         sb.append("P_vhabitadas: ").append(getP_vhabitadas()).append(", ");
         sb.append("ClaveCarta: ").append(getClaveCarta()).append(", ");
-        sb.append("IdMunicipio: ").append(getIdMunicipio());
+        sb.append("IdMunicipio: ").append(getIdMunicipio()).append(", ");
+        sb.append("Clave_estado: ").append(getClave_estado()).append(", ");
+        sb.append("Clave_mun: ").append(getClave_mun()).append(", ");
+        sb.append("Clave_loc: ").append(getClave_loc());
         return sb.toString();
     }
     

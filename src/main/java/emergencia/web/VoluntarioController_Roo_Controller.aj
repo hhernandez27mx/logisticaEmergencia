@@ -138,6 +138,14 @@ privileged aspect VoluntarioController_Roo_Controller {
         };
     }
     
+    Converter<Profesion, String> VoluntarioController.getProfesionConverter() {
+        return new Converter<Profesion, String>() {
+            public String convert(Profesion profesion) {
+                return new StringBuilder().append(profesion.getNombre()).toString();
+            }
+        };
+    }
+    
     Converter<Voluntario, String> VoluntarioController.getVoluntarioConverter() {
         return new Converter<Voluntario, String>() {
             public String convert(Voluntario voluntario) {
@@ -149,6 +157,7 @@ privileged aspect VoluntarioController_Roo_Controller {
     @PostConstruct
     void VoluntarioController.registerConverters() {
         conversionService.addConverter(getDireccionConverter());
+        conversionService.addConverter(getProfesionConverter());
         conversionService.addConverter(getVoluntarioConverter());
     }
     

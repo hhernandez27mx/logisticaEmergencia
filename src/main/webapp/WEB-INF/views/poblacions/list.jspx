@@ -17,7 +17,8 @@
         
         
         <table:column id="c_emergencia_entidad_Poblacion_p_total" property="p_total" z="mJVwU+WbPo2L3z4+AxG/KiaGozI="/>
-            <table:column id="c_emergencia_entidad_Poblacion_p_maculina" property="p_maculina" z="xVrLuJcjiiCShxYz69SmInqKvO0="/>
+            
+        <table:column id="c_emergencia_entidad_Poblacion_ambito" property="ambito" z="E6Dy8LRqXXBPidV0yuz3Yi3W+Jk="/>
         </table:table>
     </page:list>
 </div>

@@ -9,12 +9,17 @@
             
             
             
-        <table:column id="c_emergencia_entidad_Emergencia_centroAcopios" property="centroAcopios" z="yLuMNp2k6j2ANB1xSRmfEo5AfCk="/>
-            <table:column id="c_emergencia_entidad_Emergencia_emergenciaSuministroes" property="emergenciaSuministroes" z="PtfrI3yG8m5Na5YHaooRN0hGL4A="/>
-            <table:column id="c_emergencia_entidad_Emergencia_consejo" property="consejo" z="Ns0u0SFy6zxZaJIolYtLPSlVdU4="/>
+        
+            
+            
+            
+            
+            
+        <table:column id="c_emergencia_entidad_Emergencia_consejo" property="consejo" z="Ns0u0SFy6zxZaJIolYtLPSlVdU4="/>
             <table:column id="c_emergencia_entidad_Emergencia_ubicacion" property="ubicacion" z="N/U3x4Ktdo1sl43NGU3AgZePagI="/>
             <table:column id="c_emergencia_entidad_Emergencia_nombre" property="nombre" z="0SW/NWpm3+oSSBNm4xRH2W66A8E="/>
             <table:column id="c_emergencia_entidad_Emergencia_fechaInicio" property="fechaInicio" z="RgjcrAF3B0Ts4CeCXleLyxGUPE0="/>
+            <table:column id="c_emergencia_entidad_Emergencia_fechaFin" property="fechaFin" z="zQzJc3dJQ/VLKtVuqhGlOq5Tk+M="/>
         </table:table>
     </page:list>
 </div>

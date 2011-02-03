@@ -5,13 +5,13 @@ package emergencia.entidad;
 
 import java.lang.String;
 
-privileged aspect CaSuministro_Roo_ToString {
+privileged aspect Albergue_Roo_ToString {
     
-    public String CaSuministro.toString() {
+    public String Albergue.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("CentroAcopio: ").append(getCentroAcopio()).append(", ");
-        sb.append("Suministro: ").append(getSuministro()).append(", ");
-        sb.append("IdCaSuministro: ").append(getIdCaSuministro());
+        sb.append("Id: ").append(getId()).append(", ");
+        sb.append("Version: ").append(getVersion()).append(", ");
+        sb.append("Direccion: ").append(getDireccion());
         return sb.toString();
     }
     

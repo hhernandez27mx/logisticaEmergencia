@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_emergencia_entidad_Sci" idField="idSci" modelAttribute="sci" path="/scis" versionField="none" z="zee1uNVMWVsWy7E+6DdmZcbtyMg=">
-        
-        <field:input field="comandante" id="c_emergencia_entidad_Sci_comandante" required="true" validationMessageCode="field_invalid_integer" z="QF8lwbL1oaZFSMz4prhkS3pXAqc="/>
-        <field:input field="seguridad" id="c_emergencia_entidad_Sci_seguridad" required="true" validationMessageCode="field_invalid_integer" z="17ilcwoXLflosChxECRg58thMJs="/>
-        <field:input field="enlace" id="c_emergencia_entidad_Sci_enlace" required="true" validationMessageCode="field_invalid_integer" z="R3iDLweWPbgNCECqMu1U5L2PjRg="/>
-        <field:input field="informacionPublica" id="c_emergencia_entidad_Sci_informacionPublica" required="true" validationMessageCode="field_invalid_integer" z="Mj5WnBKTGI8Ipqzsx8Xv/Sc1FAs="/>
-        <field:input field="planeacion" id="c_emergencia_entidad_Sci_planeacion" required="true" validationMessageCode="field_invalid_integer" z="NhkxWMI5c5BFCti6KTeQAzWfras="/>
-        <field:input field="operaciones" id="c_emergencia_entidad_Sci_operaciones" required="true" validationMessageCode="field_invalid_integer" z="mAiIXC7egiT/PGaXu/25okF3OPM="/>
-        <field:input field="logistica" id="c_emergencia_entidad_Sci_logistica" required="true" validationMessageCode="field_invalid_integer" z="n8aI2Y9W3HTY8Z7+PPntHC+fmBk="/>
-        <field:input field="admFinanciera" id="c_emergencia_entidad_Sci_admFinanciera" required="true" validationMessageCode="field_invalid_integer" z="ajxPpZmNaoqjNjBM2WxIX1qKIUI="/>
-    </form:update>
+    <form:update id="fu_emergencia_entidad_Sci" modelAttribute="sci" path="/scis" versionField="none" z="0kkjQkFB3/G12z2MtUpHs5nWNlI="/>
 </div>

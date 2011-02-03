@@ -29,6 +29,7 @@ public class Poblacion {
     
     @Size(max=2)
     @NotNull
+    /*Rural o Urbano*/
     private String ambito;
    
    

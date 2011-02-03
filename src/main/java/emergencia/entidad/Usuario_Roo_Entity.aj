@@ -3,7 +3,7 @@
 
 package emergencia.entidad;
 
-import emergencia.entidad.CentroAcopio;
+import emergencia.entidad.Usuario;
 import java.lang.Integer;
 import java.util.List;
 import javax.persistence.Column;
@@ -17,92 +17,92 @@ import javax.persistence.Table;
 import javax.persistence.Version;
 import org.springframework.transaction.annotation.Transactional;
 
-privileged aspect CentroAcopio_Roo_Entity {
+privileged aspect Usuario_Roo_Entity {
     
-    declare @type: CentroAcopio: @Entity;
+    declare @type: Usuario: @Entity;
     
-    declare @type: CentroAcopio: @Table(name = "centro_acopio", schema = "public");
+    declare @type: Usuario: @Table(name = "usuario");
     
     @PersistenceContext
-    transient EntityManager CentroAcopio.entityManager;
+    transient EntityManager Usuario.entityManager;
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_centroacopio")
-    private Integer CentroAcopio.idCentroacopio;
+    @Column(name = "id_usuario")
+    private Integer Usuario.idUsuario;
     
     @Version
     @Column(name = "version")
-    private Integer CentroAcopio.version;
+    private Integer Usuario.version;
     
-    public Integer CentroAcopio.getIdCentroacopio() {
-        return this.idCentroacopio;
+    public Integer Usuario.getIdUsuario() {
+        return this.idUsuario;
     }
     
-    public void CentroAcopio.setIdCentroacopio(Integer id) {
-        this.idCentroacopio = id;
+    public void Usuario.setIdUsuario(Integer id) {
+        this.idUsuario = id;
     }
     
-    public Integer CentroAcopio.getVersion() {
+    public Integer Usuario.getVersion() {
         return this.version;
     }
     
-    public void CentroAcopio.setVersion(Integer version) {
+    public void Usuario.setVersion(Integer version) {
         this.version = version;
     }
     
     @Transactional
-    public void CentroAcopio.persist() {
+    public void Usuario.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);
     }
     
     @Transactional
-    public void CentroAcopio.remove() {
+    public void Usuario.remove() {
         if (this.entityManager == null) this.entityManager = entityManager();
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            CentroAcopio attached = this.entityManager.find(this.getClass(), this.idCentroacopio);
+            Usuario attached = this.entityManager.find(this.getClass(), this.idUsuario);
             this.entityManager.remove(attached);
         }
     }
     
     @Transactional
-    public void CentroAcopio.flush() {
+    public void Usuario.flush() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.flush();
     }
     
     @Transactional
-    public CentroAcopio CentroAcopio.merge() {
+    public Usuario Usuario.merge() {
         if (this.entityManager == null) this.entityManager = entityManager();
-        CentroAcopio merged = this.entityManager.merge(this);
+        Usuario merged = this.entityManager.merge(this);
         this.entityManager.flush();
         return merged;
     }
     
-    public static final EntityManager CentroAcopio.entityManager() {
-        EntityManager em = new CentroAcopio().entityManager;
+    public static final EntityManager Usuario.entityManager() {
+        EntityManager em = new Usuario().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
         return em;
     }
     
-    public static long CentroAcopio.countCentroAcopios() {
-        return entityManager().createQuery("select count(o) from CentroAcopio o", Long.class).getSingleResult();
+    public static long Usuario.countUsuarios() {
+        return entityManager().createQuery("select count(o) from Usuario o", Long.class).getSingleResult();
     }
     
-    public static List<CentroAcopio> CentroAcopio.findAllCentroAcopios() {
-        return entityManager().createQuery("select o from CentroAcopio o", CentroAcopio.class).getResultList();
+    public static List<Usuario> Usuario.findAllUsuarios() {
+        return entityManager().createQuery("select o from Usuario o", Usuario.class).getResultList();
     }
     
-    public static CentroAcopio CentroAcopio.findCentroAcopio(Integer id) {
+    public static Usuario Usuario.findUsuario(Integer id) {
         if (id == null) return null;
-        return entityManager().find(CentroAcopio.class, id);
+        return entityManager().find(Usuario.class, id);
     }
     
-    public static List<CentroAcopio> CentroAcopio.findCentroAcopioEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("select o from CentroAcopio o", CentroAcopio.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    public static List<Usuario> Usuario.findUsuarioEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("select o from Usuario o", Usuario.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }

@@ -5,13 +5,11 @@ package emergencia.web;
 
 import emergencia.entidad.Sci;
 import java.io.UnsupportedEncodingException;
-import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
-import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.support.GenericConversionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,7 +36,7 @@ privileged aspect SciController_Roo_Controller {
             return "scis/create";
         }
         sci.persist();
-        return "redirect:/scis/" + encodeUrlPathSegment(sci.getIdSci().toString(), request);
+        return "redirect:/scis/" + encodeUrlPathSegment(sci.getId().toString(), request);
     }
     
     @RequestMapping(params = "form", method = RequestMethod.GET)
@@ -47,10 +45,10 @@ privileged aspect SciController_Roo_Controller {
         return "scis/create";
     }
     
-    @RequestMapping(value = "/{idSci}", method = RequestMethod.GET)
-    public String SciController.show(@PathVariable("idSci") Integer idSci, Model model) {
-        model.addAttribute("sci", Sci.findSci(idSci));
-        model.addAttribute("itemId", idSci);
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public String SciController.show(@PathVariable("id") Long id, Model model) {
+        model.addAttribute("sci", Sci.findSci(id));
+        model.addAttribute("itemId", id);
         return "scis/show";
     }
     
@@ -74,40 +72,27 @@ privileged aspect SciController_Roo_Controller {
             return "scis/update";
         }
         sci.merge();
-        return "redirect:/scis/" + encodeUrlPathSegment(sci.getIdSci().toString(), request);
+        return "redirect:/scis/" + encodeUrlPathSegment(sci.getId().toString(), request);
     }
     
-    @RequestMapping(value = "/{idSci}", params = "form", method = RequestMethod.GET)
-    public String SciController.updateForm(@PathVariable("idSci") Integer idSci, Model model) {
-        model.addAttribute("sci", Sci.findSci(idSci));
+    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
+    public String SciController.updateForm(@PathVariable("id") Long id, Model model) {
+        model.addAttribute("sci", Sci.findSci(id));
         return "scis/update";
     }
     
-    @RequestMapping(value = "/{idSci}", method = RequestMethod.DELETE)
-    public String SciController.delete(@PathVariable("idSci") Integer idSci, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model model) {
-        Sci.findSci(idSci).remove();
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public String SciController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model model) {
+        Sci.findSci(id).remove();
         model.addAttribute("page", (page == null) ? "1" : page.toString());
         model.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/scis?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
     }
     
-    Converter<Sci, String> SciController.getSciConverter() {
-        return new Converter<Sci, String>() {
-            public String convert(Sci sci) {
-                return new StringBuilder().append(sci.getComandante()).append(" ").append(sci.getSeguridad()).append(" ").append(sci.getEnlace()).toString();
-            }
-        };
-    }
-    
-    @PostConstruct
-    void SciController.registerConverters() {
-        conversionService.addConverter(getSciConverter());
-    }
-    
-    @RequestMapping(value = "/{idSci}", method = RequestMethod.GET, headers = "Accept=application/json")
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
     @ResponseBody
-    public String SciController.showJson(@PathVariable("idSci") Integer idSci) {
-        return Sci.findSci(idSci).toJson();
+    public String SciController.showJson(@PathVariable("id") Long id) {
+        return Sci.findSci(id).toJson();
     }
     
     @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")

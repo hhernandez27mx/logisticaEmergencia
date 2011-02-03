@@ -4,7 +4,7 @@
 package emergencia.web;
 
 import emergencia.entidad.CentroAcopio;
-import emergencia.entidad.Emergencia;
+import emergencia.entidad.Suministro;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,9 +12,7 @@ import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import org.joda.time.format.DateTimeFormat;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.support.GenericConversionService;
 import org.springframework.http.HttpStatus;
@@ -40,7 +38,6 @@ privileged aspect CentroAcopioController_Roo_Controller {
     public String CentroAcopioController.create(@Valid CentroAcopio centroAcopio, BindingResult result, Model model, HttpServletRequest request) {
         if (result.hasErrors()) {
             model.addAttribute("centroAcopio", centroAcopio);
-            addDateTimeFormatPatterns(model);
             return "centroacopios/create";
         }
         centroAcopio.persist();
@@ -50,13 +47,11 @@ privileged aspect CentroAcopioController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String CentroAcopioController.createForm(Model model) {
         model.addAttribute("centroAcopio", new CentroAcopio());
-        addDateTimeFormatPatterns(model);
         return "centroacopios/create";
     }
     
     @RequestMapping(value = "/{idCentroacopio}", method = RequestMethod.GET)
     public String CentroAcopioController.show(@PathVariable("idCentroacopio") Integer idCentroacopio, Model model) {
-        addDateTimeFormatPatterns(model);
         model.addAttribute("centroacopio", CentroAcopio.findCentroAcopio(idCentroacopio));
         model.addAttribute("itemId", idCentroacopio);
         return "centroacopios/show";
@@ -72,7 +67,6 @@ privileged aspect CentroAcopioController_Roo_Controller {
         } else {
             model.addAttribute("centroacopios", CentroAcopio.findAllCentroAcopios());
         }
-        addDateTimeFormatPatterns(model);
         return "centroacopios/list";
     }
     
@@ -80,7 +74,6 @@ privileged aspect CentroAcopioController_Roo_Controller {
     public String CentroAcopioController.update(@Valid CentroAcopio centroAcopio, BindingResult result, Model model, HttpServletRequest request) {
         if (result.hasErrors()) {
             model.addAttribute("centroAcopio", centroAcopio);
-            addDateTimeFormatPatterns(model);
             return "centroacopios/update";
         }
         centroAcopio.merge();
@@ -90,7 +83,6 @@ privileged aspect CentroAcopioController_Roo_Controller {
     @RequestMapping(value = "/{idCentroacopio}", params = "form", method = RequestMethod.GET)
     public String CentroAcopioController.updateForm(@PathVariable("idCentroacopio") Integer idCentroacopio, Model model) {
         model.addAttribute("centroAcopio", CentroAcopio.findCentroAcopio(idCentroacopio));
-        addDateTimeFormatPatterns(model);
         return "centroacopios/update";
     }
     
@@ -102,36 +94,22 @@ privileged aspect CentroAcopioController_Roo_Controller {
         return "redirect:/centroacopios?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
     }
     
-    @ModelAttribute("emergencias")
-    public Collection<Emergencia> CentroAcopioController.populateEmergencias() {
-        return Emergencia.findAllEmergencias();
+    @ModelAttribute("suministroes")
+    public Collection<Suministro> CentroAcopioController.populateSuministroes() {
+        return Suministro.findAllSuministroes();
     }
     
-    Converter<CentroAcopio, String> CentroAcopioController.getCentroAcopioConverter() {
-        return new Converter<CentroAcopio, String>() {
-            public String convert(CentroAcopio centroAcopio) {
-                return new StringBuilder().append(centroAcopio.getFechaInicio()).append(" ").append(centroAcopio.getFechaFin()).toString();
-            }
-        };
-    }
-    
-    Converter<Emergencia, String> CentroAcopioController.getEmergenciaConverter() {
-        return new Converter<Emergencia, String>() {
-            public String convert(Emergencia emergencia) {
-                return new StringBuilder().append(emergencia.getUbicacion()).append(" ").append(emergencia.getNombre()).append(" ").append(emergencia.getFechaInicio()).toString();
+    Converter<Suministro, String> CentroAcopioController.getSuministroConverter() {
+        return new Converter<Suministro, String>() {
+            public String convert(Suministro suministro) {
+                return new StringBuilder().append(suministro.getRadio()).append(" ").append(suministro.getCategoria()).append(" ").append(suministro.getNombre()).toString();
             }
         };
     }
     
     @PostConstruct
     void CentroAcopioController.registerConverters() {
-        conversionService.addConverter(getCentroAcopioConverter());
-        conversionService.addConverter(getEmergenciaConverter());
-    }
-    
-    void CentroAcopioController.addDateTimeFormatPatterns(Model model) {
-        model.addAttribute("centroAcopio_fechafin_date_format", DateTimeFormat.patternForStyle("S-", LocaleContextHolder.getLocale()));
-        model.addAttribute("centroAcopio_fechainicio_date_format", DateTimeFormat.patternForStyle("S-", LocaleContextHolder.getLocale()));
+        conversionService.addConverter(getSuministroConverter());
     }
     
     @RequestMapping(value = "/{idCentroacopio}", method = RequestMethod.GET, headers = "Accept=application/json")

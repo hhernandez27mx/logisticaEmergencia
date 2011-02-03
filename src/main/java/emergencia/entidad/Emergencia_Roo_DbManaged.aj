@@ -3,28 +3,18 @@
 
 package emergencia.entidad;
 
-import emergencia.entidad.CentroAcopio;
 import emergencia.entidad.Consejo;
-import emergencia.entidad.EmergenciaSuministro;
 import java.lang.String;
 import java.util.Date;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 privileged aspect Emergencia_Roo_DbManaged {
-    
-    @OneToMany(mappedBy = "emergencia")
-    private Set<CentroAcopio> Emergencia.centroAcopios;
-    
-    @OneToMany(mappedBy = "emergencia")
-    private Set<EmergenciaSuministro> Emergencia.emergenciaSuministroes;
     
     @ManyToOne
     @JoinColumn(name = "id_consejo", referencedColumnName = "id_consejo")
@@ -49,22 +39,6 @@ privileged aspect Emergencia_Roo_DbManaged {
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "S-")
     private Date Emergencia.fechaFin;
-    
-    public Set<CentroAcopio> Emergencia.getCentroAcopios() {
-        return this.centroAcopios;
-    }
-    
-    public void Emergencia.setCentroAcopios(Set<CentroAcopio> centroAcopios) {
-        this.centroAcopios = centroAcopios;
-    }
-    
-    public Set<EmergenciaSuministro> Emergencia.getEmergenciaSuministroes() {
-        return this.emergenciaSuministroes;
-    }
-    
-    public void Emergencia.setEmergenciaSuministroes(Set<EmergenciaSuministro> emergenciaSuministroes) {
-        this.emergenciaSuministroes = emergenciaSuministroes;
-    }
     
     public Consejo Emergencia.getConsejo() {
         return this.consejo;

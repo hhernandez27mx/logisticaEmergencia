@@ -3,7 +3,8 @@
 
 package emergencia.entidad;
 
-import emergencia.entidad.Sci;
+import emergencia.entidad.Albergue;
+import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
@@ -13,83 +14,93 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Table;
+import javax.persistence.Version;
 import org.springframework.transaction.annotation.Transactional;
 
-privileged aspect Sci_Roo_Entity {
+privileged aspect Albergue_Roo_Entity {
     
-    declare @type: Sci: @Entity;
-    
-    declare @type: Sci: @Table(name = "sci", schema = "public");
+    declare @type: Albergue: @Entity;
     
     @PersistenceContext
-    transient EntityManager Sci.entityManager;
+    transient EntityManager Albergue.entityManager;
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private Long Sci.id;
+    private Long Albergue.id;
     
-    public Long Sci.getId() {
+    @Version
+    @Column(name = "version")
+    private Integer Albergue.version;
+    
+    public Long Albergue.getId() {
         return this.id;
     }
     
-    public void Sci.setId(Long id) {
+    public void Albergue.setId(Long id) {
         this.id = id;
     }
     
+    public Integer Albergue.getVersion() {
+        return this.version;
+    }
+    
+    public void Albergue.setVersion(Integer version) {
+        this.version = version;
+    }
+    
     @Transactional
-    public void Sci.persist() {
+    public void Albergue.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);
     }
     
     @Transactional
-    public void Sci.remove() {
+    public void Albergue.remove() {
         if (this.entityManager == null) this.entityManager = entityManager();
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Sci attached = this.entityManager.find(this.getClass(), this.id);
+            Albergue attached = this.entityManager.find(this.getClass(), this.id);
             this.entityManager.remove(attached);
         }
     }
     
     @Transactional
-    public void Sci.flush() {
+    public void Albergue.flush() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.flush();
     }
     
     @Transactional
-    public Sci Sci.merge() {
+    public Albergue Albergue.merge() {
         if (this.entityManager == null) this.entityManager = entityManager();
-        Sci merged = this.entityManager.merge(this);
+        Albergue merged = this.entityManager.merge(this);
         this.entityManager.flush();
         return merged;
     }
     
-    public static final EntityManager Sci.entityManager() {
-        EntityManager em = new Sci().entityManager;
+    public static final EntityManager Albergue.entityManager() {
+        EntityManager em = new Albergue().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
         return em;
     }
     
-    public static long Sci.countScis() {
-        return entityManager().createQuery("select count(o) from Sci o", Long.class).getSingleResult();
+    public static long Albergue.countAlbergues() {
+        return entityManager().createQuery("select count(o) from Albergue o", Long.class).getSingleResult();
     }
     
-    public static List<Sci> Sci.findAllScis() {
-        return entityManager().createQuery("select o from Sci o", Sci.class).getResultList();
+    public static List<Albergue> Albergue.findAllAlbergues() {
+        return entityManager().createQuery("select o from Albergue o", Albergue.class).getResultList();
     }
     
-    public static Sci Sci.findSci(Long id) {
+    public static Albergue Albergue.findAlbergue(Long id) {
         if (id == null) return null;
-        return entityManager().find(Sci.class, id);
+        return entityManager().find(Albergue.class, id);
     }
     
-    public static List<Sci> Sci.findSciEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("select o from Sci o", Sci.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    public static List<Albergue> Albergue.findAlbergueEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("select o from Albergue o", Albergue.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }

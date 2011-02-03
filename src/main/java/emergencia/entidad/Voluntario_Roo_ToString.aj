@@ -9,7 +9,6 @@ privileged aspect Voluntario_Roo_ToString {
     
     public String Voluntario.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Asignacion: ").append(getAsignacion()).append(", ");
         sb.append("IdVoluntario: ").append(getIdVoluntario()).append(", ");
         sb.append("Nombre: ").append(getNombre()).append(", ");
         sb.append("Correo: ").append(getCorreo()).append(", ");

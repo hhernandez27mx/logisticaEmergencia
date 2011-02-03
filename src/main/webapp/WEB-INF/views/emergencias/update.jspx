@@ -10,9 +10,14 @@
         
         
         
-    <field:simple field="centroAcopios" id="c_emergencia_entidad_Emergencia_centroAcopios" messageCode="entity_reference_not_managed" messageCodeAttribute="Centro Acopio" z="JwWTbh0arlns1Ck3yy3TFcoV9cY="/>
-        <field:simple field="emergenciaSuministroes" id="c_emergencia_entidad_Emergencia_emergenciaSuministroes" messageCode="entity_reference_not_managed" messageCodeAttribute="Emergencia Suministro" z="haLjJubeEvLPVBCH8u4i2RZexO0="/>
-        <field:select field="consejo" id="c_emergencia_entidad_Emergencia_consejo" itemValue="idConsejo" items="${consejoes}" path="/consejoes" z="RZXKJTCbOGlDM/EI9iB9UByeRPY="/>
+    
+        
+        
+        
+        
+        
+        
+    <field:select field="consejo" id="c_emergencia_entidad_Emergencia_consejo" itemValue="idConsejo" items="${consejoes}" path="/consejoes" z="RZXKJTCbOGlDM/EI9iB9UByeRPY="/>
         <field:input field="ubicacion" id="c_emergencia_entidad_Emergencia_ubicacion" required="true" z="C/7X+YkgdfHSOnJAXyvCGwriJuk="/>
         <field:input field="nombre" id="c_emergencia_entidad_Emergencia_nombre" required="true" z="dCcNjXC8O+9gKbno2gzc338G1JM="/>
         <field:datetime dateTimePattern="${emergencia_fechainicio_date_format}" field="fechaInicio" id="c_emergencia_entidad_Emergencia_fechaInicio" required="true" z="ImXbaI0I1YqLwhvCenQsO/zPhGo="/>

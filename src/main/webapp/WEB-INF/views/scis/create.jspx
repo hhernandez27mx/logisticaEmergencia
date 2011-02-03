@@ -3,14 +3,14 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_emergencia_entidad_Sci" modelAttribute="sci" path="/scis" render="${empty dependencies}" z="CG9aG3es7DOM1RYIeA7KLD1LFI0=">
         
-        <field:input field="comandante" id="c_emergencia_entidad_Sci_comandante" required="true" validationMessageCode="field_invalid_integer" z="QF8lwbL1oaZFSMz4prhkS3pXAqc="/>
-        <field:input field="seguridad" id="c_emergencia_entidad_Sci_seguridad" required="true" validationMessageCode="field_invalid_integer" z="17ilcwoXLflosChxECRg58thMJs="/>
-        <field:input field="enlace" id="c_emergencia_entidad_Sci_enlace" required="true" validationMessageCode="field_invalid_integer" z="R3iDLweWPbgNCECqMu1U5L2PjRg="/>
-        <field:input field="informacionPublica" id="c_emergencia_entidad_Sci_informacionPublica" required="true" validationMessageCode="field_invalid_integer" z="Mj5WnBKTGI8Ipqzsx8Xv/Sc1FAs="/>
-        <field:input field="planeacion" id="c_emergencia_entidad_Sci_planeacion" required="true" validationMessageCode="field_invalid_integer" z="NhkxWMI5c5BFCti6KTeQAzWfras="/>
-        <field:input field="operaciones" id="c_emergencia_entidad_Sci_operaciones" required="true" validationMessageCode="field_invalid_integer" z="mAiIXC7egiT/PGaXu/25okF3OPM="/>
-        <field:input field="logistica" id="c_emergencia_entidad_Sci_logistica" required="true" validationMessageCode="field_invalid_integer" z="n8aI2Y9W3HTY8Z7+PPntHC+fmBk="/>
-        <field:input field="admFinanciera" id="c_emergencia_entidad_Sci_admFinanciera" required="true" validationMessageCode="field_invalid_integer" z="ajxPpZmNaoqjNjBM2WxIX1qKIUI="/>
+        
+        
+        
+        
+        
+        
+        
+        
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_Sci" render="${not empty dependencies}" z="nc1aSl1m+BL3N5gWwblKtee4cuw="/>
 </div>

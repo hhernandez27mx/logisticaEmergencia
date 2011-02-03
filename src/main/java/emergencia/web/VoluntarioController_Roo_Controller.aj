@@ -149,7 +149,7 @@ privileged aspect VoluntarioController_Roo_Controller {
     Converter<Voluntario, String> VoluntarioController.getVoluntarioConverter() {
         return new Converter<Voluntario, String>() {
             public String convert(Voluntario voluntario) {
-                return new StringBuilder().append(voluntario.getAsignacion()).append(" ").append(voluntario.getNombre()).append(" ").append(voluntario.getCorreo()).toString();
+                return new StringBuilder().append(voluntario.getNombre()).append(" ").append(voluntario.getCorreo()).append(" ").append(voluntario.getFechaNacimiento()).toString();
             }
         };
     }

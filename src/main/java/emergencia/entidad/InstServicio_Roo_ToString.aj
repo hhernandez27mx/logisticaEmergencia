@@ -5,11 +5,12 @@ package emergencia.entidad;
 
 import java.lang.String;
 
-privileged aspect Sci_Roo_ToString {
+privileged aspect InstServicio_Roo_ToString {
     
-    public String Sci.toString() {
+    public String InstServicio.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Id: ").append(getId());
+        sb.append("Id: ").append(getId()).append(", ");
+        sb.append("Version: ").append(getVersion());
         return sb.toString();
     }
     

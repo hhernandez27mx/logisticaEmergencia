@@ -119,3 +119,41 @@ field string --fieldName nombre --notNull --unique true
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-01 09:13:40
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-01 10:27:28
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-01 10:27:54
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-01 12:53:06
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-01 14:05:56
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-01 16:13:12
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-01 16:49:03
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-02 13:31:27
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-02 13:46:15
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-02 13:48:01
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-02 13:53:09
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-02 13:53:25
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-02 14:04:23
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-02 14:04:48
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-02 14:08:31
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-02 14:08:48
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-02 14:52:18
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-02 14:52:40
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-02 14:54:48
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-02 14:55:06
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-02 15:04:17
+focus --class ~.entidad.CentroAcopio
+field set --fieldName recSuministros --element ~.entidad.Suministro
+focus --class ~.entidad.Usuario
+field reference --fieldName perfil --type ~.entidad.Perfil --notNull --cardinality ONE_TO_ONE
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-02 15:30:17
+focus --class ~.entidad.Usuario
+field set --fieldName perfiles  --element ~.entidad.Perfil --notNull 
+entity --class ~.entidad.Albergue
+entity --class ~.entidad.InstServicio
+focus --class  ~.entidad.Albergue
+// [failed] field reference --fieldName direccion --type ~.entidad.Direccion --notNull --cardinality ONE_TO_ONE
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-02 15:51:41
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-02 15:53:09
+// [failed] field reference --fieldName direccion --type ~.entidad.Direccion --notNull --cardinality --class ~.entidadAlbergue
+// [failed] field reference --fieldName direccion --type ~.entidad.Direccion --notNull  --class ~.entidadAlbergue
+field reference --fieldName direccion --type ~.entidad.Direccion   --notNull  --class ~.entidad.Albergue
+field reference --fieldName direccion --type ~.entidad.Direccion   --notNull  --class ~.entidad.CentroAlmacenamiento
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-02 16:59:12

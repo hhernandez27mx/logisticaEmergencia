@@ -3,10 +3,8 @@
 
 package emergencia.web;
 
-import emergencia.entidad.CentroAcopio;
 import emergencia.entidad.Consejo;
 import emergencia.entidad.Emergencia;
-import emergencia.entidad.EmergenciaSuministro;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
@@ -104,27 +102,9 @@ privileged aspect EmergenciaController_Roo_Controller {
         return "redirect:/emergencias?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
     }
     
-    @ModelAttribute("centroacopios")
-    public Collection<CentroAcopio> EmergenciaController.populateCentroAcopios() {
-        return CentroAcopio.findAllCentroAcopios();
-    }
-    
     @ModelAttribute("consejoes")
     public Collection<Consejo> EmergenciaController.populateConsejoes() {
         return Consejo.findAllConsejoes();
-    }
-    
-    @ModelAttribute("emergenciasuministroes")
-    public Collection<EmergenciaSuministro> EmergenciaController.populateEmergenciaSuministroes() {
-        return EmergenciaSuministro.findAllEmergenciaSuministroes();
-    }
-    
-    Converter<CentroAcopio, String> EmergenciaController.getCentroAcopioConverter() {
-        return new Converter<CentroAcopio, String>() {
-            public String convert(CentroAcopio centroAcopio) {
-                return new StringBuilder().append(centroAcopio.getFechaInicio()).append(" ").append(centroAcopio.getFechaFin()).toString();
-            }
-        };
     }
     
     Converter<Consejo, String> EmergenciaController.getConsejoConverter() {
@@ -143,20 +123,10 @@ privileged aspect EmergenciaController_Roo_Controller {
         };
     }
     
-    Converter<EmergenciaSuministro, String> EmergenciaController.getEmergenciaSuministroConverter() {
-        return new Converter<EmergenciaSuministro, String>() {
-            public String convert(EmergenciaSuministro emergenciaSuministro) {
-                return new StringBuilder().append(emergenciaSuministro.getCantidad()).toString();
-            }
-        };
-    }
-    
     @PostConstruct
     void EmergenciaController.registerConverters() {
-        conversionService.addConverter(getCentroAcopioConverter());
         conversionService.addConverter(getConsejoConverter());
         conversionService.addConverter(getEmergenciaConverter());
-        conversionService.addConverter(getEmergenciaSuministroConverter());
     }
     
     void EmergenciaController.addDateTimeFormatPatterns(Model model) {

@@ -4,12 +4,12 @@
     <form:create id="fc_emergencia_entidad_Persona" modelAttribute="persona" path="/personae" render="${empty dependencies}" z="jhm4I1elw2KXeTZXrzGHPAeeWw4=">
         
         
-        <field:input field="locacion" id="c_emergencia_entidad_Persona_locacion" required="true" z="SvPrgibdXjeigC6uKSTtz9s7WD4="/>
-        <field:input field="correo" id="c_emergencia_entidad_Persona_correo" required="true" z="T3iwvn8Jts5lSZ0u9md3sG2lWjg="/>
-        <field:input field="perfil" id="c_emergencia_entidad_Persona_perfil" required="true" z="OhP4fNpz3GRJYbrGJJSAc7/Qah8="/>
-        <field:input field="celular" id="c_emergencia_entidad_Persona_celular" required="true" validationMessageCode="field_invalid_integer" z="H9s5X/iTMHjFrMeBI61bIyu5hXA="/>
-        <field:input field="direccion" id="c_emergencia_entidad_Persona_direccion" required="true" z="Sfw0w2oTmeH3bEdmlbHQSGq8Izw="/>
-        <field:input field="nombre" id="c_emergencia_entidad_Persona_nombre" required="true" z="dMc9XAuXH41E60Iu1FAToCB9984="/>
+        
+        
+        
+        
+        
+        
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_Persona" render="${not empty dependencies}" z="vdGMV8vuLxpJsvJZ6hycM0ELXRU="/>
 </div>

@@ -3,7 +3,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_emergencia_entidad_Voluntario" modelAttribute="voluntario" path="/voluntarios" render="${empty dependencies}" z="tZtGSMTT3X9OVdkTL3JYFD5saAk=">
         
-        <field:input field="asignacion" id="c_emergencia_entidad_Voluntario_asignacion" required="true" z="eVdgRtWFpbyum+FyfbffxvQI9wY="/>
+        
     <field:input field="nombre" id="c_emergencia_entidad_Voluntario_nombre" required="true" z="dbIqj6h4E4YmBsf2T79ys+OMS+E="/>
     <field:textarea field="correo" id="c_emergencia_entidad_Voluntario_correo" required="true" z="cM7jIZljJyGqNI4VIyhuEzuNlZ0="/>
     <field:datetime dateTimePattern="${voluntario_fechanacimiento_date_format}" field="fechaNacimiento" id="c_emergencia_entidad_Voluntario_fechaNacimiento" required="true" z="/y3mvsyLKStlnOmQRh+lSqHlhGw="/>

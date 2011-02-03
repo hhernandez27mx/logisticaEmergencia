@@ -4,12 +4,13 @@
     <page:list id="pl_emergencia_entidad_Voluntario" items="${voluntarios}" z="MdsPeQ383wIP6Mek4A6KY9KAakI=">
         <table:table data="${voluntarios}" id="l_emergencia_entidad_Voluntario" path="/voluntarios" typeIdFieldName="idVoluntario" z="nslA6d6tc2zgCqtDrYf7R4L26x8=">
             
-            <table:column id="c_emergencia_entidad_Voluntario_asignacion" property="asignacion" z="MYgIheIs0Mw+6wmnAar3f65dDRA="/>
+            
         <table:column id="c_emergencia_entidad_Voluntario_nombre" property="nombre" z="SF6zpn3na+tKgjmhjKLbLanp2J0="/>
         <table:column id="c_emergencia_entidad_Voluntario_correo" property="correo" z="IcXS3FBPpEu5pE6AmXa3OInTIcw="/>
         <table:column id="c_emergencia_entidad_Voluntario_fechaNacimiento" property="fechaNacimiento" z="PXm45/xdRN8v/7pnVRkGb3ZiV5I="/>
         <table:column id="c_emergencia_entidad_Voluntario_twitter" property="twitter" z="6SL8pGTx5EMhWsfiJ1XBtH7/5yg="/>
         <table:column id="c_emergencia_entidad_Voluntario_apellidoPaterno" property="apellidoPaterno" z="gZJJk6BpAdo7ylVCfs3ZGxIGrL4="/>
+        <table:column id="c_emergencia_entidad_Voluntario_apellidoMaterno" property="apellidoMaterno" z="bsjyUmPBjAg1XlZymXlkgLn6VnE="/>
         </table:table>
     </page:list>
 </div>

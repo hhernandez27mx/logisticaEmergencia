@@ -4,10 +4,11 @@
     <page:list id="pl_emergencia_entidad_CentroAcopio" items="${centroacopios}" z="JQRxlxb1FSjaCcHuxow5PxkGtME=">
         <table:table data="${centroacopios}" id="l_emergencia_entidad_CentroAcopio" path="/centroacopios" typeIdFieldName="idCentroacopio" z="cXxF0LV/odA0QNkSymNKeldhtcI=">
             
-            <table:column id="c_emergencia_entidad_CentroAcopio_emergencia" property="emergencia" z="8JPZrgLR5Fh4g1Pn6YXNgy+ZIRM="/>
             
-            <table:column id="c_emergencia_entidad_CentroAcopio_fechaInicio" property="fechaInicio" z="1A6pvXZvPNhI66wYcjXO1Ru38Cs="/>
-            <table:column id="c_emergencia_entidad_CentroAcopio_fechaFin" property="fechaFin" z="Xy0ztyXwC/GGIvqLK7LW41py4TA="/>
+            
+            
+            
+        <table:column id="c_emergencia_entidad_CentroAcopio_recSuministros" property="recSuministros" z="mU0FUt2npE2f8b0O2sZ8GWG2ZcM="/>
         </table:table>
     </page:list>
 </div>

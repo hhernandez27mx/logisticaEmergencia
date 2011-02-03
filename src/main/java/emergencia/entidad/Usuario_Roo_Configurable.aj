@@ -5,8 +5,8 @@ package emergencia.entidad;
 
 import org.springframework.beans.factory.annotation.Configurable;
 
-privileged aspect EmergenciaSuministro_Roo_Configurable {
+privileged aspect Usuario_Roo_Configurable {
     
-    declare @type: EmergenciaSuministro: @Configurable;
+    declare @type: Usuario: @Configurable;
     
 }

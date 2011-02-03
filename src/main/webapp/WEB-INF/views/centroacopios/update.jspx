@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_emergencia_entidad_CentroAcopio" idField="idCentroacopio" modelAttribute="centroAcopio" path="/centroacopios" versionField="none" z="atsdnu+YzbtWGCdXtdp9IWLKpfQ=">
-        
-        <field:select field="emergencia" id="c_emergencia_entidad_CentroAcopio_emergencia" itemValue="idEmergencia" items="${emergencias}" path="/emergencias" z="uMFO1qepfoL5CdSv7DLZLGIIBJs="/>
-        
-        <field:datetime dateTimePattern="${centroAcopio_fechainicio_date_format}" field="fechaInicio" id="c_emergencia_entidad_CentroAcopio_fechaInicio" required="true" z="HUw0bOWefpxpDCfmf/YYVEg7akI="/>
-        <field:datetime dateTimePattern="${centroAcopio_fechafin_date_format}" field="fechaFin" id="c_emergencia_entidad_CentroAcopio_fechaFin" required="true" z="W8QGgswfIK1CuqbWrs55ueUKZJE="/>
+    <form:update id="fu_emergencia_entidad_CentroAcopio" idField="idCentroacopio" modelAttribute="centroAcopio" path="/centroacopios" z="69u14VLbqeTEDx2B9LAIufSaTA8=">
+        <field:select field="recSuministros" id="c_emergencia_entidad_CentroAcopio_recSuministros" itemValue="idSuministro" items="${suministroes}" multiple="true" path="/suministroes" z="MJ8LXVGihPOMfWufT31wg+k+BwM="/>
     </form:update>
 </div>

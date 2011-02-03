@@ -3,9 +3,10 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_emergencia_entidad_CentroAcopio" object="${centroacopio}" path="/centroacopios" z="x0bk3ePIOViDUmymuA1XxflVPdQ=">
         
-        <field:display field="emergencia" id="s_emergencia_entidad_CentroAcopio_emergencia" object="${centroacopio}" z="7NBxQi75yJaR/+PdE0SkhZsLUZw="/>
         
-        <field:display date="true" dateTimePattern="${centroAcopio_fechainicio_date_format}" field="fechaInicio" id="s_emergencia_entidad_CentroAcopio_fechaInicio" object="${centroacopio}" z="FNRgmggLiOU1DZW53AtLGnKFCsU="/>
-        <field:display date="true" dateTimePattern="${centroAcopio_fechafin_date_format}" field="fechaFin" id="s_emergencia_entidad_CentroAcopio_fechaFin" object="${centroacopio}" z="FLuukBcRbrvNkHRUJC+4D1Lb5VA="/>
+        
+        
+        
+    <field:display field="recSuministros" id="s_emergencia_entidad_CentroAcopio_recSuministros" object="${centroacopio}" z="afrJC1emhJW5oIxaGpiosAA5JdQ="/>
     </page:show>
 </div>

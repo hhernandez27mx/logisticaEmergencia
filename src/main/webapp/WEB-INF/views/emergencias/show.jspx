@@ -22,5 +22,8 @@
         <field:display field="nombre" id="s_emergencia_entidad_Emergencia_nombre" object="${emergencia}" z="2UGzVOPZphxKwYPpDJJ+KZZ6DQE="/>
         <field:display date="true" dateTimePattern="${emergencia_fechainicio_date_format}" field="fechaInicio" id="s_emergencia_entidad_Emergencia_fechaInicio" object="${emergencia}" z="9zYul1zYdpk57rh4ceH90nRIZ8E="/>
         <field:display date="true" dateTimePattern="${emergencia_fechafin_date_format}" field="fechaFin" id="s_emergencia_entidad_Emergencia_fechaFin" object="${emergencia}" z="H6B49lfJGojzH+80CAsPv2QaPkc="/>
+    
+    
+    <field:display field="suministrosReq" id="s_emergencia_entidad_Emergencia_suministrosReq" object="${emergencia}" z="bCRNZkw8SK9co2t8EGbMiIzDHmY="/>
     </page:show>
 </div>

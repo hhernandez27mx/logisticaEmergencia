@@ -11,7 +11,8 @@ privileged aspect CentroAlmacenamiento_Roo_ToString {
         StringBuilder sb = new StringBuilder();
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("Direccion: ").append(getDireccion());
+        sb.append("Direccion: ").append(getDireccion()).append(", ");
+        sb.append("Emergencia: ").append(getEmergencia());
         return sb.toString();
     }
     

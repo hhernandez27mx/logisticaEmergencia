@@ -3,6 +3,8 @@
 
 package emergencia.entidad;
 
+import emergencia.entidad.Direccion;
+import emergencia.entidad.InstEncargada;
 import emergencia.entidad.Suministro;
 import java.util.Set;
 
@@ -14,6 +16,22 @@ privileged aspect CentroAcopio_Roo_JavaBean {
     
     public void CentroAcopio.setRecSuministros(Set<Suministro> recSuministros) {
         this.recSuministros = recSuministros;
+    }
+    
+    public InstEncargada CentroAcopio.getInstEncargada() {
+        return this.instEncargada;
+    }
+    
+    public void CentroAcopio.setInstEncargada(InstEncargada instEncargada) {
+        this.instEncargada = instEncargada;
+    }
+    
+    public Direccion CentroAcopio.getDireccion() {
+        return this.direccion;
+    }
+    
+    public void CentroAcopio.setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
     
 }

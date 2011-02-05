@@ -8,5 +8,7 @@
         
         
     <field:display field="recSuministros" id="s_emergencia_entidad_CentroAcopio_recSuministros" object="${centroacopio}" z="afrJC1emhJW5oIxaGpiosAA5JdQ="/>
+    <field:display field="instEncargada" id="s_emergencia_entidad_CentroAcopio_instEncargada" object="${centroacopio}" z="YU6lZ+GmT0l5UvaLIBw6aiaUUcY="/>
+    <field:display field="direccion" id="s_emergencia_entidad_CentroAcopio_direccion" object="${centroacopio}" z="52px0fkU+0VMAwrKqVqdkYofvWs="/>
     </page:show>
 </div>

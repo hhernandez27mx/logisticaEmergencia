@@ -9,6 +9,8 @@
             
             
         <table:column id="c_emergencia_entidad_CentroAcopio_recSuministros" property="recSuministros" z="mU0FUt2npE2f8b0O2sZ8GWG2ZcM="/>
+        <table:column id="c_emergencia_entidad_CentroAcopio_instEncargada" property="instEncargada" z="HR4U90S+uFjrcTGKK0Rd3bHH49U="/>
+        <table:column id="c_emergencia_entidad_CentroAcopio_direccion" property="direccion" z="oorufSufIkY1tTVh2fWcGMgSwCI="/>
         </table:table>
     </page:list>
 </div>

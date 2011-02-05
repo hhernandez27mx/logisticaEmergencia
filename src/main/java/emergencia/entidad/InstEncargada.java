@@ -5,6 +5,9 @@ import org.springframework.roo.addon.tostring.RooToString;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.dbre.RooDbManaged;
 import org.springframework.roo.addon.json.RooJson;
+import emergencia.entidad.Usuario;
+import javax.validation.constraints.NotNull;
+import javax.persistence.OneToOne;
 
 @RooJavaBean
 @RooToString
@@ -12,4 +15,8 @@ import org.springframework.roo.addon.json.RooJson;
 @RooDbManaged(automaticallyDelete = true)
 @RooJson
 public class InstEncargada {
+
+    @NotNull
+    @OneToOne
+    private Usuario reponsable;
 }

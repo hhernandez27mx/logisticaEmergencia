@@ -40,7 +40,6 @@
  <table name="inst_encargada">
      <column index="1" name="id_instencargada" primaryKey="true" required="true" size="10" type="INTEGER"/>
      <column index="2" name="nombre" primaryKey="false" required="true" size="100" type="VARCHAR"/>
-     <column index="3" name="id_responsable" primaryKey="false" required="true" size="10" type="INTEGER"/>
      <column index="4" name="funciones" primaryKey="false" required="true" size="100" type="VARCHAR"/>
      <unique name="inst_encargada_pk">
          <unique-column name="id_instencargada" sequenceNumber="1"/>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_emergencia_entidad_Usuario" items="${usuarios}" z="rh0z/XD7BB36tBWlnW+vTZaarUk=">
+        <table:table data="${usuarios}" id="l_emergencia_entidad_Usuario" path="/usuarios" typeIdFieldName="idUsuario" z="Lb8PAmO0y36EN5JFRiGE2yXS7og=">
+            <table:column id="c_emergencia_entidad_Usuario_perfiles" property="perfiles" z="y2P1doql++aCQfP+CS65koxT/zA="/>
+            <table:column id="c_emergencia_entidad_Usuario_nombre" property="nombre" z="Y+Qyf38o9yqNCcdmjI5v/OApq9k="/>
+            <table:column id="c_emergencia_entidad_Usuario_contrasena" property="contrasena" z="v0xKx/ap2FXeT0BNbVkxTkWssSM="/>
+            <table:column id="c_emergencia_entidad_Usuario_correo" property="correo" z="kLLxq6Mk+ufSFmthsMAckaA5+wY="/>
+            <table:column id="c_emergencia_entidad_Usuario_twitter" property="twitter" z="fj1xXUcxEUUhBOgHH55jbgh+oHM="/>
+            <table:column id="c_emergencia_entidad_Usuario_apellidoPaterno" property="apellidoPaterno" z="u/2rvzRUkPlsAxkd/Bcrz6ZhC0g="/>
+        </table:table>
+    </page:list>
+</div>

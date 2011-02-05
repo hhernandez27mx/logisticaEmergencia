@@ -22,6 +22,9 @@
         <field:input field="nombre" id="c_emergencia_entidad_Emergencia_nombre" required="true" z="dCcNjXC8O+9gKbno2gzc338G1JM="/>
         <field:datetime dateTimePattern="${emergencia_fechainicio_date_format}" field="fechaInicio" id="c_emergencia_entidad_Emergencia_fechaInicio" required="true" z="ImXbaI0I1YqLwhvCenQsO/zPhGo="/>
         <field:datetime dateTimePattern="${emergencia_fechafin_date_format}" field="fechaFin" id="c_emergencia_entidad_Emergencia_fechaFin" required="true" z="eUJzsf5Jtbcbg0/Tf1xaNnqegVk="/>
+    
+    
+    <field:simple field="suministrosReq" id="c_emergencia_entidad_Emergencia_suministrosReq" messageCode="entity_reference_not_managed" messageCodeAttribute="Emergencia Req Suministros" z="8NlR2ER3Gn0QFqhNMAcAC8nXTLw="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_Emergencia" render="${not empty dependencies}" z="vRQSfuFOnhgK8EFchEnbBqxrcFU="/>
 </div>

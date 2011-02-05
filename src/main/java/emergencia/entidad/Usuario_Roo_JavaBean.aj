@@ -3,7 +3,10 @@
 
 package emergencia.entidad;
 
+import emergencia.entidad.Direccion;
+import emergencia.entidad.EnumSexo;
 import emergencia.entidad.Perfil;
+import java.lang.String;
 import java.util.Set;
 
 privileged aspect Usuario_Roo_JavaBean {
@@ -14,6 +17,78 @@ privileged aspect Usuario_Roo_JavaBean {
     
     public void Usuario.setPerfiles(Set<Perfil> perfiles) {
         this.perfiles = perfiles;
+    }
+    
+    public String Usuario.getNombre() {
+        return this.nombre;
+    }
+    
+    public void Usuario.setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public String Usuario.getContrasena() {
+        return this.contrasena;
+    }
+    
+    public void Usuario.setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+    
+    public String Usuario.getCorreo() {
+        return this.correo;
+    }
+    
+    public void Usuario.setCorreo(String correo) {
+        this.correo = correo;
+    }
+    
+    public String Usuario.getTwitter() {
+        return this.twitter;
+    }
+    
+    public void Usuario.setTwitter(String twitter) {
+        this.twitter = twitter;
+    }
+    
+    public String Usuario.getApellidoPaterno() {
+        return this.apellidoPaterno;
+    }
+    
+    public void Usuario.setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
+    }
+    
+    public String Usuario.getApellidoMaterno() {
+        return this.apellidoMaterno;
+    }
+    
+    public void Usuario.setApellidoMaterno(String apellidoMaterno) {
+        this.apellidoMaterno = apellidoMaterno;
+    }
+    
+    public String Usuario.getFacebook() {
+        return this.facebook;
+    }
+    
+    public void Usuario.setFacebook(String facebook) {
+        this.facebook = facebook;
+    }
+    
+    public EnumSexo Usuario.getSexo() {
+        return this.sexo;
+    }
+    
+    public void Usuario.setSexo(EnumSexo sexo) {
+        this.sexo = sexo;
+    }
+    
+    public Direccion Usuario.getDomicilioParticular() {
+        return this.domicilioParticular;
+    }
+    
+    public void Usuario.setDomicilioParticular(Direccion domicilioParticular) {
+        this.domicilioParticular = domicilioParticular;
     }
     
 }

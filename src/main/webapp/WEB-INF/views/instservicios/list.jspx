@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_emergencia_entidad_InstServicio" items="${instservicios}" z="eB6dK7b+C3CW1cmn80X8sq7sCO8=">
+        <table:table data="${instservicios}" id="l_emergencia_entidad_InstServicio" path="/instservicios" z="2kl7YXWryWI8qTKdr4UT5+WPm6M="/>
+    </page:list>
+</div>

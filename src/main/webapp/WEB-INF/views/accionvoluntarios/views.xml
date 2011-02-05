@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="accionvoluntarios/list">
+        <put-attribute name="body" value="/WEB-INF/views/accionvoluntarios/list.jspx"/>
+    </definition>
+<definition extends="default" name="accionvoluntarios/show">
+        <put-attribute name="body" value="/WEB-INF/views/accionvoluntarios/show.jspx"/>
+    </definition>
+<definition extends="default" name="accionvoluntarios/create">
+        <put-attribute name="body" value="/WEB-INF/views/accionvoluntarios/create.jspx"/>
+    </definition>
+<definition extends="default" name="accionvoluntarios/update">
+        <put-attribute name="body" value="/WEB-INF/views/accionvoluntarios/update.jspx"/>
+    </definition>
+</tiles-definitions>

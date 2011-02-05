@@ -4,9 +4,13 @@
 package emergencia.web;
 
 import emergencia.entidad.InstEncargada;
+import emergencia.entidad.Usuario;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -17,6 +21,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -44,6 +49,11 @@ privileged aspect InstEncargadaController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String InstEncargadaController.createForm(Model model) {
         model.addAttribute("instEncargada", new InstEncargada());
+        List dependencies = new ArrayList();
+        if (Usuario.countUsuarios() == 0) {
+            dependencies.add(new String[]{"reponsable", "usuarios"});
+        }
+        model.addAttribute("dependencies", dependencies);
         return "instencargadas/create";
     }
     
@@ -91,10 +101,23 @@ privileged aspect InstEncargadaController_Roo_Controller {
         return "redirect:/instencargadas?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
     }
     
+    @ModelAttribute("usuarios")
+    public Collection<Usuario> InstEncargadaController.populateUsuarios() {
+        return Usuario.findAllUsuarios();
+    }
+    
     Converter<InstEncargada, String> InstEncargadaController.getInstEncargadaConverter() {
         return new Converter<InstEncargada, String>() {
             public String convert(InstEncargada instEncargada) {
-                return new StringBuilder().append(instEncargada.getNombre()).append(" ").append(instEncargada.getIdResponsable()).append(" ").append(instEncargada.getFunciones()).toString();
+                return new StringBuilder().append(instEncargada.getNombre()).append(" ").append(instEncargada.getFunciones()).toString();
+            }
+        };
+    }
+    
+    Converter<Usuario, String> InstEncargadaController.getUsuarioConverter() {
+        return new Converter<Usuario, String>() {
+            public String convert(Usuario usuario) {
+                return new StringBuilder().append(usuario.getNombre()).append(" ").append(usuario.getContrasena()).append(" ").append(usuario.getCorreo()).toString();
             }
         };
     }
@@ -102,6 +125,7 @@ privileged aspect InstEncargadaController_Roo_Controller {
     @PostConstruct
     void InstEncargadaController.registerConverters() {
         conversionService.addConverter(getInstEncargadaConverter());
+        conversionService.addConverter(getUsuarioConverter());
     }
     
     @RequestMapping(value = "/{idInstencargada}", method = RequestMethod.GET, headers = "Accept=application/json")

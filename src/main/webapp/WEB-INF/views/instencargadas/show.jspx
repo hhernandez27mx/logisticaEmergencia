@@ -4,7 +4,8 @@
     <page:show id="ps_emergencia_entidad_InstEncargada" object="${instencargada}" path="/instencargadas" z="MOU9GEW4QLSuBW6Yv16+AiwbUtI=">
         
         <field:display field="nombre" id="s_emergencia_entidad_InstEncargada_nombre" object="${instencargada}" z="Qr38no2hSyzSq+/3/5UyeP2eGlE="/>
-        <field:display field="idResponsable" id="s_emergencia_entidad_InstEncargada_idResponsable" object="${instencargada}" z="VRDBIq13xjyiCpl75fsHxXZBy/E="/>
+        
         <field:display field="funciones" id="s_emergencia_entidad_InstEncargada_funciones" object="${instencargada}" z="Did+u7uA7cehXgz7aDN21br6My8="/>
+    <field:display field="reponsable" id="s_emergencia_entidad_InstEncargada_reponsable" object="${instencargada}" z="iS/cVPZfVguYnZ+JTSOaAGDq9rc="/>
     </page:show>
 </div>

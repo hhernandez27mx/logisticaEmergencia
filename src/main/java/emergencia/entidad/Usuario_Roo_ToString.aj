@@ -11,7 +11,16 @@ privileged aspect Usuario_Roo_ToString {
         StringBuilder sb = new StringBuilder();
         sb.append("IdUsuario: ").append(getIdUsuario()).append(", ");
         sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("Perfiles: ").append(getPerfiles() == null ? "null" : getPerfiles().size());
+        sb.append("Perfiles: ").append(getPerfiles() == null ? "null" : getPerfiles().size()).append(", ");
+        sb.append("Nombre: ").append(getNombre()).append(", ");
+        sb.append("Contrasena: ").append(getContrasena()).append(", ");
+        sb.append("Correo: ").append(getCorreo()).append(", ");
+        sb.append("Twitter: ").append(getTwitter()).append(", ");
+        sb.append("ApellidoPaterno: ").append(getApellidoPaterno()).append(", ");
+        sb.append("ApellidoMaterno: ").append(getApellidoMaterno()).append(", ");
+        sb.append("Facebook: ").append(getFacebook()).append(", ");
+        sb.append("Sexo: ").append(getSexo()).append(", ");
+        sb.append("DomicilioParticular: ").append(getDomicilioParticular());
         return sb.toString();
     }
     

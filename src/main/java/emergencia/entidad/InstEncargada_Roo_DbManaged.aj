@@ -3,7 +3,6 @@
 
 package emergencia.entidad;
 
-import java.lang.Integer;
 import java.lang.String;
 import javax.persistence.Column;
 import javax.validation.constraints.NotNull;
@@ -13,10 +12,6 @@ privileged aspect InstEncargada_Roo_DbManaged {
     @Column(name = "nombre", length = 100)
     @NotNull
     private String InstEncargada.nombre;
-    
-    @Column(name = "id_responsable")
-    @NotNull
-    private Integer InstEncargada.idResponsable;
     
     @Column(name = "funciones", length = 100)
     @NotNull
@@ -28,14 +23,6 @@ privileged aspect InstEncargada_Roo_DbManaged {
     
     public void InstEncargada.setNombre(String nombre) {
         this.nombre = nombre;
-    }
-    
-    public Integer InstEncargada.getIdResponsable() {
-        return this.idResponsable;
-    }
-    
-    public void InstEncargada.setIdResponsable(Integer idResponsable) {
-        this.idResponsable = idResponsable;
     }
     
     public String InstEncargada.getFunciones() {

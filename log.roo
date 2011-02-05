@@ -157,3 +157,71 @@ field reference --fieldName direccion --type ~.entidad.Direccion   --notNull  --
 field reference --fieldName direccion --type ~.entidad.Direccion   --notNull  --class ~.entidad.CentroAlmacenamiento
 quit
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-02 16:59:12
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 13:07:40
+entity --class ~.entidad.AccionVoluntario --identifierField idAccionVol 
+field string --fieldName comentarios --notNull --sizeMax 2000
+field date --fieldName fechaInicio --notNull --type java.util.Date
+field date --fieldName fechaFin  --type java.util.Date
+field reference --type ~.entidad.Emergencia --fieldName emergencia --cardinality ONE_TO_ONE
+// [failed] field reference --type ~.Voluntario --fieldName voluntario --cardinality ONE_TO_ONE --notNull 
+field reference --type ~.entidad.Voluntario --fieldName voluntario --cardinality ONE_TO_ONE --notNull 
+focus --class ~.entidad.InstEncargada
+ focus --class ~.entidad.CentroAcopio
+// [failed] field reference --type ~.entidad.InstEncargada --fieldName instEncargada --cardinality ONE_TO_MANY --notNull 
+field reference --type ~.entidad.InstEncargada --fieldName instEncargada --cardinality MANY_TO_ONE --notNull 
+ focus --class ~.entidad.CentroAlmacenamiento
+field reference --type ~.entidad.Emergencia --fieldName emergencia --cardinality MANY_TO_ONE --notNull 
+entity --class ~.entidad.EmergenciaRecSuministros --identifierField idEmerRecSum 
+field number --fieldName cantidad --type java.lang.Integer --notNull 
+field reference --type ~.entidad.Suministro --fieldName suministro --notNull --cardinality ONE_TO_ONE 
+field reference --type ~.entidad.Emergencia  --fieldName emergencia  --notNull --cardinality MANY_TO_ONE
+focus --class ~.entidad.Emergencia
+field set --element ~.entidad.EmergenciaRecSuministros --fieldName suministrosRec --cardinality ONE_TO_MANY --mappedBy emergencia
+entity --class ~.entidad.EmergenciaReqSuministros --identifierField idEmerReqSum 
+field reference --type ~.entidad.Emergencia  --fieldName emergencia  --notNull --cardinality MANY_TO_ONE
+field number --fieldName cantidad --type java.lang.Integer --notNull 
+field reference --type ~.entidad.Suministro --fieldName suministro --notNull --cardinality MANY_TO_ONE
+focus --class ~.entidad.Emergencia
+field set --element ~.entidad.EmergenciaReqSuministros --fieldName suministrosReq --cardinality ONE_TO_MANY
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 14:16:12
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 14:16:27
+focus --class ~.entidad.InstEncargada
+field reference --type ~.entidad.Usuario --fieldName reponsable --notNull --cardinality ONE_TO_ONE 
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 14:21:01
+entity --class ~.entidad.AlbergueEmergencia --identifierField idAlbEmer 
+field reference --fieldName direccion --type ~.entidad.Direccion --notNull --cardinality ONE_TO_ONE
+field reference --fieldName emergencia  --type ~.entidad.Emergencia  --notNull --cardinality ONE_TO_ONE
+// [failed] field set --element ~.entidad.EmergenciaReqSuministros --fieldName suministrosReq --class ~.entidad.Emergencia --mappedBy emergencia --cardinality MANY_TO_ONE
+// [failed] field set --element ~.entidad.EmergenciaReqSuministros --fieldName suministrosReq --mappedBy emergencia --cardinality MANY_TO_ONE
+ field set --element ~.entidad.EmergenciaReqSuministros --fieldName suministrosReq --mappedBy emergencia --cardinality ONE_TO_MANY
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 14:48:16
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 14:48:26
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 14:50:40
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 17:31:42
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 17:32:10
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 17:35:15
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 17:41:58
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 17:42:37
+controller class --class ~.web.PerfilController 
+controller all --package ~.web  ~.entidad.Perfil
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 17:57:01
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 17:57:13
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 18:00:58
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 18:01:06
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 18:01:43
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 18:11:24
+controller scaffold --class ~.web.EstadoController --entity ~.entidad.Estado 
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 18:20:45
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 18:20:53
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 18:38:45
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2011-02-03 18:39:00
+quit
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2011-02-03 18:39:19

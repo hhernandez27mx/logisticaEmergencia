@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_emergencia_entidad_AccionVoluntario" idField="idAccionVol" modelAttribute="accionVoluntario" path="/accionvoluntarios" z="GXO7r3ax/OVECV7+v1fXNFt8700=">
+        <field:textarea field="comentarios" id="c_emergencia_entidad_AccionVoluntario_comentarios" required="true" z="L2ggjmHrbcWnWMePtUNeISzXd3g="/>
+        <field:datetime dateTimePattern="${accionVoluntario_fechainicio_date_format}" field="fechaInicio" id="c_emergencia_entidad_AccionVoluntario_fechaInicio" required="true" z="J015Mtp+rxdmlv8k8l1p0Su1TsU="/>
+        <field:datetime dateTimePattern="${accionVoluntario_fechafin_date_format}" field="fechaFin" id="c_emergencia_entidad_AccionVoluntario_fechaFin" z="lKM5VvtTR4EFOipU61G2OWFbHXQ="/>
+        <field:select field="emergencia" id="c_emergencia_entidad_AccionVoluntario_emergencia" itemValue="idEmergencia" items="${emergencias}" path="/emergencias" z="K3OIBxsw9JCLFAY2YYAkzPQb1Os="/>
+        <field:select field="voluntario" id="c_emergencia_entidad_AccionVoluntario_voluntario" itemValue="idVoluntario" items="${voluntarios}" path="/voluntarios" required="true" z="c03sxdfE27VLMB5TFqd/awjrgoQ="/>
+    </form:update>
+</div>

@@ -5,8 +5,9 @@
         <table:table data="${instencargadas}" id="l_emergencia_entidad_InstEncargada" path="/instencargadas" typeIdFieldName="idInstencargada" z="mhJJ6VrwhyoOjPsqc+0FScbOhl0=">
             
             <table:column id="c_emergencia_entidad_InstEncargada_nombre" property="nombre" z="gs8JQvQpUzS0+sHHmcEwjV83QEA="/>
-            <table:column id="c_emergencia_entidad_InstEncargada_idResponsable" property="idResponsable" z="6Kp4OBkBbmWiUkvbMEe58eiIpmg="/>
+            
             <table:column id="c_emergencia_entidad_InstEncargada_funciones" property="funciones" z="2QmN3GakTQmpPDpv5tKJUh+wC04="/>
+        <table:column id="c_emergencia_entidad_InstEncargada_reponsable" property="reponsable" z="X1mQN1Wp9hwl9vuh1cbnxL445PU="/>
         </table:table>
     </page:list>
 </div>

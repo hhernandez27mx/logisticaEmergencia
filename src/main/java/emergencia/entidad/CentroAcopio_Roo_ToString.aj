@@ -11,7 +11,9 @@ privileged aspect CentroAcopio_Roo_ToString {
         StringBuilder sb = new StringBuilder();
         sb.append("IdCentroacopio: ").append(getIdCentroacopio()).append(", ");
         sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("RecSuministros: ").append(getRecSuministros() == null ? "null" : getRecSuministros().size());
+        sb.append("RecSuministros: ").append(getRecSuministros() == null ? "null" : getRecSuministros().size()).append(", ");
+        sb.append("InstEncargada: ").append(getInstEncargada()).append(", ");
+        sb.append("Direccion: ").append(getDireccion());
         return sb.toString();
     }
     

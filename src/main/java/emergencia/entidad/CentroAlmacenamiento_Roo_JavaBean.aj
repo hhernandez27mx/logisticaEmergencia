@@ -4,6 +4,7 @@
 package emergencia.entidad;
 
 import emergencia.entidad.Direccion;
+import emergencia.entidad.Emergencia;
 
 privileged aspect CentroAlmacenamiento_Roo_JavaBean {
     
@@ -13,6 +14,14 @@ privileged aspect CentroAlmacenamiento_Roo_JavaBean {
     
     public void CentroAlmacenamiento.setDireccion(Direccion direccion) {
         this.direccion = direccion;
+    }
+    
+    public Emergencia CentroAlmacenamiento.getEmergencia() {
+        return this.emergencia;
+    }
+    
+    public void CentroAlmacenamiento.setEmergencia(Emergencia emergencia) {
+        this.emergencia = emergencia;
     }
     
 }

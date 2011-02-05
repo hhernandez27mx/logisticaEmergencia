@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_emergencia_entidad_CentroAlmacenamiento" items="${centroalmacenamientoes}" z="4gmCM7PkOUN6l19l6qVlxiIHTkE=">
+        <table:table data="${centroalmacenamientoes}" id="l_emergencia_entidad_CentroAlmacenamiento" path="/centroalmacenamientoes" z="6ZTMH6vNR6cuhGEcht8dGS/1gBA=">
+            <table:column id="c_emergencia_entidad_CentroAlmacenamiento_direccion" property="direccion" z="4LhMkqQh32jDYuGhvW3uWbzWBYg="/>
+            <table:column id="c_emergencia_entidad_CentroAlmacenamiento_emergencia" property="emergencia" z="oCHNF/A0/LCTrxZwPkZ/0yGdPKM="/>
+        </table:table>
+    </page:list>
+</div>

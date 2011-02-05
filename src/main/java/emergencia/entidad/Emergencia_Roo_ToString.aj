@@ -14,7 +14,8 @@ privileged aspect Emergencia_Roo_ToString {
         sb.append("Nombre: ").append(getNombre()).append(", ");
         sb.append("FechaInicio: ").append(getFechaInicio()).append(", ");
         sb.append("FechaFin: ").append(getFechaFin()).append(", ");
-        sb.append("IdEmergencia: ").append(getIdEmergencia());
+        sb.append("IdEmergencia: ").append(getIdEmergencia()).append(", ");
+        sb.append("SuministrosReq: ").append(getSuministrosReq() == null ? "null" : getSuministrosReq().size());
         return sb.toString();
     }
     

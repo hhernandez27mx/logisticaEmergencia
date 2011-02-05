@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_emergencia_entidad_Usuario" object="${usuario}" path="/usuarios" z="Fh6wbuRQgfmsKVYzGwZoLfwcwX0=">
+        <field:display field="perfiles" id="s_emergencia_entidad_Usuario_perfiles" object="${usuario}" z="vuegbB8DoDdsZfte+TZD0p2ih1k="/>
+        <field:display field="nombre" id="s_emergencia_entidad_Usuario_nombre" object="${usuario}" z="qeQCpDR+WC0quQxUFiQiF+3GocI="/>
+        <field:display field="contrasena" id="s_emergencia_entidad_Usuario_contrasena" object="${usuario}" z="zPMZGEYv4mwfvjGhQwcUzngPXDs="/>
+        <field:display field="correo" id="s_emergencia_entidad_Usuario_correo" object="${usuario}" z="1BxGN85JLwVCwURoJBhkTS0U0Ns="/>
+        <field:display field="twitter" id="s_emergencia_entidad_Usuario_twitter" object="${usuario}" z="lSnzDHROxSpjqGrBfMgqYXDfk4E="/>
+        <field:display field="apellidoPaterno" id="s_emergencia_entidad_Usuario_apellidoPaterno" object="${usuario}" z="ICpDvWrKJEYGOHx8zWl+iqLifG4="/>
+        <field:display field="apellidoMaterno" id="s_emergencia_entidad_Usuario_apellidoMaterno" object="${usuario}" z="Xnm9YPiGdCH0iduJeScNKUDB9/w="/>
+        <field:display field="facebook" id="s_emergencia_entidad_Usuario_facebook" object="${usuario}" z="1142iXM4CIRgAEbv+fPd7L5L7Og="/>
+        <field:display field="sexo" id="s_emergencia_entidad_Usuario_sexo" object="${usuario}" z="w6y/nM8LyOow0y0SbOEMVfnBOp4="/>
+        <field:display field="domicilioParticular" id="s_emergencia_entidad_Usuario_domicilioParticular" object="${usuario}" z="9ASC/DokO8j5vZZlenDeqw+nwHk="/>
+    </page:show>
+</div>

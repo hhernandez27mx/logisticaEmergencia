@@ -12,6 +12,8 @@ import emergencia.entidad.Suministro;
 import java.util.HashSet;
 import javax.persistence.ManyToMany;
 import javax.persistence.CascadeType;
+import emergencia.entidad.InstEncargada;
+import javax.validation.constraints.NotNull;
 
 @RooJavaBean
 @RooToString
@@ -22,4 +24,12 @@ public class CentroAcopio {
 
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Suministro> recSuministros = new HashSet<Suministro>();
+
+    @NotNull
+    @ManyToOne
+    private InstEncargada instEncargada;
+    
+    @NotNull
+    @ManyToOne
+    private Direccion direccion;
 }

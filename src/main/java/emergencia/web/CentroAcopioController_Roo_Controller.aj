@@ -4,11 +4,15 @@
 package emergencia.web;
 
 import emergencia.entidad.CentroAcopio;
+import emergencia.entidad.Direccion;
+import emergencia.entidad.InstEncargada;
 import emergencia.entidad.Suministro;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -47,6 +51,14 @@ privileged aspect CentroAcopioController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String CentroAcopioController.createForm(Model model) {
         model.addAttribute("centroAcopio", new CentroAcopio());
+        List dependencies = new ArrayList();
+        if (Direccion.countDireccions() == 0) {
+            dependencies.add(new String[]{"direccion", "direccions"});
+        }
+        if (InstEncargada.countInstEncargadas() == 0) {
+            dependencies.add(new String[]{"instEncargada", "instencargadas"});
+        }
+        model.addAttribute("dependencies", dependencies);
         return "centroacopios/create";
     }
     
@@ -94,9 +106,35 @@ privileged aspect CentroAcopioController_Roo_Controller {
         return "redirect:/centroacopios?page=" + ((page == null) ? "1" : page.toString()) + "&size=" + ((size == null) ? "10" : size.toString());
     }
     
+    @ModelAttribute("direccions")
+    public Collection<Direccion> CentroAcopioController.populateDireccions() {
+        return Direccion.findAllDireccions();
+    }
+    
+    @ModelAttribute("instencargadas")
+    public Collection<InstEncargada> CentroAcopioController.populateInstEncargadas() {
+        return InstEncargada.findAllInstEncargadas();
+    }
+    
     @ModelAttribute("suministroes")
     public Collection<Suministro> CentroAcopioController.populateSuministroes() {
         return Suministro.findAllSuministroes();
+    }
+    
+    Converter<Direccion, String> CentroAcopioController.getDireccionConverter() {
+        return new Converter<Direccion, String>() {
+            public String convert(Direccion direccion) {
+                return new StringBuilder().append(direccion.getCalle()).append(" ").append(direccion.getNumero()).append(" ").append(direccion.getNumeroint()).toString();
+            }
+        };
+    }
+    
+    Converter<InstEncargada, String> CentroAcopioController.getInstEncargadaConverter() {
+        return new Converter<InstEncargada, String>() {
+            public String convert(InstEncargada instEncargada) {
+                return new StringBuilder().append(instEncargada.getNombre()).append(" ").append(instEncargada.getFunciones()).toString();
+            }
+        };
     }
     
     Converter<Suministro, String> CentroAcopioController.getSuministroConverter() {
@@ -109,6 +147,8 @@ privileged aspect CentroAcopioController_Roo_Controller {
     
     @PostConstruct
     void CentroAcopioController.registerConverters() {
+        conversionService.addConverter(getDireccionConverter());
+        conversionService.addConverter(getInstEncargadaConverter());
         conversionService.addConverter(getSuministroConverter());
     }
     

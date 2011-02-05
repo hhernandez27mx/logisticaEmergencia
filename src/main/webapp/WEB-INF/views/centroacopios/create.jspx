@@ -8,6 +8,8 @@
         
         
     <field:select field="recSuministros" id="c_emergencia_entidad_CentroAcopio_recSuministros" itemValue="idSuministro" items="${suministroes}" multiple="true" path="/suministroes" z="MJ8LXVGihPOMfWufT31wg+k+BwM="/>
+    <field:select field="instEncargada" id="c_emergencia_entidad_CentroAcopio_instEncargada" itemValue="idInstencargada" items="${instencargadas}" path="/instencargadas" required="true" z="Jb36QD6H4diWmgKz4V+sf0dDKYM="/>
+    <field:select field="direccion" id="c_emergencia_entidad_CentroAcopio_direccion" itemValue="idDireccion" items="${direccions}" path="/direccions" required="true" z="p7/H3heEIShEZ+F/1mi39jZgfIw="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_CentroAcopio" render="${not empty dependencies}" z="Wh/8fA8M0yA2Xtq3tSLDkssMUB4="/>
 </div>

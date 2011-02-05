@@ -4,8 +4,9 @@
     <form:create id="fc_emergencia_entidad_InstEncargada" modelAttribute="instEncargada" path="/instencargadas" render="${empty dependencies}" z="+6z4gWT2dseu/viwdoJ87kADjLE=">
         
         <field:input field="nombre" id="c_emergencia_entidad_InstEncargada_nombre" required="true" z="HBTjljwIlv0BibyejG8OlFQR5zc="/>
-        <field:input field="idResponsable" id="c_emergencia_entidad_InstEncargada_idResponsable" required="true" validationMessageCode="field_invalid_integer" z="/9L03aYoEQ8yoMYNr1KacX6TTcs="/>
+        
         <field:input field="funciones" id="c_emergencia_entidad_InstEncargada_funciones" required="true" z="431fM4M9DxWcjpr9daViA9AkyV8="/>
+    <field:select field="reponsable" id="c_emergencia_entidad_InstEncargada_reponsable" itemValue="idUsuario" items="${usuarios}" path="/usuarios" required="true" z="xV7fUNDovrR7UbMPtiEd7rVrL7Y="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_InstEncargada" render="${not empty dependencies}" z="MYV2j3IrGokfWZ9O7I4ZmAFwEDs="/>
 </div>

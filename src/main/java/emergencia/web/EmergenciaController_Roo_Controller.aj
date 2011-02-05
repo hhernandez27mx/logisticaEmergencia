@@ -5,6 +5,7 @@ package emergencia.web;
 
 import emergencia.entidad.Consejo;
 import emergencia.entidad.Emergencia;
+import emergencia.entidad.EmergenciaReqSuministros;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.String;
@@ -107,6 +108,11 @@ privileged aspect EmergenciaController_Roo_Controller {
         return Consejo.findAllConsejoes();
     }
     
+    @ModelAttribute("emergenciareqsuministroses")
+    public Collection<EmergenciaReqSuministros> EmergenciaController.populateEmergenciaReqSuministroses() {
+        return EmergenciaReqSuministros.findAllEmergenciaReqSuministroses();
+    }
+    
     Converter<Consejo, String> EmergenciaController.getConsejoConverter() {
         return new Converter<Consejo, String>() {
             public String convert(Consejo consejo) {
@@ -123,10 +129,19 @@ privileged aspect EmergenciaController_Roo_Controller {
         };
     }
     
+    Converter<EmergenciaReqSuministros, String> EmergenciaController.getEmergenciaReqSuministrosConverter() {
+        return new Converter<EmergenciaReqSuministros, String>() {
+            public String convert(EmergenciaReqSuministros emergenciaReqSuministros) {
+                return new StringBuilder().append(emergenciaReqSuministros.getCantidad()).toString();
+            }
+        };
+    }
+    
     @PostConstruct
     void EmergenciaController.registerConverters() {
         conversionService.addConverter(getConsejoConverter());
         conversionService.addConverter(getEmergenciaConverter());
+        conversionService.addConverter(getEmergenciaReqSuministrosConverter());
     }
     
     void EmergenciaController.addDateTimeFormatPatterns(Model model) {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_emergencia_entidad_AccionVoluntario" items="${accionvoluntarios}" z="JbvTNevetkp/yAK9Z8FkKNs4uZo=">
+        <table:table data="${accionvoluntarios}" id="l_emergencia_entidad_AccionVoluntario" path="/accionvoluntarios" typeIdFieldName="idAccionVol" z="PUclHW1avC49JIzMPCFlkWaaH6Y=">
+            <table:column id="c_emergencia_entidad_AccionVoluntario_comentarios" property="comentarios" z="u6o0CI9E6fpbagQh/Jo2TAO7EBI="/>
+            <table:column id="c_emergencia_entidad_AccionVoluntario_fechaInicio" property="fechaInicio" z="vqFDbEYM1IDxnCFTvfCwHlCHStI="/>
+            <table:column id="c_emergencia_entidad_AccionVoluntario_fechaFin" property="fechaFin" z="KcNFOtiT1ZclutJmb8JmcBvPIB4="/>
+            <table:column id="c_emergencia_entidad_AccionVoluntario_emergencia" property="emergencia" z="y4fbzBUl/iAfWm+OXO/KW23j/gk="/>
+            <table:column id="c_emergencia_entidad_AccionVoluntario_voluntario" property="voluntario" z="P0PZ7kosBgMkJ48qv4yPOB3q04M="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_emergencia_entidad_AccionVoluntario" object="${accionvoluntario}" path="/accionvoluntarios" z="7fGMHuoJQoQw5Qlji+l0/u2PSzU=">
+        <field:display field="comentarios" id="s_emergencia_entidad_AccionVoluntario_comentarios" object="${accionvoluntario}" z="JfxB8yUPWhyJuaT0398RwvAfdfY="/>
+        <field:display date="true" dateTimePattern="${accionVoluntario_fechainicio_date_format}" field="fechaInicio" id="s_emergencia_entidad_AccionVoluntario_fechaInicio" object="${accionvoluntario}" z="yj7WDZOz696dwwxZHf2ro25vFCM="/>
+        <field:display date="true" dateTimePattern="${accionVoluntario_fechafin_date_format}" field="fechaFin" id="s_emergencia_entidad_AccionVoluntario_fechaFin" object="${accionvoluntario}" z="EHJmqQG92R7A6+nsaggmvbeYUyM="/>
+        <field:display field="emergencia" id="s_emergencia_entidad_AccionVoluntario_emergencia" object="${accionvoluntario}" z="ft15moyB4fB7uQUulbVpGkuxhmk="/>
+        <field:display field="voluntario" id="s_emergencia_entidad_AccionVoluntario_voluntario" object="${accionvoluntario}" z="czrDqmmumM4HFJNPyXMvWGGUTus="/>
+    </page:show>
+</div>

@@ -12,5 +12,6 @@
         <field:display field="facebook" id="s_emergencia_entidad_Usuario_facebook" object="${usuario}" z="1142iXM4CIRgAEbv+fPd7L5L7Og="/>
         <field:display field="sexo" id="s_emergencia_entidad_Usuario_sexo" object="${usuario}" z="w6y/nM8LyOow0y0SbOEMVfnBOp4="/>
         <field:display field="domicilioParticular" id="s_emergencia_entidad_Usuario_domicilioParticular" object="${usuario}" z="9ASC/DokO8j5vZZlenDeqw+nwHk="/>
+    <field:display field="confcontrasena" id="s_emergencia_entidad_Usuario_confcontrasena" object="${usuario}" z="F066VZ0RWg2xm/sanCMGM9e6RiM="/>
     </page:show>
 </div>

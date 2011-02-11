@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML SYSTEM "about:legacy-compat">
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="IE=8" http-equiv="X-UA-Compatible" />
+<link href="/Emergencia/resources/styles/standard.css" media="screen"
+	type="text/css" rel="stylesheet"></link>
+<link href="/Emergencia/resources/dijit/themes/tundra/tundra.css"
+	type="text/css" rel="stylesheet"></link>
+<link href="/Emergencia/resources/images/favicon.ico"
+	rel="SHORTCUT ICON" />
+<script type="text/javascript">
+	var djConfig = "es_ES";
+</script>
+<script type="text/javascript" src="/Emergencia/resources/dojo/dojo.js"></script>
+<script type="text/javascript"
+	src="/Emergencia/resources/spring/Spring.js"></script>
+<script type="text/javascript"
+	src="/Emergencia/resources/spring/Spring-Dojo.js"></script>
+<script type="text/javascript" language="JavaScript">
+	dojo.require("dojo.parser");
+</script>
+<title>Bienvenido a RHoKMx Logistica Emergencias</title>
+</head>
+<body class="tundra spring">
+<div id="wrapper">
+<div version="2.0" id="header"><font
+	style="font-family: sans-serif; font-size: 26px; font-weight: bold; position: absolute; margin-top: 70px; margin-left: 500px;">Mexico</font><a
+	title="Inicio" name="Inicio" href="/Emergencia/"><img
+	src="/Emergencia/resources/images/banner-graphic.png" /></a>
+<div align="right"><span id="language"> | Idioma: <a
+	title="Cambiar idioma a English"
+	href="?lang=en&amp;amp;page=1&amp;amp;size=10"><img
+	alt="Cambiar idioma a English"
+	src="/Emergencia/resources/images/en.png" class="flag" /></a> <a
+	title="Cambiar idioma a Espanol"
+	href="?lang=es&amp;amp;page=1&amp;amp;size=10"><img
+	alt="Cambiar idioma a Espanol"
+	src="/Emergencia/resources/images/es.png" class="flag" /></a> </span><span>
+| Tema: <a title="est&aacute;ndar"
+	href="?theme=standard&amp;page=1&amp;size=10">est&aacute;ndar</a> | <a
+	title="alt" href="?theme=alt&amp;page=1&amp;size=10">alt</a></span></div>
+</div>
+<div version="2.0" id="menu">
+<ul id="_menu">
+	<li id="c_consejo">
+	<h2>Consejo</h2>
+	<ul>
+		<li id="i_consejo_new"><a title="Crear nuevo Consejo"
+			href="/Emergencia/consejoes?form">Crear nuevo Consejo</a></li>
+		<li id="i_consejo_list"><a title="Listar Consejoes"
+			href="/Emergencia/consejoes?page=1&amp;size=10">Listar Consejoes</a></li>
+	</ul>
+	</li>
+	<li id="c_instencargada">
+	<h2>Inst Encargada</h2>
+	<ul>
+		<li id="i_instencargada_new"><a
+			title="Crear nuevo Inst Encargada"
+			href="/Emergencia/instencargadas?form">Crear nuevo Inst Encargada</a></li>
+		<li id="i_instencargada_list"><a title="Listar Inst Encargadas"
+			href="/Emergencia/instencargadas?page=1&amp;size=10">Listar Inst
+		Encargadas</a></li>
+	</ul>
+	</li>
+	<li id="c_perfil">
+	<h2>Perfil</h2>
+	<ul>
+		<li id="i_perfil_new"><a title="Crear nuevo Perfil"
+			href="/Emergencia/perfils?form">Crear nuevo Perfil</a></li>
+		<li id="i_perfil_list"><a title="Listar Perfils"
+			href="/Emergencia/perfils?page=1&amp;size=10">Listar Perfils</a></li>
+	</ul>
+	</li>
+	<li id="c_suministro">
+	<h2>Suministro</h2>
+	<ul>
+		<li id="i_suministro_new"><a title="Crear nuevo Suministro"
+			href="/Emergencia/suministroes?form">Crear nuevo Suministro</a></li>
+		<li id="i_suministro_list"><a title="Listar Suministroes"
+			href="/Emergencia/suministroes?page=1&amp;size=10">Listar
+		Suministroes</a></li>
+	</ul>
+	</li>
+	<li id="c_accionvoluntario">
+	<h2>Accion Voluntario</h2>
+	<ul>
+		<li id="i_accionvoluntario_new"><a
+			title="Crear nuevo Accion Voluntario"
+			href="/Emergencia/accionvoluntarios?form">Crear nuevo Accion
+		Voluntario</a></li>
+		<li id="i_accionvoluntario_list"><a
+			title="Listar Accion Voluntarios"
+			href="/Emergencia/accionvoluntarios?page=1&amp;size=10">Listar
+		Accion Voluntarios</a></li>
+	</ul>
+	</li>
+	<li id="c_profesion">
+	<h2>Profesion</h2>
+	<ul>
+		<li id="i_profesion_new"><a title="Crear nuevo Profesion"
+			href="/Emergencia/profesions?form">Crear nuevo Profesion</a></li>
+		<li id="i_profesion_list"><a title="Listar Profesions"
+			href="/Emergencia/profesions?page=1&amp;size=10">Listar
+		Profesions</a></li>
+	</ul>
+	</li>
+	<li id="c_direccion">
+	<h2>Direccion</h2>
+	<ul>
+		<li id="i_direccion_new"><a title="Crear nuevo Direccion"
+			href="/Emergencia/direccions?form">Crear nuevo Direccion</a></li>
+		<li id="i_direccion_list"><a title="Listar Direccions"
+			href="/Emergencia/direccions?page=1&amp;size=10">Listar
+		Direccions</a></li>
+	</ul>
+	</li>
+	<li id="c_centroacopio">
+	<h2>Centro Acopio</h2>
+	<ul>
+		<li id="i_centroacopio_new"><a title="Crear nuevo Centro Acopio"
+			href="/Emergencia/centroacopios?form">Crear nuevo Centro Acopio</a></li>
+		<li id="i_centroacopio_list"><a title="Listar Centro Acopios"
+			href="/Emergencia/centroacopios?page=1&amp;size=10">Listar Centro
+		Acopios</a></li>
+	</ul>
+	</li>
+	<li id="c_voluntario">
+	<h2>Voluntario</h2>
+	<ul>
+		<li id="i_voluntario_new"><a title="Crear nuevo Voluntario"
+			href="/Emergencia/voluntarios?form">Crear nuevo Voluntario</a></li>
+		<li id="i_voluntario_list"><a title="Listar Voluntarios"
+			href="/Emergencia/voluntarios?page=1&amp;size=10">Listar
+		Voluntarios</a></li>
+	</ul>
+	</li>
+	<li id="c_centroalmacenamiento">
+	<h2>Centro Almacenamiento</h2>
+	<ul>
+		<li id="i_centroalmacenamiento_new"><a
+			title="Crear nuevo Centro Almacenamiento"
+			href="/Emergencia/centroalmacenamientoes?form">Crear nuevo Centro
+		Almacenamiento</a></li>
+		<li id="i_centroalmacenamiento_list"><a
+			title="Listar Centro Almacenamientoes"
+			href="/Emergencia/centroalmacenamientoes?page=1&amp;size=10">Listar
+		Centro Almacenamientoes</a></li>
+	</ul>
+	</li>
+	<li id="c_usuario">
+	<h2>Usuario</h2>
+	<ul>
+		<li id="i_usuario_new"><a title="Crear nuevo Usuario"
+			href="/Emergencia/usuarios?form">Crear nuevo Usuario</a></li>
+		<li id="i_usuario_list"><a title="Listar Usuarios"
+			href="/Emergencia/usuarios?page=1&amp;size=10">Listar Usuarios</a></li>
+	</ul>
+	</li>
+	<li id="c_poblacion">
+	<h2>Poblacion</h2>
+	<ul>
+		<li id="i_poblacion_new"><a title="Crear nuevo Poblacion"
+			href="/Emergencia/poblacions?form">Crear nuevo Poblacion</a></li>
+		<li id="i_poblacion_list"><a title="Listar Poblacions"
+			href="/Emergencia/poblacions?page=1&amp;size=10">Listar
+		Poblacions</a></li>
+	</ul>
+	</li>
+	<li id="c_emergencia">
+	<h2>Emergencia</h2>
+	<ul>
+		<li id="i_emergencia_new"><a title="Crear nuevo Emergencia"
+			href="/Emergencia/emergencias?form">Crear nuevo Emergencia</a></li>
+		<li id="i_emergencia_list"><a title="Listar Emergencias"
+			href="/Emergencia/emergencias?page=1&amp;size=10">Listar
+		Emergencias</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+<div id="main">
+<div version="2.0"><script type="text/javascript">
+	dojo.require('dijit.TitlePane');
+</script>
+<div id="_title_pl_emergencia_entidad_Perfil_id"><script
+	type="text/javascript">
+	Spring.addDecoration(new Spring.ElementDecoration({
+		elementId : '_title_pl_emergencia_entidad_Perfil_id',
+		widgetType : 'dijit.TitlePane',
+		widgetAttrs : {
+			title : 'Listar Perfils',
+			open : true
+		}
+	}));
+</script>
+<table>
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th />
+			<th />
+			<th />
+		</tr>
+	</thead>
+	<tr>
+		<td>Administra</td>
+		<td><a title="Mostrar Perfil" alt="Mostrar Perfil"
+			href="/Emergencia/perfils/3"><img title="Mostrar Perfil"
+			src="/Emergencia/resources/images/show.png" class="image"
+			alt="Mostrar Perfil" /></a></td>
+		<td><a title="Actualizar Perfil" alt="Actualizar Perfil"
+			href="/Emergencia/perfils/3?form"><img title="Actualizar Perfil"
+			src="/Emergencia/resources/images/update.png" class="image"
+			alt="Actualizar Perfil" /></a></td>
+		<td>
+		<form id="command" action="/Emergencia/perfils/3" method="post"><input
+			type="hidden" name="_method" value="DELETE" /><input
+			onclick="return confirm('Estas seguro que quieres eliminar este elemento');"
+			value="Borrar Perfil" type="image" title="Borrar Perfil"
+			src="/Emergencia/resources/images/delete.png" class="image"
+			alt="Borrar Perfil" /><input value="1" type="hidden" name="page" /><input
+			value="10" type="hidden" name="size" /></form>
+		</td>
+	</tr>
+	<tr>
+		<td>Voluntario</td>
+		<td><a title="Mostrar Perfil" alt="Mostrar Perfil"
+			href="/Emergencia/perfils/4"><img title="Mostrar Perfil"
+			src="/Emergencia/resources/images/show.png" class="image"
+			alt="Mostrar Perfil" /></a></td>
+		<td><a title="Actualizar Perfil" alt="Actualizar Perfil"
+			href="/Emergencia/perfils/4?form"><img title="Actualizar Perfil"
+			src="/Emergencia/resources/images/update.png" class="image"
+			alt="Actualizar Perfil" /></a></td>
+		<td>
+		<form id="command" action="/Emergencia/perfils/4" method="post"><input
+			type="hidden" name="_method" value="DELETE" /><input
+			onclick="return confirm('Estas seguro que quieres eliminar este elemento');"
+			value="Borrar Perfil" type="image" title="Borrar Perfil"
+			src="/Emergencia/resources/images/delete.png" class="image"
+			alt="Borrar Perfil" /><input value="1" type="hidden" name="page" /><input
+			value="10" type="hidden" name="size" /></form>
+		</td>
+	</tr>
+	<tr>
+		<td>AdmVolunta</td>
+		<td><a title="Mostrar Perfil" alt="Mostrar Perfil"
+			href="/Emergencia/perfils/5"><img title="Mostrar Perfil"
+			src="/Emergencia/resources/images/show.png" class="image"
+			alt="Mostrar Perfil" /></a></td>
+		<td><a title="Actualizar Perfil" alt="Actualizar Perfil"
+			href="/Emergencia/perfils/5?form"><img title="Actualizar Perfil"
+			src="/Emergencia/resources/images/update.png" class="image"
+			alt="Actualizar Perfil" /></a></td>
+		<td>
+		<form id="command" action="/Emergencia/perfils/5" method="post"><input
+			type="hidden" name="_method" value="DELETE" /><input
+			onclick="return confirm('Estas seguro que quieres eliminar este elemento');"
+			value="Borrar Perfil" type="image" title="Borrar Perfil"
+			src="/Emergencia/resources/images/delete.png" class="image"
+			alt="Borrar Perfil" /><input value="1" type="hidden" name="page" /><input
+			value="10" type="hidden" name="size" /></form>
+		</td>
+	</tr>
+	<tr class="footer">
+		<td colspan="10"><span class="new"><a
+			href="/Emergencia//perfils?form"><img title="Crear nuevo Perfil"
+			src="/Emergencia/resources/images/add.png" alt="Crear nuevo Perfil" /></a></span>
+		Resultados por p&amp;aacute;gina: <a href="?page=1&amp;size=5">5</a>
+		10 <a href="?page=1&amp;size=15">15</a> <a href="?page=1&amp;size=20">20</a>
+		<a href="?page=1&amp;size=25">25</a> | P&aacute;gina 1 de 1</td>
+	</tr>
+</table>
+</div>
+</div>
+<div version="2.0" id="footer">
+<div style="bottom: 0; position: absolute;"><img width="180px"
+	src="./images/unidad.gif" /><img alt="" height="58px" width="180px"
+	src="./images/telmexhub.jpg" /></div>
+</div>
+</div>
+</div>
+</body>
+</html>

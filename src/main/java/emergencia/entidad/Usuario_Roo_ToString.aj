@@ -14,6 +14,7 @@ privileged aspect Usuario_Roo_ToString {
         sb.append("Perfiles: ").append(getPerfiles() == null ? "null" : getPerfiles().size()).append(", ");
         sb.append("Nombre: ").append(getNombre()).append(", ");
         sb.append("Contrasena: ").append(getContrasena()).append(", ");
+        sb.append("Confcontrasena: ").append(getConfcontrasena()).append(", ");
         sb.append("Correo: ").append(getCorreo()).append(", ");
         sb.append("Twitter: ").append(getTwitter()).append(", ");
         sb.append("ApellidoPaterno: ").append(getApellidoPaterno()).append(", ");

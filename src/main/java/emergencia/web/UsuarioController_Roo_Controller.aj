@@ -30,8 +30,7 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect UsuarioController_Roo_Controller {
     
-    @Autowired
-    private GenericConversionService UsuarioController.conversionService;
+    
     
     @RequestMapping(method = RequestMethod.POST)
     public String UsuarioController.create(@Valid Usuario usuario, BindingResult result, Model model, HttpServletRequest request) {
@@ -116,28 +115,7 @@ privileged aspect UsuarioController_Roo_Controller {
         };
     }
     
-    Converter<Perfil, String> UsuarioController.getPerfilConverter() {
-        return new Converter<Perfil, String>() {
-            public String convert(Perfil perfil) {
-                return new StringBuilder().append(perfil.getNombre()).toString();
-            }
-        };
-    }
-    
-    Converter<Usuario, String> UsuarioController.getUsuarioConverter() {
-        return new Converter<Usuario, String>() {
-            public String convert(Usuario usuario) {
-                return new StringBuilder().append(usuario.getNombre()).append(" ").append(usuario.getContrasena()).append(" ").append(usuario.getCorreo()).toString();
-            }
-        };
-    }
-    
-    @PostConstruct
-    void UsuarioController.registerConverters() {
-        conversionService.addConverter(getDireccionConverter());
-        conversionService.addConverter(getPerfilConverter());
-        conversionService.addConverter(getUsuarioConverter());
-    }
+  
     
     private String UsuarioController.encodeUrlPathSegment(String pathSegment, HttpServletRequest request) {
         String enc = request.getCharacterEncoding();

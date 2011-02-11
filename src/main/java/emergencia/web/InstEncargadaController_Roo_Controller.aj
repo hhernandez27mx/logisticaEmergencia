@@ -117,7 +117,7 @@ privileged aspect InstEncargadaController_Roo_Controller {
     Converter<Usuario, String> InstEncargadaController.getUsuarioConverter() {
         return new Converter<Usuario, String>() {
             public String convert(Usuario usuario) {
-                return new StringBuilder().append(usuario.getNombre()).append(" ").append(usuario.getContrasena()).append(" ").append(usuario.getCorreo()).toString();
+                return new StringBuilder().append(usuario.getNombre()).append(" ").append(usuario.getContrasena()).append(" ").append(usuario.getConfcontrasena()).toString();
             }
         };
     }

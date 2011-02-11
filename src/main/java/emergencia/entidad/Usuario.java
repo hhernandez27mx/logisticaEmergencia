@@ -21,6 +21,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @RooJavaBean
 @RooToString
@@ -29,21 +30,22 @@ import javax.persistence.TemporalType;
 public class Usuario {
 
 	
+	
     @NotNull
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     private Set<Perfil> perfiles = new HashSet<Perfil>();
     
     @NotNull
     private String nombre;
     @NotNull
     private String contrasena;
+    @Transient
+    private String confcontrasena;
 
     @NotNull
     private String correo;
 
  
-
-    @Size(max = 150)
     private String twitter;
 
     @NotNull

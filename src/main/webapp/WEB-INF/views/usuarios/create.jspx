@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
-    <jsp:output omit-xml-declaration="yes"/>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:datos="urn:jsptagdir:/WEB-INF/tags/form/datos" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+     <jsp:output omit-xml-declaration="yes"/>
+ 
     <form:create id="fc_emergencia_entidad_Usuario" modelAttribute="usuario" path="/usuarios" render="${empty dependencies}" z="mpFx9Ov+T6PEeJkXeUFCFUT4zzg=">
-        <field:select field="perfiles" id="c_emergencia_entidad_Usuario_perfiles" itemValue="idPerfil" items="${perfils}" multiple="true" path="/perfils" required="true" z="9JgIuOLy4rqdvHnRkqWVT52nuAk="/>
         <field:input field="nombre" id="c_emergencia_entidad_Usuario_nombre" required="true" z="zeXZU46aJQ5uOlr6wnGM9BOSzIU="/>
+         <field:input field="apellidoPaterno" id="c_emergencia_entidad_Usuario_apellidoPaterno" required="true" z="BZ6l493StnvJN4PUC8x2rZDjGak="/>
+        <field:input field="apellidoMaterno" id="c_emergencia_entidad_Usuario_apellidoMaterno" required="true" z="G2DrcU4HksnqeCBg3rp47XysZKA="/>
+        <field:select field="perfiles" id="c_emergencia_entidad_Usuario_perfiles" itemValue="idPerfil" items="${perfils}" multiple="true" path="/perfils" required="true" z="9JgIuOLy4rqdvHnRkqWVT52nuAk="/>
+      
         <field:input field="contrasena" id="c_emergencia_entidad_Usuario_contrasena" required="true" z="Djj3eq5KItWs0NPCMPXNZMvt4NY="/>
         <field:input field="correo" id="c_emergencia_entidad_Usuario_correo" required="true" z="8iTPIQfs/CoGS3y45SH9mlGrik8="/>
-        <field:textarea field="twitter" id="c_emergencia_entidad_Usuario_twitter" z="eS+YBD+Y8A3T1MAs+KVQwYI0DaE="/>
-        <field:input field="apellidoPaterno" id="c_emergencia_entidad_Usuario_apellidoPaterno" required="true" z="BZ6l493StnvJN4PUC8x2rZDjGak="/>
-        <field:input field="apellidoMaterno" id="c_emergencia_entidad_Usuario_apellidoMaterno" required="true" z="G2DrcU4HksnqeCBg3rp47XysZKA="/>
+        <field:input field="twitter" id="c_emergencia_entidad_Usuario_twitter" z="U2F092n7+Z5iF/Yr2U22HuvmBP4="/>
         <field:input field="facebook" id="c_emergencia_entidad_Usuario_facebook" z="kH5bessdQKEfcyy9dKo41ghLDoE="/>
         <field:select field="sexo" id="c_emergencia_entidad_Usuario_sexo" items="${enumsexoes}" path="enumsexoes" z="BJ+8DPgClOEQiqS2ChYgxG82paI="/>
-        <field:select field="domicilioParticular" id="c_emergencia_entidad_Usuario_domicilioParticular" itemValue="idDireccion" items="${direccions}" path="/direccions" z="NWFMeZ8hYE+ktFW46dbceeMUZpk="/>
+        
+   <spring:message code="dompart" var="title_dir"/>   
+  
+    <util:panel id="usuario_dom" openPane="false" title="${title_dir}">
+ 
+      
+    </util:panel>
+  
+    
+    <field:input field="confcontrasena" id="c_emergencia_entidad_Usuario_confcontrasena" z="CiHBCpMp/NeV253Scv3c2Cd92Bo="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_Usuario" render="${not empty dependencies}" z="ZjOk2qDre9a41SqykENbesEGqec="/>
 </div>

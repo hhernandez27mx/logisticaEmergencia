@@ -10,7 +10,7 @@
     <c:if test="${empty openPane}">
       <c:set value="true" var="openPane" />
     </c:if>
-  
+ 
     <c:set var="sec_id">
       <spring:escapeBody javaScriptEscape="true" >${id}</spring:escapeBody>
     </c:set>
@@ -20,7 +20,7 @@
     </c:set>
     
     <c:set var="sec_title">
-      <spring:escapeBody javaScriptEscape="true" >${title}</spring:escapeBody>
+     ${title}
     </c:set>
     
     <script type="text/javascript">dojo.require('dijit.TitlePane');</script>

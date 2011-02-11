@@ -35,6 +35,14 @@ privileged aspect Usuario_Roo_JavaBean {
         this.contrasena = contrasena;
     }
     
+    public String Usuario.getConfcontrasena() {
+        return this.confcontrasena;
+    }
+    
+    public void Usuario.setConfcontrasena(String confcontrasena) {
+        this.confcontrasena = confcontrasena;
+    }
+    
     public String Usuario.getCorreo() {
         return this.correo;
     }

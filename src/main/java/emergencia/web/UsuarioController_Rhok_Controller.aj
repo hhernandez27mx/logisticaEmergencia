@@ -8,7 +8,9 @@ import java.util.Collection;
 
 import javax.annotation.PostConstruct;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.core.convert.support.GenericConversionService;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import emergencia.entidad.Estado;
 import emergencia.entidad.Perfil;
@@ -17,7 +19,8 @@ import emergencia.entidad.Usuario;
 
 privileged aspect UsuarioController_Rhok_Controller {
     
-	
+	@Autowired
+    private GenericConversionService UsuarioController.conversionService;
     @ModelAttribute("estados")
     public Collection<Estado> UsuarioController.llenaEstados() {
         return Estado.findAllEstadoes();
@@ -31,27 +34,13 @@ privileged aspect UsuarioController_Rhok_Controller {
         };
     }
     
-    Converter<Perfil, String> UsuarioController.getPerfilConverter() {
-        return new Converter<Perfil, String>() {
-            public String convert(Perfil perfil) {
-                return new StringBuilder().append(perfil.getNombre()).toString();
-            }
-        };
-    }
-    
-    Converter<Usuario, String> UsuarioController.getUsuarioConverter() {
-        return new Converter<Usuario, String>() {
-            public String convert(Usuario usuario) {
-                return new StringBuilder().append(usuario.getNombre()).append(" ").append(usuario.getContrasena()).append(" ").append(usuario.getConfcontrasena()).toString();
-            }
-        };
-    }
+  
     
     @PostConstruct
-    void UsuarioController.registerConverters() {
+    void UsuarioController.registerConverters1() {
         conversionService.addConverter(getEstadoConverter());
-        conversionService.addConverter(getPerfilConverter());
-        conversionService.addConverter(getUsuarioConverter());
+       // conversionService.addConverter(getPerfilConverter());
+        ///conversionService.addConverter(getUsuarioConverter());
     }
   
 }

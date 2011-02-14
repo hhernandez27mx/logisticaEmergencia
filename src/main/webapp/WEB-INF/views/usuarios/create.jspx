@@ -9,6 +9,7 @@
         <field:select field="perfiles" id="c_emergencia_entidad_Usuario_perfiles" itemValue="idPerfil" items="${perfils}" multiple="true" path="/perfils" required="true" z="9JgIuOLy4rqdvHnRkqWVT52nuAk="/>
       
         <field:input field="contrasena" id="c_emergencia_entidad_Usuario_contrasena" required="true" z="Djj3eq5KItWs0NPCMPXNZMvt4NY="/>
+        <field:input field="confcontrasena" id="c_emergencia_entidad_Usuario_confcontrasena" z="CiHBCpMp/NeV253Scv3c2Cd92Bo="/>
         <field:input field="correo" id="c_emergencia_entidad_Usuario_correo" required="true" z="8iTPIQfs/CoGS3y45SH9mlGrik8="/>
         <field:input field="twitter" id="c_emergencia_entidad_Usuario_twitter" z="U2F092n7+Z5iF/Yr2U22HuvmBP4="/>
         <field:input field="facebook" id="c_emergencia_entidad_Usuario_facebook" z="kH5bessdQKEfcyy9dKo41ghLDoE="/>
@@ -17,12 +18,10 @@
    <spring:message code="dompart" var="title_dir"/>   
   
     <util:panel id="usuario_dom" openPane="false" title="${title_dir}">
- 
-      
+     <field:select field="estados" disableFormBinding="true" id="label_estado_usuario" itemValue="idEstado" items="${estados}" path="/estados" />
     </util:panel>
   
     
-    <field:input field="confcontrasena" id="c_emergencia_entidad_Usuario_confcontrasena" z="CiHBCpMp/NeV253Scv3c2Cd92Bo="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_Usuario" render="${not empty dependencies}" z="ZjOk2qDre9a41SqykENbesEGqec="/>
 </div>

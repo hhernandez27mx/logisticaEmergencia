@@ -37,6 +37,7 @@ privileged aspect UsuarioController_Rhok_Controller {
     @ResponseBody
     public String UsuarioController.buscaJson(@RequestParam(value="estado")Long estado,@RequestParam(value="term",required=false)String term ) 
     {
+    	System.out.println(estado+" "+term);
     	if(term==null || term.equals(""))
     		term="%";
     	else

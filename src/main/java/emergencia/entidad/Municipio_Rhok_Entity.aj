@@ -17,7 +17,7 @@ privileged aspect Municipio_Rhok_Entity {
     
     public static List<Municipio> Municipio.findLikeNombreMunicipios(String term,Long idEstado) 
     {
-    	Query q= entityManager().createQuery("select o from Municipio o where  o.nombre like ?1 and o.idEstado=?2 and");
+    	Query q= entityManager().createQuery("select o from Municipio o where  o.nombre like ?1 and o.idEstado.idEstado=?2 ");
     	 q.setParameter(1, term);
     	 q.setParameter(2, idEstado);
         return  q.getResultList();

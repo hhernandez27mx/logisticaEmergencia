@@ -13,9 +13,11 @@
   <spring:url value="/jquery-ui/css/ui-lightness/jquery-ui-1.8.9.custom.css" var="JqueryCSS_url" />
   
   <spring:url value="/resources/images/favicon.ico" var="favicon" />
+  
+  <link rel="stylesheet" type="text/css" href="${JqueryCSS_url}"></link>
   <link rel="stylesheet" type="text/css" media="screen" href="${roo_css_url}"><!-- required for FF3 and Opera --></link>
   <link rel="stylesheet" type="text/css" href="${tundra_url}"><!-- required for FF3 and Opera --></link>
-  <link rel="stylesheet" type="text/css" href="${JqueryCSS_url}"><!-- required for FF3 and Opera --></link>
+ 
   <link rel="SHORTCUT ICON" href="${favicon}" />
 
   <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
@@ -27,8 +29,8 @@
 	
 	
 	
-  <script src="${Jquery_url}"></script>
-  <script src="${JqueryUI_url}"></script>
+  <script src="${Jquery_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script src="${JqueryUI_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${spring_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
   <script src="${spring_dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>

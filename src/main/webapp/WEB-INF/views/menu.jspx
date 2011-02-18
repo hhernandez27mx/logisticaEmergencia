@@ -59,5 +59,8 @@
             <menu:item id="i_estado_new" messageCode="global_menu_new" url="/estadoes?form" z="ycg0kAs5SJ41KTsAQHflCSNyXf0="/>
         <menu:item id="i_estado_list" messageCode="global_menu_list" url="/estadoes?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="2uI2x8fiIwCZGPPnCmjFiOMDA/g="/>
         </menu:category>
+    <menu:category id="c_embedded" z="LRTVSLfH1//iHuBP77kc72qGGb8=">
+            <menu:item id="i_embedded__embedmapa_id" messageCode="global_generic" url="/embed/mapa" z="K3ZcCpoo/AlRuY82UmUHL20mOCc="/>
+        </menu:category>
     </menu:menu>
 </div>

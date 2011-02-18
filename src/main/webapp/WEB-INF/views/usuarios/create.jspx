@@ -23,7 +23,7 @@
 
 <div class="ui-widget">
 	<label for="municipio">Municipio: </label>
-	<input id="municipio" />
+	<input id="municipio"/>
 	<script>
 	var cache = {},	lastXhr;
 	
@@ -37,7 +37,7 @@
 			}
 			
 			lastXhr=$.ajax({
-				url: '<c:url value="/usuarios/buscaMunicipio" />',
+				url: '<c:url value="/usuarios/buscaMunicipio"/>',
 				data: {
 					term: request.term,
 					estado:dijit.byId('_estados_id').attr('value')

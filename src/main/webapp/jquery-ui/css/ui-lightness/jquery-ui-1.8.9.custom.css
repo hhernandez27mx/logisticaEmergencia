@@ -349,10 +349,15 @@
  *
  * http://docs.jquery.com/UI/Autocomplete#theming
  */
-.ui-autocomplete { position: absolute; cursor: default; }	
+.ui-autocomplete { position: absolute; cursor: default;max-height: 180px;
+		overflow-y: auto;overflow-x: hidden;
+		/* add padding to account for vertical scrollbar */
+		padding-right: 20px;
+		
+}	
 
 /* workarounds */
-* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+* html .ui-autocomplete { width:180px; } /* without this, the menu expands to 100% in IE6 */
 
 /*
  * jQuery UI Menu 1.8.9

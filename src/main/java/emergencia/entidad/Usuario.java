@@ -2,6 +2,7 @@ package emergencia.entidad;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
+import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.dbre.RooDbManaged;
@@ -27,6 +28,7 @@ import javax.persistence.Transient;
 @RooToString
 @RooDbManaged(automaticallyDelete = true)
 @RooEntity(versionField = "version", table = "usuario")
+@RooJson
 public class Usuario {
 
 	

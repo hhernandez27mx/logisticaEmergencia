@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_emergencia_entidad_Estado" idField="idEstado" modelAttribute="estado" path="/estadoes" z="hrPZ7EhkN6TfHDB3yVYk++c02UA=">
+        <field:input field="nombre" id="c_emergencia_entidad_Estado_nombre" required="true" z="QaLCALyx2oGIdNTdqQHu747zeeU="/>
+        <field:input field="nombreAbreviado" id="c_emergencia_entidad_Estado_nombreAbreviado" z="gGlHVyFlIfRbR50lo+bedu7puSI="/>
+    </form:update>
+</div>

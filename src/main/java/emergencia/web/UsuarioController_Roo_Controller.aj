@@ -18,13 +18,17 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.support.GenericConversionService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
@@ -137,6 +141,32 @@ privileged aspect UsuarioController_Roo_Controller {
         conversionService.addConverter(getDireccionConverter());
         conversionService.addConverter(getPerfilConverter());
         conversionService.addConverter(getUsuarioConverter());
+    }
+    
+    @RequestMapping(value = "/{idUsuario}", method = RequestMethod.GET, headers = "Accept=application/json")
+    @ResponseBody
+    public String UsuarioController.showJson(@PathVariable("idUsuario") Integer idUsuario) {
+        return Usuario.findUsuario(idUsuario).toJson();
+    }
+    
+    @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
+    public ResponseEntity<String> UsuarioController.createFromJson(@RequestBody String json) {
+        Usuario.fromJsonToUsuario(json).persist();
+        return new ResponseEntity<String>("Usuario created", HttpStatus.CREATED);
+    }
+    
+    @RequestMapping(headers = "Accept=application/json")
+    @ResponseBody
+    public String UsuarioController.listJson() {
+        return Usuario.toJsonArray(Usuario.findAllUsuarios());
+    }
+    
+    @RequestMapping(value = "/jsonArray", method = RequestMethod.POST, headers = "Accept=application/json")
+    public ResponseEntity<String> UsuarioController.createFromJsonArray(@RequestBody String json) {
+        for (Usuario usuario: Usuario.fromJsonArrayToUsuarios(json)) {
+            usuario.persist();
+        }
+        return new ResponseEntity<String>("Usuario created", HttpStatus.CREATED);
     }
     
     private String UsuarioController.encodeUrlPathSegment(String pathSegment, HttpServletRequest request) {

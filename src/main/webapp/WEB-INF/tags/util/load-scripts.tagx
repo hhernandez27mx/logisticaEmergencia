@@ -8,9 +8,14 @@
   <spring:url value="/resources/dijit/themes/tundra/tundra.css" var="tundra_url" />
   <spring:url value="/resources/spring/Spring.js" var="spring_url" />
   <spring:url value="/resources/spring/Spring-Dojo.js" var="spring_dojo_url" />
+  <spring:url value="/jquery-ui/js/jquery-1.4.4.min.js" var="Jquery_url" />
+  <spring:url value="/jquery-ui/js/jquery-ui-1.8.9.custom.min.js" var="JqueryUI_url" />
+  <spring:url value="/jquery-ui/css/ui-lightness/jquery-ui-1.8.9.custom.css" var="JqueryCSS_url" />
+  
   <spring:url value="/resources/images/favicon.ico" var="favicon" />
   <link rel="stylesheet" type="text/css" media="screen" href="${roo_css_url}"><!-- required for FF3 and Opera --></link>
   <link rel="stylesheet" type="text/css" href="${tundra_url}"><!-- required for FF3 and Opera --></link>
+  <link rel="stylesheet" type="text/css" href="${JqueryCSS_url}"><!-- required for FF3 and Opera --></link>
   <link rel="SHORTCUT ICON" href="${favicon}" />
 
   <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
@@ -19,7 +24,11 @@
   </c:set>
 
   <script type="text/javascript">var djConfig="${userLocale}"; </script>
-
+	
+	
+	
+  <script src="${Jquery_url}"></script>
+  <script src="${JqueryUI_url}"></script>
   <script src="${dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${spring_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
   <script src="${spring_dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>

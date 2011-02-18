@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_emergencia_entidad_Estado" items="${estadoes}" z="aflPze2n5ipXVqTGxo20EyLcYGg=">
+        <table:table data="${estadoes}" id="l_emergencia_entidad_Estado" path="/estadoes" typeIdFieldName="idEstado" z="m0UtHs34mlaU5dd3hTzdb6SeCoY=">
+            <table:column id="c_emergencia_entidad_Estado_nombre" property="nombre" z="60GX4UOM5/VPUnQxWpr0x7IZ4WI="/>
+            <table:column id="c_emergencia_entidad_Estado_nombreAbreviado" property="nombreAbreviado" z="AEt00hmq26HfHBlDToNdviacKqA="/>
+        </table:table>
+    </page:list>
+</div>

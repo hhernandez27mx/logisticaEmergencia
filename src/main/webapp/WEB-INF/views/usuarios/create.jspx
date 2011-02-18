@@ -18,10 +18,11 @@
    <spring:message code="dompart" var="title_dir"/>   
   
     <util:panel id="usuario_dom" openPane="false" title="${title_dir}">
-     <field:select field="estados" disableFormBinding="true" id="label_estado_usuario" itemValue="idEstado" items="${estados}" path="/estados" />
+     <datos:select disableFormBinding="true" field="estados" id="label_estado_usuario" itemValue="idEstado" items="${estados}" path="/estados" texto="nombre"/>
     </util:panel>
   
     
+       <field:select field="domicilioParticular" id="c_emergencia_entidad_Usuario_domicilioParticular" itemValue="idDireccion" items="${direccions}" path="/direccions" z="NWFMeZ8hYE+ktFW46dbceeMUZpk="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_emergencia_entidad_Usuario" render="${not empty dependencies}" z="ZjOk2qDre9a41SqykENbesEGqec="/>
 </div>

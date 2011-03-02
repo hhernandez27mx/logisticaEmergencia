@@ -1,0 +1,59 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:spring="http://www.springframework.org/tags" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+  <jsp:output omit-xml-declaration="yes" />
+
+  <jsp:directive.attribute name="entidad" type="java.lang.String" required="true" description="Entidad a la cual pertenece el domicilio." />
+  <jsp:directive.attribute name="entdomicilio" type="java.lang.String" required="true" description="Domicilio" />
+  <jsp:directive.attribute name="label" type="java.lang.String" required="false" description="The label used for this field, will default to a message bundle if not supplied" />
+   
+   
+    <spring:message code="dompart" arguments="${entidad}"  var="title_dir"/>   
+  
+    <util:panel id="${entidad}_${entdomicilio}" openPane="false" title="${title_dir}">
+    <datos:select disableFormBinding="true" field="${entidad}estados" id="label_campo_estado" itemValue="idEstado" items="${estados}" path="/estados" texto="nombre"/>
+  
+<c:url value="/usuarios/buscaMunicipio" var="urlMun"/>
+<div class="ui-widget">
+	<label for="${entidad}_municipio">Municipio: </label>
+	<input id="${entidad}_municipio"/>
+	<script>
+	var cache = {},	lastXhr;
+	
+	$( "#${entidad}_municipio" ).autocomplete({
+		source: function( request, response ) {
+			var term = request.term;
+			
+			lastXhr=$.ajax({
+				url: '${urlMun}',
+				data: {
+					term: request.term,
+					estado:dijit.byId('_${entidad}estados_id').attr('value')
+				},
+				success: function( data ) {
+					var mapa=eval('('+ data+')') ;
+					
+					mapJq= $.map( mapa , function( item ) { 
+						                                    return { label: item.nombre,dato:item} 
+						                                   }
+					             );
+					
+					response(mapJq);
+				}
+			});
+		},
+		minLength: 0,
+		select: function( event, ui ) {
+		                              }
+	
+	});
+	
+	</script>
+</div>
+  
+  
+ </util:panel>
+ 
+  
+ 
+ 
+ 
+</jsp:root>
